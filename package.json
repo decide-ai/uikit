@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@babel/preset-typescript": "^7.23.3",
+    "@storybook/addon-actions": "^7.6.16",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/addon-links": "^7.6.16",
@@ -52,9 +53,12 @@
     "@storybook/react": "^7.6.16",
     "@storybook/react-webpack5": "^7.6.16",
     "@storybook/test": "^7.6.16",
+    "autoprefixer": "^10.4.17",
     "eslint-plugin-storybook": "^0.6.15",
+    "postcss": "^8.4.35",
     "prop-types": "^15.8.1",
     "storybook": "^7.6.16",
+    "tailwindcss": "^3.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.90.2"
