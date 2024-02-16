@@ -1,42 +1,62 @@
 {
   "name": "uikit",
-  "version": "1.0.0",
-  "description": "Uikit project",
-  "main": "dist/App.js",
-  "scripts": {
-    "test-storybook": "storyshots",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
-    "test:json": "jest --json --outputFile=jest-test-results.json"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/modclub-app/uikit.git"
-  },
-  "keywords": [],
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.82",
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:storybook/recommended"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
+    "@babel/preset-typescript": "^7.23.3",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
-    "@storybook/addon-jest": "^7.6.16",
     "@storybook/addon-links": "^7.6.16",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.16",
+    "@storybook/preset-create-react-app": "^7.6.16",
     "@storybook/react": "^7.6.16",
     "@storybook/react-webpack5": "^7.6.16",
     "@storybook/test": "^7.6.16",
-    "@types/jest": "^29.5.12",
-    "@types/react": "^18.2.55",
-    "@types/react-dom": "^18.2.19",
-    "css-loader": "^6.10.0",
-    "jest": "^29.7.0",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prop-types": "^15.8.1",
     "storybook": "^7.6.16",
-    "style-loader": "^3.3.4",
-    "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "webpack": "^5.90.2"
   }
 }

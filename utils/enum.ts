@@ -1,5 +1,5 @@
-export enum Enum {
-  Foundations = "Foundations",
+export enum Chapters {
   Components = "Components",
-  Guidelines = "Guidelines"
+  Guidelines = "Guidelines",
+  Foundation = "Foundation",
 }
