@@ -1,4 +1,3 @@
-import React, { ReactElement } from 'react';
 import * as Icons from './index';
 
 type IconProps = {
@@ -9,14 +8,14 @@ type IconProps = {
 
 type IconItem = {
   name: string;
-  component: ReactElement;
+  component: React.ReactElement;
 }
 
 export const getBasicIcons = ({
   fill,
   width,
   height,
-}: IconProps): Map<string, ReactElement> => {
+}: IconProps): Map<string, React.ReactElement> => {
   const iconItems: IconItem[] = [
     {
       name: 'userPlusIcon',
@@ -26,7 +25,7 @@ export const getBasicIcons = ({
   ];
 
   // Convert iconItems array to Map
-  return new Map<string, ReactElement>(iconItems.map(item =>
+  return new Map<string, React.ReactElement>(iconItems.map(item =>
     [item.name, item.component]
   ));
 };
