@@ -5,7 +5,7 @@ import { IconProps } from './types';
 import { ListSection } from './ListSection';
 import { IconBox } from './IconBox';
 
-const IconsMap = (props: IconProps) => {
+const IconsList = (props: IconProps) => {
   const iconsMap = getIconsMap();
   return (
     <Container>
@@ -30,4 +30,4 @@ const IconsMap = (props: IconProps) => {
   );
 };
 
-export default IconsMap;
+export default IconsList;
