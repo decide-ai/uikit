@@ -4,6 +4,7 @@ module.exports = {
   darkMode: false,
   content: [
     "./src/stories/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/storiesComponents/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {

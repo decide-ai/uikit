@@ -1,39 +1,28 @@
 import React, { memo, ReactElement } from "react";
-
-type IconProps = {
-  fill?: string;
-  viewBox?: string;
-  width?: number;
-  height?: number;
-  rectFill?: string;
-}
-
-type SvgWrapProps = {
-  viewBox?: string;
-  ratio?: number;
-}
+import { IconProps, SvgWrapProps } from './types';
 
 const defaultViewBox = "0 0 24 24";
 
 export const SvgWrap = ({
-  width = 24,
-  height = 24,
-  fill = "#000",
+  size = 24,
+  fill = "none",
+  stroke = "none",
+  strokeWidth = 1.2,
   viewBox = defaultViewBox,
   ratio = 1,
-  rectFill,
   children,
 }: IconProps & SvgWrapProps & { children: ReactElement }): ReactElement => (
   <svg
     fill={fill}
-    height={height}
+    height={size}
     viewBox={viewBox}
-    width={width * ratio}
+    width={size * ratio}
     xmlns="http://www.w3.org/2000/svg"
     fillRule="evenodd"
     clipRule="evenodd"
+    stroke={stroke}
+    strokeWidth={strokeWidth}
   >
-    {rectFill && <rect width={width} height={height} rx="7" fill={rectFill} />}
     {children}
   </svg>
 );

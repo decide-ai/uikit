@@ -33,3 +33,6 @@ https://storybook.js.org/docs/writing-stories/args
 
 ## How to set up optional component parameters in the Canvas: 
 https://storybook.js.org/docs/configure/story-layout
+
+## How to publish storybook
+https://storybook.js.org/docs/sharing/publish-storybook
