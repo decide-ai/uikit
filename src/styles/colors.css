@@ -1,0 +1,67 @@
+:root {
+  /** Dark green */
+  --color-A00: #1B4444;
+  --color-A10: #325757;
+  --color-A20: #496969;
+  --color-A30: #5F7C7C;
+  --color-A40: #768F8F;
+  --color-A50: #8DA1A1;
+  --color-A60: #A4B4B4;
+  --color-A70: #BBC7C7;
+  --color-A80: #D1DADA;
+  --color-A90: #DDE3E3;
+  --color-A100: #E8ECEC;
+  --color-A110: #F4F6F6;
+  
+  /** Green */
+  --color-B00: #66DD95;
+  --color-B10: #75E0A0;
+  --color-B20: #85E4AA;
+  --color-B30: #94E7B5;
+  --color-B40: #A3EBBF;
+  --color-B50: #B3EECA;
+  --color-B60: #C2F1D5;
+  --color-B70: #D1F5DF;
+  --color-B80: #E0F8EA;
+  --color-B90: #F0FCF4;
+  --color-B100: #F7FDFA;
+  
+  /** Grey */
+  --color-C00: #EFEFEF;
+  --color-C10: #F1F1F1;
+  --color-C20: #F2F2F2;
+  --color-C30: #F4F4F4;
+  --color-C40: #F5F5F5;
+  --color-C50: #F7F7F7;
+  --color-C60: #F9F9F9;
+  --color-C70: #FAFAFA;
+  --color-C80: #FCFCFC;
+  --color-C90: #FDFDFD;
+  --color-C100: #FEFEFE;
+  
+  /** Red */
+  --color-D00: #E55D5D;
+  --color-D10: #E86D6D;
+  --color-D20: #EA7D7D;
+  --color-D30: #ED8E8E;
+  --color-D40: #EF9E9E;
+  --color-D50: #F2AEAE;
+  --color-D60: #F5BEBE;
+  --color-D70: #F5BEBE;
+  --color-D80: #FADFDF;
+  --color-D90: #FCEFEF;
+  --color-D100: #FEF7F7;
+  
+  /** Yellow */
+  --color-E00: #FFFBD6;
+  --color-E10: #FFFBDA;
+  --color-E20: #FFFCDE;
+  --color-E30: #FFFCE2;
+  --color-E40: #FFFDE6;
+  --color-E50: #FFFDEB;
+  --color-E60: #FFFDEF;
+  --color-E70: #FFFEF3;
+  --color-E80: #FFFEF7;
+  --color-E90: #FFFFFB;
+  --color-E100: #FFFFFD;
+}
