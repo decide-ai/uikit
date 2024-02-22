@@ -14,7 +14,7 @@ export const IconBox = ({
   return (
     <div 
       key={name} 
-      className="w-[200px] h-[200px] p-4 flex items-center justify-center rounded-md border border-dashed border-[#DDE3E3] flex flex-col"
+      className="w-[14rem] h-[14rem] p-4 flex items-center justify-center rounded-md border border-dashed border-[#DDE3E3] flex flex-col"
     >
       <IconComponent {...props} />
       <div className="text-xs text-black pt-4">{name}</div>

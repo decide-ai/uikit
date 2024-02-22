@@ -5,9 +5,9 @@ export const ListSection: React.FC<ListSectionProps> = ({
   title, 
   children 
 }) => (
-  <section className="mb-8">
+  <section>
     <div className="text-2xl font-bold leading-6 mb-4">{title}</div>
-    <div className="flex flex-row flex-wrap items-start pb-14 gap-3">  
+    <div className="flex flex-row gap-0">  
       {children}
     </div>
   </section>
