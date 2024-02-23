@@ -4,7 +4,7 @@ export const ADAPTIVE_SIZE_MAP = {
   '5xl': 'xl:text-5xl lg:text-5xl md:text-4xl sm:text-4xl',      // xl:48px | lg:48px | md:36px | sm:36px
   '4xl': 'xl:text-4xl lg:text-4xl md:text-3xl sm:text-3xl',      // xl:36px | lg:36px | md:30px | sm:30px
   '3xl': 'xl:text-3xl lg:text-3xl md:text-2xl sm:text-2xl',      // xl:30px | lg:30px | md:24px | sm:24px
-  '2xl': 'xl:text-2xl lg:text-2xl md:text-xl sm:text-xl',        // xl:24px | lg:20px | md:20px | sm:20px
+  '2xl': 'xl:text-2xl lg:text-2xl md:text-xl sm:text-xl',        // xl:24px | lg:24px | md:20px | sm:20px
   'xl': 'xl:text-xl lg:text-xl md:text-lg sm:text-lg',           // xl:20px | lg:20px | md:18px | sm:18px
   'lg': 'xl:text-lg lg:text-lg md:text-base sm:text-base',       // xl:18px | lg:18px | md:16px | sm:16px
   'base': 'xl:text-base lg:text-base md:text-base sm:text-sm',   // xl:16px | lg:16px | md:16px | sm:14px

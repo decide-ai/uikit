@@ -31,7 +31,7 @@ export const argTypes = {
       '6xl', 
       '7xl'
     ],
-    description: 'Typography Size: For additional information about typography sizes, please refer to the "Size" section.',
+    description: 'Typography Size: For additional information about typography sizes, please refer to the "Font" section.',
     table: {
       defaultValue: { summary: 'base' },
     },

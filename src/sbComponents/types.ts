@@ -13,18 +13,9 @@ type DescriptionTypes = {
   description?: string;
 }
 
-export type BaseContainerProps = ChildrenProps & TitleTypes & DescriptionTypes;
-
-export type SectionBoxProps = ChildrenProps & TitleTypes;
-
-export type SimpleTableProps = ChildrenProps & {
+type MaxWidthTypes = {
   /** Max table width, default value equal none
-      max-w-0: 0rem (0px)
       max-w-none: none
-      max-w-xs: 20rem (320px)
-      max-w-sm: 24rem (384px)
-      max-w-md: 28rem (448px)
-      max-w-lg: 32rem (512px)
       max-w-xl: 36rem (576px)
       max-w-2xl: 42rem (672px)
       max-w-3xl: 48rem (768px)
@@ -36,8 +27,16 @@ export type SimpleTableProps = ChildrenProps & {
       max-w-screen-sm: 640px (ширина экрана "sm")
       max-w-screen-md: 768px (ширина экрана "md")
       max-w-screen-lg: 1024px (ширина экрана "lg")
-      max-w-screen-xl: 1280px (ширина экрана "xl")
-      max-w-screen-2xl: 1536px (ширина экрана "2xl")
   */
-  maxWidth?: '0' | 'none' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full' | 'screen-sm' | 'screen-md' | 'screen-lg' | 'screen-xl' | 'screen-2xl';
+      maxWidth?: 'none' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl' | 'full' | 'screen-sm' | 'screen-md' | 'screen-lg' | undefined;
+}
+
+export type BaseContainerProps = ChildrenProps & TitleTypes & DescriptionTypes;
+
+export type SectionBoxProps = ChildrenProps & TitleTypes & DescriptionTypes;
+
+export type TableProps = ChildrenProps & MaxWidthTypes;
+
+export type SimpleTableProps = MaxWidthTypes & {
+  tableList: Record<string, string>[], 
 }
