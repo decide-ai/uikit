@@ -1,3 +1,4 @@
+const path = require('path');
 import type { StorybookConfig } from "@storybook/react-webpack5";
 
 const config: StorybookConfig = {
@@ -17,8 +18,21 @@ const config: StorybookConfig = {
           loader: require.resolve('ts-loader'),
         },
       ],
+    }, {
+      test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      use: [
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'fonts/',
+          },
+        },
+      ],
     });
+    
     config.resolve.extensions.push('.ts', '.tsx');
+    
     return config;
   },
   framework: {

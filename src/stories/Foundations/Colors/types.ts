@@ -11,3 +11,8 @@ export type ColorBoxProps = {
   /** Color hex */
   hex: string;
 }
+
+export type ChildrenProps = {
+  /** Children */
+  children: React.ReactNode;
+}

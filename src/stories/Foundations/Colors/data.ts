@@ -1,4 +1,4 @@
-export const getColorsMap = [
+export const DATA = [
   {
     title: "Dark green",
     colorsList: [

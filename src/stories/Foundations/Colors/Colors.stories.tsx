@@ -1,13 +1,11 @@
-import type { Meta, Story } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import ColorsPalette from './ColorsPalette';
 
 export default {
   title: 'Foundations/Colors',
-  component: ColorsPalette,
-  tags: ['autodocs'],
-} as Meta;
+  component: ColorsPalette
+} as Meta<typeof ColorsPalette>;
 
-const Template: Story = () => <ColorsPalette />;
+type Story = StoryObj<typeof ColorsPalette>;
 
-export const Colors = Template.bind({});
-Colors.args = {};
+export const Colors: Story = {}

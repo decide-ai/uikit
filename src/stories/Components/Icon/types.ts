@@ -29,9 +29,7 @@ export type IconsType = {
   [key: string]: React.ComponentType<IconProps>;
 };
 
-export type ListSectionProps = {
-  /** Section title */
-  title: string;
-  /** Section children for list with icons */
+export type ChildrenProps = {
+  /** Children */
   children: React.ReactNode;
 }
