@@ -1,25 +1,34 @@
 import React from 'react';
-import { Container } from '../../../storiesComponents';
-import { ListSection } from './ListSection';
+import { 
+  BaseContainer, 
+  ContainerCol,
+  SectionBox,
+} from '../../../sbComponents';
 import { ColorBox } from './ColorBox';
-import { getColorsMap } from './getColorsMap';
+import { ColorsList } from './ColorsList';
+import { DATA } from './data';
 
 const Colors = () => (
-  <Container>
-    <div className="flex flex-col gap-y-12 w-full pb-14">
-      {getColorsMap.map(item => (
-        <ListSection title={item.title}>
-          {item.colorsList.map(colorItem => (
-            <ColorBox
-              key={colorItem.name}
-              name={colorItem.name}
-              hex={colorItem.hex}
-            />
-          ))}
-        </ListSection>
+  <BaseContainer title="Colors Palette">
+    <ContainerCol>
+      {DATA.map(item => (
+        <SectionBox 
+          key={item.title} 
+          title={item.title}
+        >
+          <ColorsList>
+            {item.colorsList.map(colorItem => (
+              <ColorBox
+                key={colorItem.name}
+                name={colorItem.name}
+                hex={colorItem.hex}
+              />
+            ))}
+          </ColorsList>
+        </SectionBox>
       ))}
-    </div>
-  </Container>
+    </ContainerCol>
+  </BaseContainer>
 );
 
 export default Colors;

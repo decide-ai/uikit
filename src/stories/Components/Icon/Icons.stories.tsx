@@ -1,17 +1,17 @@
 import type { Meta, Story } from '@storybook/react';
 import { IconProps } from'../../../../components/Icon/types';
 import { argTypes, args } from './docs';
-import IconsList from './IconsList';
+import Icons from './Icons';
 
 export default {
-  title: 'Components/Icon',
-  component: IconsList,
+  title: 'Components/Icons',
+  component: Icons,
   tags: ['autodocs'],
   argTypes,
   args,
 } as Meta;
 
-const Template: Story<IconProps> = (props) => <IconsList {...props} />;
+const Template: Story<IconProps> = (props) => <Icons {...props} />;
 
-export const Icons = Template.bind({});
-Icons.args = {};
+export const IconsList = Template.bind({});
+IconsList.args = {};
