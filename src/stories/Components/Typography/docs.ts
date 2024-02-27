@@ -37,7 +37,13 @@ export const argTypes = {
     },
   },
   weight: {
-    description: 'Typography weight',
+    control: 'select',
+    table: {
+      defaultValue: { summary: 'normal' }
+    }
+  },
+  style: {
+    control: 'select',
     table: {
       defaultValue: { summary: 'normal' }
     }

@@ -32,7 +32,7 @@ export const BaseContainer: React.FC<BaseContainerProps> = ({
         )}
       </div>
     )}
-    <div className="px-12 pt-16 pb-16">
+    <div className="p-12">
       {children}
     </div>
   </React.Fragment>

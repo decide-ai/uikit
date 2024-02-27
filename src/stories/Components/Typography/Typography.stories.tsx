@@ -1,17 +1,18 @@
-import type { Meta, Story } from '@storybook/react';
-// import { Typography as TypographyStory } from '../../../../components';
-import TypographyStory from './TypographyStory';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Typography } from '../../../../components';
+import { TypographyProps } from '../../../../components/Typography/types';
 import { args, argTypes } from './docs';
 
 export default {
   title: 'Components/Typography',
-  component: TypographyStory,
+  component: Typography,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+  },
   argTypes,
   args,
-} as Meta;
+} as Meta<typeof Typography>;
 
-const Template: Story<typeof TypographyStory> = (props) => <TypographyStory {...props} />;
-
-export const Typography = Template.bind({});
-Typography.args = {};
+export const Story: StoryObj<typeof Typography> = {
+};

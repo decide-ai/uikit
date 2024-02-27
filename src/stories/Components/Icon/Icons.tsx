@@ -12,7 +12,7 @@ import { IconProps } from './types';
 const Icons = (props: IconProps) => {
   const iconsMap = getIconsMap();
   return (
-    <BaseContainer title="Icons">
+    <BaseContainer>
       <ContainerCol>
         {Array.from(iconsMap).map(item => (
           <SectionBox
