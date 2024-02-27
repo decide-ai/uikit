@@ -10,6 +10,8 @@ export type IconProps = {
   stroke?: string;
   /** Stroke width for svg */
   strokeWidth?: number;
+  /** Extra class for svg icon, use for hover */
+  className?: string,
 }
 
 export type SvgWrapProps = {

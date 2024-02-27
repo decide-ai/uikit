@@ -9,6 +9,7 @@ export const SvgWrap = ({
   stroke = "none",
   strokeWidth = 1.2,
   viewBox = defaultViewBox,
+  className,
   ratio = 1,
   children,
 }: IconProps & SvgWrapProps & { children: ReactElement }): ReactElement => (
@@ -22,6 +23,7 @@ export const SvgWrap = ({
     clipRule="evenodd"
     stroke={stroke}
     strokeWidth={strokeWidth}
+    className={className}
   >
     {children}
   </svg>
