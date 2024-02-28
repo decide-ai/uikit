@@ -89,6 +89,11 @@ export type ButtonPropsTypes = {
    * Any user text, if required, a custom text can be incorporated through a child element.
    */
   buttonText?: string;
+
+  /**
+   * Button event callback.
+   */
+  onClick?: () => void;
 }
 
 

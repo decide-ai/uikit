@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        'spin-fast': 'spin 0.5s linear infinite',
+      },
       screens: {
         sm: "480px", // 30rem
         md: "768px", // 48rem
