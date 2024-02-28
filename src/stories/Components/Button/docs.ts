@@ -45,5 +45,5 @@ export const argTypes = {
 export const args = {
   size: 'medium',
   skin: 'standard',
-  buttonText: 'Button'
+  buttonText: 'Button',
 };

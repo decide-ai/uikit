@@ -1,8 +1,6 @@
 import React from 'react';
-import classnames from 'classnames/bind';
+import cn from 'classnames';
 import { SpinnerPropTypes, SizeTypes, SkinTypes } from './types';
-import styles from './styles.less';
-const cn = classnames.bind(styles);
 
 // Defining classes for different sizes of the spinner
 const sizeClasses: SizeTypes = {
@@ -44,7 +42,7 @@ export const Spinner: React.FC<SpinnerPropTypes> = ({
   return (
     <span 
       className={cn(
-        'spinner',
+        'animate-spin-fast',
         'inline-block border border-solid rounded-full border-A100 border-[2px]',
         spinnerSize, 
         spinnerSkin,
