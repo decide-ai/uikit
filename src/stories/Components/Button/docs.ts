@@ -14,7 +14,7 @@ export const argTypes = {
   skin: {
     control: 'select',
     options: [
-      'standart',
+      'standard',
       'inline',
       'grey',
       'light'
@@ -44,6 +44,6 @@ export const argTypes = {
 
 export const args = {
   size: 'medium',
-  skin: 'standart',
+  skin: 'standard',
   buttonText: 'Button'
 };

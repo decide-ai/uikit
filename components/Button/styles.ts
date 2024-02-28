@@ -51,7 +51,7 @@ export const sizeClassesWithIcon = {
 
 // Different styles for hover and active states based on button skin.
 export const hoverAndActiveStyles = {
-  standart: `hover:${BgColorSet.A10} hover:${BorderColorSet.A10} active:${BgColorSet.A00} active:${BorderColorSet.A00}`,
+  standard: `hover:${BgColorSet.A10} hover:${BorderColorSet.A10} active:${BgColorSet.A00} active:${BorderColorSet.A00}`,
   inline: `hover:${BorderColorSet.A10} hover:${BgColorSet.A10} hover:${TextColorSet.C100} active:${BorderColorSet.A00} active:${BgColorSet.A00} active:${TextColorSet.C100}`,
   grey: `hover:${BorderColorSet.A10} hover:${BgColorSet.A10} hover:${TextColorSet.C100} active:${BorderColorSet.A00} active:${BgColorSet.A00} active:${TextColorSet.C100}`,
   inlineGrey: `hover:${BgColorSet.C50} active:${BgColorSet.C00}`,
@@ -60,7 +60,7 @@ export const hoverAndActiveStyles = {
 
 // Disabled state styles to indicate non-interactive elements.
 export const disabledSkin = {
-  standart: `disabled:${BorderColorSet.C00} disabled:${BgColorSet.C00} disabled:${TextColorSet.A50}`,
+  standard: `disabled:${BorderColorSet.C00} disabled:${BgColorSet.C00} disabled:${TextColorSet.A50}`,
   inline: `disabled:${BorderColorSet.C00} disabled:${TextColorSet.A50}`,
   grey: `disabled:${BorderColorSet.C00} disabled:${BgColorSet.C00} disabled:${TextColorSet.A50}`,
   inlineGrey: `disabled:${BorderColorSet.C00} disabled:${TextColorSet.A50}`,
@@ -69,7 +69,7 @@ export const disabledSkin = {
 
 // Comprehensive skin classes combining border, background, text colors, and interaction states.
 export const skinClasses = {
-  standart: `${BorderStyle.base} ${BorderColorSet.A00} ${BgColorSet.A00} ${TextColorSet.C100} ${hoverAndActiveStyles.standart} ${disabledSkin.standart}`,
+  standard: `${BorderStyle.base} ${BorderColorSet.A00} ${BgColorSet.A00} ${TextColorSet.C100} ${hoverAndActiveStyles.standart} ${disabledSkin.standart}`,
   inline: `bg-white ${BorderStyle.base} ${BorderColorSet.A00} ${TextColorSet.A00} ${hoverAndActiveStyles.inline} ${disabledSkin.inline}`,
   grey: `${BorderStyle.base} ${BorderColorSet.C00} ${BgColorSet.C00} ${TextColorSet.A00} ${hoverAndActiveStyles.grey} ${disabledSkin.grey}`,
   inlineGrey: `bg-white ${BorderStyle.base} ${BorderColorSet.A80} ${TextColorSet.A00} ${hoverAndActiveStyles.inlineGrey} ${disabledSkin.inlineGrey}`, 
