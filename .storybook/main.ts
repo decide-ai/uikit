@@ -6,10 +6,18 @@ const config: StorybookConfig = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app",
+    {
+      "name": "@storybook/preset-create-react-app",
+      "options": {
+        "craOverrides": {
+          "fileLoaderExcludes": ["less"]
+        }
+      }
+    },
     '@storybook/addon-actions',
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
+    "@storybook/addon-styling-webpack",
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
@@ -30,6 +38,21 @@ const config: StorybookConfig = {
           },
         },
       ],
+    }, {
+      test: /\.less$/,
+      use: [
+        require.resolve('style-loader'),
+        {
+          loader: require.resolve('css-loader'),
+          options: {
+              importLoaders: 1,
+              modules: {
+                localIdentName: '[local]_[hash:base64:5]'
+              }
+          },
+        },
+        require.resolve('less-loader')
+      ]
     });
     
     config.resolve.extensions.push('.ts', '.tsx');

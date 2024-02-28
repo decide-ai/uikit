@@ -17,10 +17,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Standart: Story = {
+export const Standard: Story = {
   args: {
     size: 'medium',
-    skin: 'standart',
+    skin: 'standard',
     buttonText: 'Button text'
   }
 };
