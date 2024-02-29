@@ -18,3 +18,22 @@ export type SvgWrapProps = {
   viewBox?: string;
   ratio?: number;
 }
+
+export type IconListItem = {
+  /** Icon group name */
+  group: string;
+  /** Icon name, use for key */
+  name: string;
+  /** Icon Component */
+  component: React.ComponentType<IconProps>;
+}
+
+export type IconMapItem = {
+  /** Icons list */
+  iconsList: IconListItem[];
+}
+
+export type IconsType = {
+  [key: string]: React.ComponentType<IconProps>;
+}
+

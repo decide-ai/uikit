@@ -21,14 +21,8 @@ export const argTypes = {
     ]
   },
   iconName: {
-    control: 'select',
-    options: [
-      null,
-      'RestartIcon',
-      'DownloadIcon',
-      'UploadIcon',
-      'TrashBinTrashIcon'
-    ]
+    control: 'text',
+    options: null
   },
   indicator: {
     control: 'select',

@@ -3,14 +3,12 @@ import * as Icons from '../../../../../components/Icon';
 import { IconsType, IconListItem, IconProps } from '../types';
 import cn from 'classnames';
 
-const IconsComponentMap: IconsType = Icons;
-
 export const IconBox = ({ 
   name, 
   component, 
   ...props 
 }: IconListItem & IconProps) => {
-  const IconComponent = IconsComponentMap[name];
+  const IconComponent = component;
   if (!IconComponent) return null;
   return (
     <div

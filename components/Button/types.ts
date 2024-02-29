@@ -73,7 +73,7 @@ export type ButtonPropsTypes = {
   /**
    * Retrieves the icon name and renders the icon to the right of the text. Utilize the predefined icon set available for the button. If required, a custom icon can be incorporated through a child element.
    */
-  iconName?: 'RestartIcon' | 'DownloadIcon' | 'UploadIcon' | 'TrashBinTrashIcon';
+  iconName?: string;
   
   /**
    * Children - if required, a custom icon can be incorporated through a child element.
@@ -95,7 +95,6 @@ export type ButtonPropsTypes = {
    */
   onClick?: () => void;
 }
-
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>
 export type ButtonIconTypes = Pick<ButtonPropsTypes, 'iconName' | 'skin' | 'size'>
