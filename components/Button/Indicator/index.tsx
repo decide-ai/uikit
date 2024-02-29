@@ -1,12 +1,13 @@
 import React from 'react';
 import cn from 'classnames';
-import { IndicatorTypes } from '../types';
+import { IndicatorTypes, IndicatorStyleTypes } from '../types';
+import { getColorByName } from '../../index';
 
-const INDICATOR_COLORS = {
-  red: 'bg-D00',
-  green: 'bg-B00',
-  grey: 'bg-A50',
-  yellow: 'bg-E00'
+const INDICATOR_COLORS: IndicatorStyleTypes = {
+  red: 'D00',
+  green: 'B00',
+  grey: 'A50',
+  yellow: 'E00'
 };
 
 /**
@@ -17,12 +18,15 @@ export const Indicator: React.FC<IndicatorTypes> = ({
   indicator,
   disabled
 }) => {
-  let indicatorColor = indicator && INDICATOR_COLORS[indicator];
-  if (disabled) indicatorColor = INDICATOR_COLORS.grey;
+  if (!indicator) return null;
+
+  const colorName = INDICATOR_COLORS[indicator];
+  const getColor = disabled ? 
+    getColorByName(INDICATOR_COLORS.grey) : getColorByName(colorName);
 
   return (
     <span className={cn(
-      indicatorColor, 'mr-1 w-2 h-2 inline-block rounded-full'
+      getColor?.bg, 'mr-1 w-2 h-2 inline-block rounded-full'
     )}/>
   );
 }

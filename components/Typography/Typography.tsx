@@ -1,6 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 import { TypographyProps } from './types';
+import { getColorByName } from '../index';
 import { 
   ADAPTIVE_SIZE_MAP, 
   REGULAR_SIZE_MAP,
@@ -17,11 +18,12 @@ export const Typography: React.FC<TypographyProps> = ({
 }) => {
   const Tag = tagName as keyof JSX.IntrinsicElements;
   const sizeClass = adaptive ? ADAPTIVE_SIZE_MAP[size] : REGULAR_SIZE_MAP[size];
+  const getColor = getColorByName(color);
   return (
     <Tag
       className={cn(
         sizeClass, 
-        `font-${weight} ${style} text-${color}`, 
+        `font-${weight} ${style} ${getColor?.text}`, 
         'font-neue-montreal'
       )}
     >

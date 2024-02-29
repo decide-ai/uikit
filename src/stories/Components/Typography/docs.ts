@@ -49,8 +49,11 @@ export const argTypes = {
     }
   },
   color: {
-    control: 'color',
-    description: 'Typography Color: The default value is A00. For additional information about the typography color palette, please refer to the "Color" section.'
+    control: 'text',
+    description: 'Typography Color: The default value is A00. For additional information about the typography color palette, please refer to the "Color" section.',
+    table: {
+      defaultValue: { summary: 'A00' }
+    }
   }
 };
 
@@ -59,5 +62,6 @@ export const args = {
   size: 'base',
   weight: 'normal',
   style: 'normal',
+  color: 'A00',
   children: 'The quick brown fox jumps over the lazy dog.'
 }

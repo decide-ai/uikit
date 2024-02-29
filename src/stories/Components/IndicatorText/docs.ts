@@ -1,4 +1,14 @@
 export const argTypes = {
+  indicator: {
+    control: 'select',
+    options: [
+      null,
+      "red",
+      "green",
+      "grey",
+      "yellow"
+    ]
+  },
   textSize: {
     control: 'select',
     options: [
@@ -9,19 +19,7 @@ export const argTypes = {
       "lg"
     ],
     table: {
-      defaultValue: { summary: 'medium' }
-    }
-  },
-  iconSize: {
-    control: 'number',
-    table: {
-      defaultValue: { summary: 24 }
-    }
-  },
-  iconStroke: {
-    control: 'text',
-    table: {
-      defaultValue: { summary: 'A00' }
+      defaultValue: { summary: "sm" }
     }
   },
   textColor: {

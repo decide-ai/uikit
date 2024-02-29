@@ -1,3 +1,11 @@
+export type IndicatorStyleTypes = {
+  [key: string]: string;
+  red: string;
+  green: string;
+  yellow: string;
+  grey: string;
+}
+
 export type LoaderSizeTypes = {
   [key: string]: string;
   large: string;
@@ -97,8 +105,6 @@ export type ButtonPropsTypes = {
 }
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>
-
-
 type PickIconTypes = Pick<ButtonPropsTypes, 'skin' | 'size'>;
 export type ButtonIconTypes = PickIconTypes & {
   iconName: string;
