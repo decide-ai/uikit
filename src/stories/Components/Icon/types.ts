@@ -15,12 +15,12 @@ export type IconListItem = {
   /** Icon name, use for key */
   name: string;
   /** Icon Component */
-  component: React.ReactElement;
+  component: React.ComponentType<IconProps>;
 }
 
 export type IconMapItem = {
   /** Icon list type, also use for list title */
-  title: string;
+  group: string;
   /** Icons list */
   iconsList: IconListItem[];
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getIconsMap } from './getIconsMap';
+import { getIconsGroup } from './getIconsGroup';
 import { 
   BaseContainer, 
   ContainerCol,
@@ -7,17 +7,17 @@ import {
 } from '../../../sbComponents';
 import { IconsList } from './IconsList';
 import { IconBox } from './IconBox';
-import { IconProps } from './types';
+import { IconProps, IconMapItem } from './types';
 
 const Icons = (props: IconProps) => {
-  const iconsMap = getIconsMap();
+  const resultArray: IconMapItem[] = getIconsGroup();
   return (
     <BaseContainer>
       <ContainerCol>
-        {Array.from(iconsMap).map(item => (
+        {Array.from(resultArray).map(item => (
           <SectionBox
-            key={item.title}
-            title={item.title}
+            key={item.group}
+            title={item.group}
           >
             <IconsList>  
               {item.iconsList.map((iconItem) => (
