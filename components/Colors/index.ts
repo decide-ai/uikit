@@ -1,0 +1,1 @@
+export { colorsMap, getColorByName } from './colorsMap';

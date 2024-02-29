@@ -6,29 +6,31 @@ import {
 } from '../../../sbComponents';
 import { ColorBox } from './ColorBox';
 import { ColorsList } from './ColorsList';
-import { DATA } from './data';
+import { getColorsGroup } from './getColorsGroup';
 
-const Colors = () => (
-  <BaseContainer title="Colors Palette">
-    <ContainerCol>
-      {DATA.map(item => (
-        <SectionBox 
-          key={item.title} 
-          title={item.title}
-        >
-          <ColorsList>
-            {item.colorsList.map(colorItem => (
-              <ColorBox
-                key={colorItem.name}
-                name={colorItem.name}
-                hex={colorItem.hex}
-              />
-            ))}
-          </ColorsList>
-        </SectionBox>
-      ))}
-    </ContainerCol>
-  </BaseContainer>
-);
+const Colors = () => {
+  const colorsList = getColorsGroup();
+  return (
+    <BaseContainer title="Colors Palette">
+      <ContainerCol>
+        {colorsList.map(item => (
+          <SectionBox 
+            key={item.group} 
+            title={item.group}
+          >
+            <ColorsList>
+              {item.colorsList.map(colorItem => (
+                <ColorBox
+                  key={colorItem.hex}
+                  {...colorItem}
+                />
+              ))}
+            </ColorsList>
+          </SectionBox>
+        ))}
+      </ContainerCol>
+    </BaseContainer>
+  );
+}
 
 export default Colors;

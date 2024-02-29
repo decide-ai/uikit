@@ -1,28 +1,27 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { IconText } from '../../../../components';
+import { IndicatorText as IndicatorTextComponent } from '../../../../components';
 import { args, argTypes } from './docs';
 
 const meta = {
-  title: 'Components/IconText',
-  component: IconText,
+  title: 'Components/IndicatorText',
+  component: IndicatorTextComponent,
   tags: ['autodocs'],
   parameters: {
     layout: 'centered',
   },
   argTypes,
   args,
-} as Meta<typeof IconText>;
+} as Meta<typeof IndicatorTextComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Medium: Story = {
+export const IndicatorText: Story = {
   args: {
-    iconName: 'ChartSquareIcon',
+    indicator: 'green',
     textSize: 'sm',
     text: 'The quick brown fox jumps over the lazy dog.',
-    iconStroke: 'A00',
     textColor: 'A00'
   }
 };

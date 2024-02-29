@@ -1,6 +1,7 @@
 import React from 'react';
 import { DynamicIcon, Typography } from '../index';
 import { IconTextPropsTypes } from './types';
+import { getColorByName } from '../index';
 
 /**
  * A component that displays an icon alongside text.
@@ -12,7 +13,7 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
   text,
   iconSize = 24,
   textSize = 'sm',
-  iconStroke = "#1B4444",
+  iconStroke = 'A00',
   textColor = 'A00',
 }) => {
   /** If the requred prop is not obtained, return null */
@@ -21,11 +22,16 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
     return null;
   }
 
+  /**
+   * Get svg icon stroke color in hex
+   */
+  const getIconStrokeHex = getColorByName(iconStroke);
+
   return (
     <div className='flex justify-center items-center'>
       <DynamicIcon 
         iconName={iconName}
-        stroke={iconStroke}
+        stroke={getIconStrokeHex?.hex}
         size={iconSize}
         className='mr-1.5'
       />

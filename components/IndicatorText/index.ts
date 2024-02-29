@@ -1,0 +1,1 @@
+export { IndicatorText } from './IndicatorText';
