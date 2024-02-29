@@ -97,4 +97,9 @@ export type ButtonPropsTypes = {
 }
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>
-export type ButtonIconTypes = Pick<ButtonPropsTypes, 'iconName' | 'skin' | 'size'>
+
+
+type PickIconTypes = Pick<ButtonPropsTypes, 'skin' | 'size'>;
+export type ButtonIconTypes = PickIconTypes & {
+  iconName: string;
+}

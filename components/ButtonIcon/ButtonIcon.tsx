@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { getIconByName } from '../index';
+import { DynamicIcon } from '../index';
 import { ButtonIconPropTypes } from './types';
 import { skinClasses, disabledSkinClasses } from './styles';
 
@@ -18,39 +18,26 @@ export const ButtonIcon: React.FC<ButtonIconPropTypes> = ({
   skin = 'standard',
   size = 24,
   onClick,
-}) => {
-  /** If the requred prop is not obtained, return null */
-  if (!iconName) return null;
-
-  /** Get icon by name */
-  const IconComponent = getIconByName(iconName);
-
-  /** Сheck if the icon exists */
-  if (!IconComponent) {
-    console.error(`Icon with name ${iconName} does not exist.`);
-    return null;
-  }
-
-  return (
-    <button
-      onClick={onClick}
-      disabled={disabled}
-      className={cn(
-        skinClasses[skin],
-        disabledSkinClasses[skin],
-        'border-solid border-[1px] rounded-[6px] cursor-pointer p-0.5',
-        {
-          'pointer-events-none': disabled,
-        }
-      )}
-    >
-      <IconComponent 
-        size={size}
-        className={cn('stroke-current', {
-          'text-A00': !disabled,
-          'text-A70': disabled
-        })} 
-      />
-    </button>
-  );
-}
+}) => (
+  <button
+    onClick={onClick}
+    disabled={disabled}
+    className={cn(
+      skinClasses[skin],
+      disabledSkinClasses[skin],
+      'border-solid border-[1px] rounded-[6px] cursor-pointer p-0.5',
+      {
+        'pointer-events-none': disabled,
+      }
+    )}
+  >
+    <DynamicIcon
+      iconName={iconName}
+      size={size}
+      className={cn('stroke-current', {
+        'text-A00': !disabled,
+        'text-A70': disabled
+      })} 
+    />
+  </button>
+);

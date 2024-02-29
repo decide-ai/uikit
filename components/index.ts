@@ -4,3 +4,5 @@ export { Button } from './Button';
 export { Spinner } from './Spinner';
 export { ButtonRecord } from './ButtonRecord';
 export { ButtonIcon } from './ButtonIcon';
+export { IconText } from './IconText';
+export { DynamicIcon } from './DynamicIcon';

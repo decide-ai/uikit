@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { getIconByName } from '../../index';
+import { DynamicIcon } from '../../index';
 import { ButtonIconTypes } from '../types';
 import { svgIconSkinColors } from './styles';
 
@@ -30,25 +30,14 @@ export const ButtonIcon: React.FC<ButtonIconTypes> = ({
   size,
   skin 
 }) => {
-  /** If the requred prop is not obtained, return null */
-  if (!iconName) return null;
-
-  /** Get icon by name */
-  const IconComponent = getIconByName(iconName);
-
-  /** Сheck if the icon exists */
-  if (!IconComponent) {
-    console.error(`Icon with name ${iconName} does not exist.`);
-    return null;
-  }
-
   /** Button icon stroke color */
   const iconColor = skin && svgIconSkinColors[skin];
   const iconSize = size && SIZE[size];
 
   return (
     <span className={cn('rounded-md ml-2')}>
-      <IconComponent
+      <DynamicIcon
+        iconName={iconName}
         size={iconSize}
         className={`stroke-current ${iconColor}`}
         strokeWidth={1.5}
