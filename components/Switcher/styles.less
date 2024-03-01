@@ -1,0 +1,70 @@
+@switcher-bg-color: #8DA1A1;
+@switcher-bg-color-checked: #66DD95;
+@switcher-disabled-bg-color: #EFEFEF;
+
+.switcher-size(@width, @height, @before-width, @before-height, @translate-x-checked) {
+  width: @width;
+  height: @height;
+  border-radius: calc(@height / 2);
+
+  &:before {
+    width: @before-width;
+    height: @before-height;
+  }
+
+  &:checked:before {
+    transform: translate(@translate-x-checked, -50%);
+  }
+}
+
+.switcher {
+  position: relative;
+  appearance: none;
+  padding: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  background-color: @switcher-bg-color;
+  transition: background-color 0.3s ease;
+
+  &:disabled {
+    pointer-events: none;
+    background-color: @switcher-disabled-bg-color;
+
+    &:before {
+      background-color: @switcher-disabled-bg-color;
+    }
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background-color: @switcher-bg-color;
+    border-radius: 50%;
+    transform: translate(0.15rem, -50%);
+    transition: transform 0.5s;
+    box-shadow: inset 0 0 0 7px #fff, 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  }
+
+  &:checked {
+    background-color: @switcher-bg-color-checked;
+
+    &:before {
+      background-color: @switcher-bg-color-checked;
+    }
+  }
+
+  &._size-medium {
+    .switcher-size(56px, 28px, 24px, 24px, calc(~"42px - 50%"));
+  }
+
+  &._size-small {
+    .switcher-size(44px, 24px, 20px, 20px, calc(~"32px - 50%"));
+  }
+
+  &._view-only {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}

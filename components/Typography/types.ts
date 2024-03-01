@@ -1,34 +1,34 @@
 export type TypographyProps = {
   /** 
-   * Component tag name; default tag prop equal div
+   * Typography component for displaying text using predefined styles and configurations.
    */
   tagName?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div";
 
   /** 
-   * Typography size; default value equal base
+   * The size of the text, supporting responsive sizes if 'adaptive' is true.
    */
   size?: "2xs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl";
 
   /** 
-   * Typography weight; default value equal normal
+   *  The font weight of the text.
    */
   weight?: "light" | "normal" | "medium" | "bold";
 
   /** 
-   * Typography style; default value equal normal
+   * The font style, either normal or italic.
    */
   style?: "normal" | "italic";
 
   /** 
-   * Typography color; default value equal A00
+   * The color of the text, specified as a string. Uses design system color codes.
    */
   color?: string;
 
-  /** Text */
+  /** The content to be displayed within the typography component. */
   children: React.ReactNode | string;
 
   /** 
-   * Should text be responsive and resize on different devices?
+   * If true, enables responsive text sizing across different screen sizes.
    */
   adaptive?: boolean;
 };

@@ -10,3 +10,4 @@ export { DynamicIcon } from './DynamicIcon';
 export { IndicatorText } from './IndicatorText';
 export { WordsList } from './WordsList';
 export { Stub } from './Stub';
+export { Switcher } from './Switcher';
