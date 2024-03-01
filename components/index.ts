@@ -8,3 +8,4 @@ export { ButtonIcon } from './ButtonIcon';
 export { IconText } from './IconText';
 export { DynamicIcon } from './DynamicIcon';
 export { IndicatorText } from './IndicatorText';
+export { WordsList } from './WordsList';

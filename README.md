@@ -36,3 +36,6 @@ https://storybook.js.org/docs/configure/story-layout
 
 ## How to publish storybook
 https://storybook.js.org/docs/sharing/publish-storybook
+
+## List with controls types
+https://storybook.js.org/docs/essentials/controls
