@@ -10,7 +10,6 @@ export const argTypes = {
       'span', 
       'div'
     ],
-    description: 'Component Tag Name: The component supports the use of any HTML tag listed in the supported tags list.',
     table: {
       defaultValue: { summary: 'div' },
     },
@@ -31,7 +30,6 @@ export const argTypes = {
       '6xl', 
       '7xl'
     ],
-    description: 'Typography Size: For additional information about typography sizes, please refer to the "Font" section.',
     table: {
       defaultValue: { summary: 'base' },
     },
@@ -50,7 +48,6 @@ export const argTypes = {
   },
   color: {
     control: 'text',
-    description: 'Typography Color: The default value is A00. For additional information about the typography color palette, please refer to the "Color" section.',
     table: {
       defaultValue: { summary: 'A00' }
     }

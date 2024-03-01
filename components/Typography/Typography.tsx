@@ -7,6 +7,9 @@ import {
   REGULAR_SIZE_MAP,
 } from './typographyClassMap';
 
+/**
+ * Typography component for displaying text using predefined styles and configurations.
+ */
 export const Typography: React.FC<TypographyProps> = ({
   tagName = 'div',
   children,
@@ -16,8 +19,19 @@ export const Typography: React.FC<TypographyProps> = ({
   style = 'normal',
   color = 'A00',
 }) => {
+  /**
+   * Convert string to JSX tag.
+   */
   const Tag = tagName as keyof JSX.IntrinsicElements;
+
+  /**
+   * Determine size class based on 'adaptive' prop.
+   */
   const sizeClass = adaptive ? ADAPTIVE_SIZE_MAP[size] : REGULAR_SIZE_MAP[size];
+
+  /**
+   * Get the text color.
+   */
   const getColor = getColorByName(color);
   return (
     <Tag
