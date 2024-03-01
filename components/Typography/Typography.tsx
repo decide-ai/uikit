@@ -23,6 +23,7 @@ export const Typography: React.FC<TypographyProps> = ({
     <Tag
       className={cn(
         sizeClass, 
+        'inline-block',
         `font-${weight} ${style} ${getColor?.text}`, 
         'font-neue-montreal'
       )}
