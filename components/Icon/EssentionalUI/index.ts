@@ -49,3 +49,6 @@ export { TrashBinV2Icon } from './TrashBinV2Icon';
 export { TrashBinMinimalisticV2Icon } from './TrashBinMinimalisticV2Icon';
 export { TrashBinMinimalisticIcon } from './TrashBinMinimalisticIcon';
 export { TrashBinTrashIcon } from './TrashBinTrashIcon';
+export { DangerTriangleIcon } from './DangerTriangleIcon';
+export { DangerCircleIcon } from './DangerCircleIcon';
+export { QuestionCircleIcon } from './QuestionCircleIcon';

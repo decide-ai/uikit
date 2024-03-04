@@ -220,6 +220,9 @@ export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
   { group: 'EssentionalUI', name: 'TrashBinMinimalisticV2Icon', component: Icons.TrashBinMinimalisticV2Icon },
   { group: 'EssentionalUI', name: 'TrashBinMinimalisticIcon', component: Icons.TrashBinMinimalisticIcon },
   { group: 'EssentionalUI', name: 'TrashBinTrashIcon', component: Icons.TrashBinTrashIcon },
+  { group: 'EssentionalUI', name: 'DangerTriangleIcon', component: Icons.DangerTriangleIcon },
+  { group: 'EssentionalUI', name: 'DangerCircleIcon', component: Icons.DangerCircleIcon },
+  { group: 'EssentionalUI', name: 'QuestionCircleIcon', component: Icons.QuestionCircleIcon },
       
 //   // List
   { group: 'List', name: 'BillIcon', component: Icons.BillIcon },
