@@ -18,4 +18,11 @@ export type DrawerPropTypes = {
    * Extra classes for manage drower component.
    */
   className?: string;
+
+  /**
+   * Change the appearance of a drawer with a skin prop.
+   * standard - is for general primary actions. This skin add white color, use as default value.
+   * grey - this skin add grey background to drawer.
+   */
+  skin?: 'standard' | 'grey';
 }

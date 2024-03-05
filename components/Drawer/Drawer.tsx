@@ -5,6 +5,7 @@ import { DrawerPropTypes } from './types';
 export const Drawer: React.FC<DrawerPropTypes> = ({ 
   children, 
   className,
+  skin = 'standard',
   empty, 
 }) => {
   /**
@@ -23,8 +24,10 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
    * removed to allow for alternative content styling or to reflect an empty state visually.
    */
   return (
-    <div className={cn('bg-white rounded-lg sm:rounded-md', className, {
-      'p-5 md:p-4 sm:p-3': !empty
+    <div className={cn('rounded-lg sm:rounded-md', className, {
+      'lg:p-5 md:p-4 p-3': !empty,
+      'bg-C00': skin === 'grey',
+      'bg-white': skin === 'standard',
     })}>{children}</div>
   );
 }
