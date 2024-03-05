@@ -17,6 +17,7 @@ export const argTypes = {
       'standard',
       'inline',
       'grey',
+      'inlineGrey',
       'light'
     ]
   },
