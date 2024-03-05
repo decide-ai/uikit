@@ -7,6 +7,9 @@ export default {
   title: 'Components/Icons',
   component: Icons,
   tags: ['autodocs'],
+  parameters: {
+    layout: 'fullscreen',
+  },
   argTypes,
   args,
 } as Meta;
