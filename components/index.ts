@@ -13,3 +13,4 @@ export { Stub } from './Stub';
 export { Switcher } from './Switcher';
 export { FeedbackAlert } from './FeedbackAlert';
 export { ProgressBar } from './ProgressBar';
+export { Drawer } from './Drawer';

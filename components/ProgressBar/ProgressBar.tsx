@@ -48,7 +48,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
       )}
 
       {type === 'dash' && segmentsArray && (
-        <div className="w-full flex gap-2">
+        <div className="w-full flex gap-1">
           {segmentsArray.map((index) => (
             <div 
               key={index} 

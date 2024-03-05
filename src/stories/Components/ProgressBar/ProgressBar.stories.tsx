@@ -4,14 +4,10 @@ import { args, argTypes } from './docs';
 
 const meta = {
   title: 'Components/ProgressBar',
-  component: (props) => (
-    <div style={{ width: '260px' }}>
-      <ProgressBar {...props} />
-    </div>
-  ),
+  component: ProgressBar,
   tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'padded',
   },
   argTypes,
   args,
