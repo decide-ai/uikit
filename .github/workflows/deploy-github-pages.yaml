@@ -9,6 +9,8 @@ on:
 #   pull_request:
 #     branches: ["main"]
 
+
+
 permissions:
   contents: read
   pages: write
@@ -17,6 +19,9 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
+    environment:
+        name: github-pages
 
     steps:
       - uses: actions/checkout@v3
