@@ -1,7 +1,6 @@
 {
   "name": "@modclub-app/uikit",
   "version": "0.1.0",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "git+https://github.com:modclub-app/uikit.git"
@@ -11,6 +10,9 @@
   "files": [
     "dist/"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "dependencies": {
     "@storybook/addon-styling-webpack": "^0.0.6",
     "@testing-library/jest-dom": "^5.17.0",
