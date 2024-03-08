@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-
   pull_request:
     branches: ["main"]
 
@@ -13,12 +12,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '18'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@modclub-app' 
+          scope: '@modclub-app'
 
       - name: Run install
         uses: borales/actions-yarn@v4
