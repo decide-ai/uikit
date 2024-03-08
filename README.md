@@ -1,5 +1,5 @@
 # Modclub UI Kit
-- Storybook Deployment: https://potential-goggles-1wzl4rv.pages.github.io/ 
+- Storybook Deployment: https://modclub-app.github.io/uikit/
 
 ## Available Scripts
 
