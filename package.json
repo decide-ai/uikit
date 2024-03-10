@@ -1,7 +1,19 @@
 {
-  "name": "uikit",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@modclub-app/uikit",
+  "version": "0.1.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:modclub-app/uikit.git"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
   "dependencies": {
     "@storybook/addon-styling-webpack": "^0.0.6",
     "@testing-library/jest-dom": "^5.17.0",
@@ -17,9 +29,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
+    "build": "npx webpack --mode production",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -67,6 +78,7 @@
     "tailwindcss": "^3.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
-    "webpack": "^5.90.2"
+    "webpack": "^5.90.2",
+    "webpack-cli": "^5.1.4"
   }
 }

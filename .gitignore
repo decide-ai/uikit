@@ -26,4 +26,5 @@ yarn-debug.log*
 yarn-error.log*
 
 
-/stroybook-static/
+/storybook-static/
+/dist/
