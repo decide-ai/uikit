@@ -1,10 +1,11 @@
 # Modclub UI Kit
+## Latest Version
 <!-- VERSION_BADGE_START -->
 ![npm package version](https://img.shields.io/badge/version-0.0.0-blue)
 <!-- VERSION_BADGE_END -->
 
-- Storybook Pages: https://modclub-app.github.io/uikit/
-- Npm registry: https://github.com/modclub-app/uikit/pkgs/npm/uikit  
+## Storybook
+Explore our components and their usage in detail by visiting our [Storybook](https://modclub-app.github.io/uikit/). The Storybook is automatically updated with every push to the main branch, ensuring you have access to the latest components and documentation.
 
 ## Development Guide
 To start developing with the project, follow these steps:
