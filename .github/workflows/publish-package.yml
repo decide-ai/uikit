@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version number'    
-        required: true
-        default: '0.0.0'
+        description: 'Version number (leave blank to automatically bump the minor version number in package.json)'
+        required: false
+        default: ''
 
 jobs:
   publish:
@@ -23,9 +23,17 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
+      
+      - name: Determine and Set Version
+        id: set_version
+        run: |
+          NEW_VERSION=$(node bump-version.js ${{ github.event.inputs.version }})
+          echo "New version: $NEW_VERSION"
+          echo "::set-output name=version::$NEW_VERSION"
+        shell: bash
 
       - name: Update version in package.json
-        run: npm version ${{ github.event.inputs.version }} --no-git-tag-version
+        run: npm version ${{ steps.set_version.outputs.version }} --no-git-tag-version
 
       - name: Build
         run: yarn build

@@ -1,44 +1,37 @@
 # Modclub UI Kit
-- Storybook Deployment: https://modclub-app.github.io/uikit/
+- Storybook Pages: https://modclub-app.github.io/uikit/
+- Npm registry: https://github.com/modclub-app/uikit/pkgs/npm/uikit  
 
-## Available Scripts
+## Development Guide
+To start developing with the project, follow these steps:
 
-In the project directory, you can run:
+In your project's root directory, execute the following command:
+```bash
+npm run storybook
+```
+This command initiates the application in development mode.
 
-### `npm storybook`
+Access the application by opening http://localhost:6006 in your web browser. You'll be able to view and interact with your app's components in Storybook's development environment.
 
-Runs the app in the development mode.\
-Open [http://localhost:6006](http://localhost:6006) to view it in the browser.
+## How to use the UIkit lib
 
-### `npm run eject`
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Our UIkit library is hosted on GitHub's npm registry. To use it, you'll need a Personal Access Token (PAT) with the correct permissions.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Setting Up Your Personal Access Token (PAT)
+Generate a PAT: Follow the instructions here to create a new PAT on GitHub. Ensure you select the read:packages scope to allow package downloads.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Configure npm with Your PAT:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Open or create the `~/.npmrc` file in your home directory.
+Add the following lines, replacing `<<YOUR_PAT>>` with your actual PAT:
+```
+@modclub-app:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=<<YOUR_PAT>>
+```
 
-## More on how to set up stories at: 
-https://storybook.js.org/docs/writing-stories#default-export
+### Installing the UIkit Library
+With your PAT configured, you can now add the UIkit library to your project:
 
-## Component will have an automatically generated Autodocs entry: 
-https://storybook.js.org/docs/writing-docs/autodocs
-
-## More on argTypes: 
-https://storybook.js.org/docs/api/argtypes
-
-## Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: 
-https://storybook.js.org/docs/essentials/actions#action-args
-
-## More on writing stories with args: 
-https://storybook.js.org/docs/writing-stories/args
-
-## How to set up optional component parameters in the Canvas: 
-https://storybook.js.org/docs/configure/story-layout
-
-## How to publish storybook
-https://storybook.js.org/docs/sharing/publish-storybook
-
-## List with controls types
-https://storybook.js.org/docs/essentials/controls
+```sh
+yarn add @modclub-app/uikit
+```
