@@ -1,4 +1,8 @@
 # Modclub UI Kit
+<!-- VERSION_BADGE_START -->
+![npm package version](https://img.shields.io/badge/version-0.0.0-blue)
+<!-- VERSION_BADGE_END -->
+
 - Storybook Pages: https://modclub-app.github.io/uikit/
 - Npm registry: https://github.com/modclub-app/uikit/pkgs/npm/uikit  
 
