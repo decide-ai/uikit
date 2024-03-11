@@ -13,7 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+        with:
+          fetch-depth: 0 # Ensures history is available for operations like 'git push'
+          token: ${{ secrets.GITHUB_TOKEN }} # Ensure this action has the token to perform operations
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -23,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: yarn install
-      
+
       - name: Determine and Set Version
         id: set_version
         run: |
@@ -43,18 +46,23 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit updated package.json
+      - name: Commit updated package.json and README
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add package.json
-          git commit -m "chore: bump version to ${{ github.event.inputs.version }}"
-          git push
-      
-      - name: Update README with Version Badge
-        run: |
           VERSION=${{ steps.set_version.outputs.version }}
           sed -i "/<!-- VERSION_BADGE_START -->/,/<!-- VERSION_BADGE_END -->/c\<!-- VERSION_BADGE_START -->\n![npm package version](https://img.shields.io/badge/version-$VERSION-blue)\n<!-- VERSION_BADGE_END -->" README.md
           git add README.md
-          git commit -m "docs: update version badge to v$VERSION"
-          git push
+          git commit -m "chore: bump version to ${{ steps.set_version.outputs.version }} and update README badge"
+          # Note: No git push here. The changes will be pushed via a PR in the next step.
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          commit-message: "chore: bump version to ${{ steps.set_version.outputs.version }}"
+          title: "chore: bump version to ${{ steps.set_version.outputs.version }}"
+          body: "This is an automated PR to bump the version to ${{ steps.set_version.outputs.version }} and update the README version badge."
+          branch: "version-bump/${{ steps.set_version.outputs.version }}"
+          delete-branch: true
+          token: ${{ secrets.GITHUB_TOKEN }}
