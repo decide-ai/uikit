@@ -1,12 +1,6 @@
 name: Publish Package
 
 on:
-  workflow_dispatch:
-    inputs:
-      version:
-        description: 'Version number (leave blank to automatically bump the minor version number in package.json)'
-        required: false
-        default: ''
 
   push:
     branches:

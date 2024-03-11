@@ -10,7 +10,7 @@ let newVersion = process.argv[2];
 if (!newVersion) {
   // If no version provided, bump the minor version
   const versionParts = packageJson.version.split('.');
-  versionParts[1] = parseInt(versionParts[1], 10) + 1;
+  versionParts[2] = parseInt(versionParts[2], 10) + 1; // Increment the patch version
   newVersion = versionParts.join('.');
 }
 
