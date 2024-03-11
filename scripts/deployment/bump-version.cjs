@@ -14,8 +14,4 @@ if (!newVersion) {
   newVersion = versionParts.join('.');
 }
 
-
-packageJson.version = newVersion;
-fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2) + '\n');
-
 console.log(newVersion); // Output the new version
