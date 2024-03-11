@@ -8,6 +8,10 @@ on:
         required: false
         default: ''
 
+  push:
+    branches:
+      - 'main'
+
 jobs:
   publish:
     runs-on: ubuntu-latest
@@ -23,11 +27,23 @@ jobs:
           node-version: '18'
           registry-url: 'https://npm.pkg.github.com'
           scope: '@modclub-app'
+    
+      - name: Check for AUTOVERSION in commit message
+        id: check_message
+        run: |
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          if [[ "${{ github.event.head_commit.message }}" == *"[AUTOVERSION]"* ]]; then
+            echo "::set-output name=skip::true"
+          else
+            echo "::set-output name=skip::false"
+          fi
 
       - name: Install dependencies
+        if: steps.check_message.outputs.skip != 'true'
         run: yarn install
 
       - name: Determine and Set Version
+        if: steps.check_message.outputs.skip != 'true'
         id: set_version
         run: |
           NEW_VERSION=$(node scripts/deployment/bump-version.cjs ${{ github.event.inputs.version }})
@@ -36,17 +52,21 @@ jobs:
         shell: bash
 
       - name: Update version in package.json
+        if: steps.check_message.outputs.skip != 'true'
         run: npm version ${{ steps.set_version.outputs.version }} --no-git-tag-version
 
       - name: Build
+        if: steps.check_message.outputs.skip != 'true'
         run: yarn build
 
       - name: Publish
+        if: steps.check_message.outputs.skip != 'true'
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit updated package.json and README
+        if: steps.check_message.outputs.skip != 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
@@ -54,15 +74,18 @@ jobs:
           VERSION=${{ steps.set_version.outputs.version }}
           sed -i "/<!-- VERSION_BADGE_START -->/,/<!-- VERSION_BADGE_END -->/c\<!-- VERSION_BADGE_START -->\n![npm package version](https://img.shields.io/badge/version-$VERSION-blue)\n<!-- VERSION_BADGE_END -->" README.md
           git add README.md
-          git commit -m "chore: bump version to ${{ steps.set_version.outputs.version }} and update README badge"
+          git commit -m "chore: bump version to ${{ steps.set_version.outputs.version }} and update README badge [AUTOVERSION]"
           # Note: No git push here. The changes will be pushed via a PR in the next step.
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          commit-message: "chore: bump version to ${{ steps.set_version.outputs.version }}"
-          title: "chore: bump version to ${{ steps.set_version.outputs.version }}"
-          body: "This is an automated PR to bump the version to ${{ steps.set_version.outputs.version }} and update the README version badge."
-          branch: "version-bump/${{ steps.set_version.outputs.version }}"
-          delete-branch: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+          git push
+
+      #
+      # - name: Create Pull Request
+      #   uses: peter-evans/create-pull-request@v3
+      #   with:
+      #     commit-message: "chore: bump version to ${{ steps.set_version.outputs.version }}"
+      #     title: "chore: bump version to ${{ steps.set_version.outputs.version }}"
+      #     body: "This is an automated PR to bump the version to ${{ steps.set_version.outputs.version }} and update the README version badge."
+      #     branch: "version-bump/${{ steps.set_version.outputs.version }}"
+      #     delete-branch: true
+      #     token: ${{ secrets.GITHUB_TOKEN }}
