@@ -17,6 +17,8 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
     console.error(`Children in Drawer component does not exist. Please add children`);
     return null;
   }
+
+  console.log('skin --> ', skin);
   
   /**
    * Renders the Drawer component with conditional styling based on the `empty` prop. By default,
@@ -28,6 +30,7 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
       'lg:p-5 md:p-4 p-3': !empty,
       'bg-C00': skin === 'grey',
       'bg-white': skin === 'standard',
+      'bg-B90': skin === 'green',
     })}>{children}</div>
   );
 }

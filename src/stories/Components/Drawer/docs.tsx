@@ -3,7 +3,7 @@ import { Typography, Button } from '../../../../components';
 export const argTypes = {
   skin: {
     control: 'select',
-    options: ['standard', 'grey'],
+    options: ['standard', 'grey', 'green'],
     table: {
       defaultValue: { summary: 'standard' }
     }
