@@ -15,6 +15,7 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
   textSize = 'sm',
   iconStroke = 'A00',
   textColor = 'A00',
+  iconStrokeWidth = 1.2
 }) => {
   /** If the requred prop is not obtained, return null */
   if (!text || !iconName) {
@@ -32,6 +33,7 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
       <DynamicIcon 
         iconName={iconName}
         stroke={getIconStrokeHex?.hex}
+        strokeWidth={iconStrokeWidth}
         size={iconSize}
         className='mr-1.5'
       />

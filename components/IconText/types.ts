@@ -32,4 +32,9 @@ export type IconTextPropsTypes = {
    * Uses color code from color library.
    */
   textColor?: string;
+
+  /**
+   * Optional. The stroke width of the svg icon. Defaults to 1.2 if not specified.
+   */
+  iconStrokeWidth?: number;
 }

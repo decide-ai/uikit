@@ -16,3 +16,6 @@ export { ProgressBar } from './ProgressBar';
 export { Drawer } from './Drawer';
 export { StatBox } from './StatBox';
 export { Steps } from './Steps';
+export { PreviewCard } from './PreviewCard';
+export { Timer } from './Timer';
+export { Picture } from './Picture';
