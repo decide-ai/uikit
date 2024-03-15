@@ -52,3 +52,4 @@ export { TrashBinTrashIcon } from './TrashBinTrashIcon';
 export { DangerTriangleIcon } from './DangerTriangleIcon';
 export { DangerCircleIcon } from './DangerCircleIcon';
 export { QuestionCircleIcon } from './QuestionCircleIcon';
+export { CrossIcon } from './CrossIcon';

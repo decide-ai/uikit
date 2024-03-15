@@ -19,3 +19,4 @@ export { Steps } from './Steps';
 export { PreviewCard } from './PreviewCard';
 export { Timer } from './Timer';
 export { Picture } from './Picture';
+export { SideBar } from './SideBar';

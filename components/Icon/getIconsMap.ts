@@ -179,6 +179,7 @@ export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
   { group: 'EssentionalUI', name: 'CheckSquareIcon', component: Icons.CheckSquareIcon },
   { group: 'EssentionalUI', name: 'CloseCircleIcon', component: Icons.CloseCircleIcon },
   { group: 'EssentionalUI', name: 'CloseSquareIcon', component: Icons.CloseSquareIcon },
+  { group: 'EssentionalUI', name: 'CrossIcon', component: Icons.CrossIcon },
   { group: 'EssentionalUI', name: 'CopyIcon', component: Icons.CopyIcon },
   { group: 'EssentionalUI', name: 'CrownMinimalisticIcon', component: Icons.CrownMinimalisticIcon },
   { group: 'EssentionalUI', name: 'CrownStarIcon', component: Icons.CrownStarIcon },

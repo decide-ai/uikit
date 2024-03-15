@@ -18,8 +18,6 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
     return null;
   }
 
-  console.log('skin --> ', skin);
-  
   /**
    * Renders the Drawer component with conditional styling based on the `empty` prop. By default,
    * padding is applied to provide spacing around the content. If `empty` is true, the padding is
