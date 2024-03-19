@@ -1,6 +1,6 @@
 export type TimerProps = {
   /**
-   * (required): Duration of the timer in minutes. Timer starts counting down from this value.
+   * (required): Duration of the timer in minutes. Timer starts counting down from this value. Every 0.1 = 00:06 sec, for example 0.4 = 00:24 sec.
    */
   durationMinutes: number;
 

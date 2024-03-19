@@ -8,22 +8,24 @@ export const SectionBox: React.FC<SectionBoxProps> = ({
   children,
 }) => (
   <section>
-    <Typography
-      tagName="h3"
-      weight="medium"
-      size="2xl"
-    >
-      {title}
-    </Typography>
-    {description && (
+    <div className='flex flex-col'>
       <Typography
-        tagName="span"
-        weight="light"
-        size="sm"
+        tagName="h3"
+        weight="medium"
+        size="2xl"
       >
-        {description}
+        {title}
       </Typography>
-    )}
+      {description && (
+        <Typography
+          tagName="span"
+          weight="light"
+          size="sm"
+        >
+          {description}
+        </Typography>
+      )}
+    </div>
     <div className="mt-4">
       {children}
     </div>

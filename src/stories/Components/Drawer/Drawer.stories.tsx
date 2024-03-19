@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Drawer as DrawerComponent, Typography } from '../../../../components';
+import { Drawer as DrawerComponent } from '../../../../components';
 import { args, argTypes } from './docs';
 
 const meta = {
