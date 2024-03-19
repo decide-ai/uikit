@@ -1,6 +1,5 @@
 import React from 'react';
-import * as Icons from '../../../../../components/Icon';
-import { IconsType, IconListItem, IconProps } from '../types';
+import { IconListItem, IconProps } from '../types';
 import cn from 'classnames';
 
 export const IconBox = ({ 

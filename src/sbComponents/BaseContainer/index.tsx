@@ -21,7 +21,7 @@ export const BaseContainer: React.FC<BaseContainerProps> = ({
           </Typography>
         )}
         {description && (
-          <div className="mt-1">
+          <div className="mt-1 block">
             <Typography 
               size="sm"
               adaptive

@@ -43,6 +43,10 @@ export const Button: React.FC<ButtonPropsTypes> = ({
       'flex items-center justify-center',
       'font-neue-montreal font-regular',
       'transition duration-100 ease-in-out',
+      
+      // Use for accessible frontend components, the focus styles will only be shown 
+      // when a user uses a keyboard to focus an element.
+      'focus:outline-none focus:box-shadow-focus-ring focus-visible:box-shadow-focus-ring',
     )}
   >
     {loading && (

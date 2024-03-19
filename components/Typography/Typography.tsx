@@ -18,6 +18,7 @@ export const Typography: React.FC<TypographyProps> = ({
   adaptive,
   style = 'normal',
   color = 'A00',
+  truncate,
 }) => {
   /**
    * Convert string to JSX tag.
@@ -37,9 +38,16 @@ export const Typography: React.FC<TypographyProps> = ({
     <Tag
       className={cn(
         sizeClass, 
-        'inline-block',
-        `font-${weight} ${style} ${getColor?.text}`, 
-        'font-neue-montreal'
+        `${style} ${getColor?.text}`, 
+        'font-neue-montreal',
+        {
+          'truncate block': truncate,
+          'inline-block': !truncate,
+          'font-light': weight === 'light',
+          'font-normal': weight === 'normal',
+          'font-medium': weight === 'medium',
+          'font-bold': weight === 'bold',
+        }
       )}
     >
       {children}

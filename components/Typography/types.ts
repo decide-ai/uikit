@@ -31,4 +31,9 @@ export type TypographyProps = {
    * If true, enables responsive text sizing across different screen sizes.
    */
   adaptive?: boolean;
+
+  /**
+   * Use truncate to prevent text from wrapping and truncate overflowing text with an ellipsis (…) if needed.
+   */
+  truncate?: boolean;
 };

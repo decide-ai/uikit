@@ -1,4 +1,3 @@
-import React, { ReactElement } from "react";
 import { getIconsMap } from "../../../../components";
 import { IconMapItem } from "./types";
 

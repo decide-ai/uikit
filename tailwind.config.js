@@ -12,6 +12,10 @@ module.exports = {
       animation: {
         'spin-fast': 'spin 0.5s linear infinite',
       },
+      // Use for accessible frontend components
+      boxShadow: {
+        'focus-ring': '0 0 0 0.75rem blue',
+      },
       screens: {
         sm: "480px", // 30rem
         md: "768px", // 48rem
