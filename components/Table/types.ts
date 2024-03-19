@@ -154,3 +154,5 @@ export type GridWrapPropTypes = VerticalSpaceTypes
    */
   className?: string;
 }
+
+export type MobileItemWrapPropTypes = Pick<GridWrapPropTypes, 'record' | 'highlightedRows' | 'children'>;
