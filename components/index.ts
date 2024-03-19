@@ -21,4 +21,3 @@ export { Timer } from './Timer';
 export { Picture } from './Picture';
 export { SideBar } from './SideBar';
 export { Table } from './Table';
-export { Input } from './Input';

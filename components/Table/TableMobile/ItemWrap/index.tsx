@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
+// Types
 import { MobileItemWrapPropTypes } from '../../types';
 
 export const ItemWrap: React.FC<MobileItemWrapPropTypes> = ({
