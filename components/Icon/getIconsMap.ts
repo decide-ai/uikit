@@ -271,7 +271,8 @@ export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
   { group: 'MessagesConversation', name: 'PlainV3Icon', component: Icons.PlainV3Icon },
   { group: 'MessagesConversation', name: 'SquareForwardIcon', component: Icons.SquareForwardIcon },
   { group: 'MessagesConversation', name: 'SquareShareLineIcon', component: Icons.SquareShareLineIcon },
-  { group: 'MessagesConversation', name: 'UnreadIcon', component: Icons.UnreadIcon },
+  { group: 'MessagesConversation', name: 'CheckIcon', component: Icons.CheckIcon },
+  { group: 'MessagesConversation', name: 'DoubleCheckIcon', component: Icons.DoubleCheckIcon },
       
 //   // Money
   { group: 'Money', name: 'BanknoteV2Icon', component: Icons.BanknoteV2Icon },

@@ -1,7 +1,10 @@
 import React from 'react';
 import cn from 'classnames';
 
-export const ItemWrap = ({
+// Types
+import { MobileItemWrapPropTypes } from '../../types';
+
+export const ItemWrap: React.FC<MobileItemWrapPropTypes> = ({
   highlightedRows,
   record,
   children,

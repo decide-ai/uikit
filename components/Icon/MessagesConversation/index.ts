@@ -19,4 +19,5 @@ export { PlainV2Icon } from './PlainV2Icon';
 export { PlainV3Icon } from './PlainV3Icon';
 export { SquareForwardIcon } from './SquareForwardIcon';
 export { SquareShareLineIcon } from './SquareShareLineIcon';
-export { UnreadIcon } from './UnreadIcon';
+export { CheckIcon } from './CheckIcon';
+export { DoubleCheckIcon } from './DoubleCheckIcon';
