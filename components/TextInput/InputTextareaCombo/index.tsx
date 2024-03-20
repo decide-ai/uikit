@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import cn from 'classnames';
 
 // Components
-import TextInputContext from '../TextInputContext';
+import { TextInputContext } from '../TextInputContext';
 
 export const InputTextareaCombo = () => {
   const { 

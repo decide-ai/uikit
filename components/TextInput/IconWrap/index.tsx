@@ -3,7 +3,7 @@ import cn from 'classnames';
 
 // Components
 import { getColorByName, DynamicIcon } from '../../index';
-import TextInputContext from '../TextInputContext';
+import { TextInputContext } from '../TextInputContext';
 
 // Types
 import { IconWrapPropTypes } from '../types';

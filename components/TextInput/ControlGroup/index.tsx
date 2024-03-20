@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 
 // Components
-import TextInputContext from '../TextInputContext';
+import { TextInputContext } from '../TextInputContext';
 import { ControlGroupWrap } from '../ControlGroupWrap';
 import { IconWrap } from '../IconWrap';
 import { Typography, ButtonIcon } from '../../index';

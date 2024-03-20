@@ -15,7 +15,7 @@ const defaultValue: ITextInputContext = {
   handleClear: () => {},
 };
 
-const TextInputContext = createContext<ITextInputContext>(defaultValue);
+export const TextInputContext = createContext<ITextInputContext>(defaultValue);
 
 export const TextInputProvider = ({ 
   children,
@@ -44,5 +44,3 @@ export const TextInputProvider = ({
     </TextInputContext.Provider>
   );
 };
-
-export default TextInputContext;

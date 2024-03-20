@@ -5,7 +5,7 @@ import { Typography } from '../index';
 import { InputTextareaCombo } from './InputTextareaCombo';
 import { TextInputProvider } from './TextInputContext';
 import { ControlGroup } from './ControlGroup';
-import TextInputContext from './TextInputContext';
+import { TextInputContext } from './TextInputContext';
 
 // Types
 import { TextInputPropsTypes } from './types';
