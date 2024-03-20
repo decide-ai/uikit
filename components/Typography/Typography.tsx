@@ -19,6 +19,7 @@ export const Typography: React.FC<TypographyProps> = ({
   style = 'normal',
   color = 'A00',
   truncate,
+  htmlFor,
 }) => {
   /**
    * Convert string to JSX tag.
@@ -49,6 +50,7 @@ export const Typography: React.FC<TypographyProps> = ({
           'font-bold': weight === 'bold',
         }
       )}
+      htmlFor={htmlFor}
     >
       {children}
     </Tag>

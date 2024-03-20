@@ -2,7 +2,7 @@ export type TypographyProps = {
   /** 
    * Typography component for displaying text using predefined styles and configurations.
    */
-  tagName?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div";
+  tagName?: "h1" | "h2" | "h3" | "h4" | "p" | "span" | "div" | "label";
 
   /** 
    * The size of the text, supporting responsive sizes if 'adaptive' is true.
@@ -36,4 +36,9 @@ export type TypographyProps = {
    * Use truncate to prevent text from wrapping and truncate overflowing text with an ellipsis (…) if needed.
    */
   truncate?: boolean;
+
+  /**
+   * Use props if we need use a label and connect the label to the input.
+   */
+  htmlFor?: string;
 };
