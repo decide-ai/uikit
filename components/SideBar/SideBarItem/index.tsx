@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import cn from 'classnames';
-import { Typography, DynamicIcon, getColorByName } from '../../index';
+import { Typography, DynamicIcon, getColorByName, BubbleGum } from '../../index';
 import { ItemsPropTypes } from '../types';
 import { SideBarContext } from '../SideBarProvider';
 
@@ -46,11 +46,17 @@ export const SideBarItem: React.FC<ItemsPropTypes> = ({
           <Typography size='base'>{text}</Typography>
         </div>
       )}
-      <DynamicIcon 
-        iconName={iconName} 
-        stroke={getColorByName('A00')?.hex}
-        className='flex-shrink-0'
-      />
+
+      <BubbleGum 
+        text={text || ''}
+        hide={!text || !isExpanded}
+      >
+        <DynamicIcon 
+          iconName={iconName} 
+          stroke={getColorByName('A00')?.hex}
+          className='flex-shrink-0'
+        />
+      </BubbleGum>
     </button>
   );
 }
