@@ -40,3 +40,7 @@ With your PAT configured, you can now add the UIkit library to your project:
 ```sh
 yarn add @modclub-app/uikit
 ```
+
+## Floating UI
+Some components use the Floating UI library
+https://floating-ui.com/docs/FloatingOverlay
