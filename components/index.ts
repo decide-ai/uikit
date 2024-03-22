@@ -24,3 +24,4 @@ export { Table } from './Table';
 export { TextInput } from './TextInput';
 export { Tooltip } from './Tooltip';
 export { BubbleGum } from './BubbleGum';
+export { Select } from './Select';

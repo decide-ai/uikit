@@ -28,8 +28,8 @@ export const InputTextareaCombo = () => {
       'py-2 pl-3',
       'text-sm',
       'border rounded-lg w-full',
-      'focus:border-B00 focus:outline-none',
       'placeholder:text-sm placeholder:text-A50',
+      'focus:outline-none focus-visible:ring-1 focus-visible:ring-white/75 focus-visible:ring-offset-1 focus-visible:ring-offset-B00',
       {
         'border-D00': isError,
         'border-A100': !isError,

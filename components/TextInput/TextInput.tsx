@@ -10,13 +10,7 @@ import { TextInputContext } from './TextInputContext';
 // Types
 import { TextInputPropsTypes } from './types';
 
-/**
- * The `TextInput` component is a flexible input control that can be configured to behave in various ways
- * depending on the provided props. It supports single-line inputs, multi-line textareas, clear functionality,
- * error states with messages, and customizable actions like required field indicators or custom buttons.
- * It's designed to be a versatile component for handling user input in forms and other interfaces.
- */
-export const TextInputComponent: React.FC<TextInputPropsTypes> = (props) => {
+export const TextInputComponent: React.FC<TextInputPropsTypes> = () => {
   const { 
     label, 
     inputId, 
@@ -61,6 +55,12 @@ export const TextInputComponent: React.FC<TextInputPropsTypes> = (props) => {
   );
 };
 
+/**
+ * The `TextInput` component is a flexible input control that can be configured to behave in various ways
+ * depending on the provided props. It supports single-line inputs, multi-line textareas, clear functionality,
+ * error states with messages, and customizable actions like required field indicators or custom buttons.
+ * It's designed to be a versatile component for handling user input in forms and other interfaces.
+ */
 export const TextInput: React.FC<TextInputPropsTypes> = (props) => (
   <TextInputProvider {...props}>
     <TextInputComponent />
