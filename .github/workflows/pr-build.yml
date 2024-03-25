@@ -1,0 +1,52 @@
+name: Publish Package
+
+on:
+    pull_request:
+      branches: ["main"]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Ensures history is available for operations like 'git push'
+          token: ${{ secrets.GITHUB_TOKEN }} # Ensure this action has the token to perform operations
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@modclub-app'
+    
+      - name: Check for AUTOVERSION in commit message
+        id: check_message
+        run: |
+          echo "Commit message: ${{ github.event.head_commit.message }}"
+          if [[ "${{ github.event.head_commit.message }}" == *"[AUTOVERSION]"* ]]; then
+            echo "::set-output name=skip::true"
+          else
+            echo "::set-output name=skip::false"
+          fi
+
+      - name: Install dependencies
+        if: steps.check_message.outputs.skip != 'true'
+        run: yarn install
+
+      - name: Determine and Set Version
+        if: steps.check_message.outputs.skip != 'true'
+        id: set_version
+        run: |
+          NEW_VERSION=$(node scripts/deployment/bump-version.cjs ${{ github.event.inputs.version }})
+          echo "New version: $NEW_VERSION"
+          echo "::set-output name=version::$NEW_VERSION"
+        shell: bash
+
+      - name: Update version in package.json
+        if: steps.check_message.outputs.skip != 'true'
+        run: npm version ${{ steps.set_version.outputs.version }} --no-git-tag-version
+
+      - name: Build
+        if: steps.check_message.outputs.skip != 'true'
+        run: yarn build
