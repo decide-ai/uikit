@@ -40,8 +40,8 @@ export const Button: React.FC<ButtonPropsTypes> = ({
       disabledSkin[skin],
       iconName ? sizeClassesWithIcon[size] : sizeClasses[size],
       'svgGroup relative overflow-hidden',
-      'flex items-center justify-center',
-      'font-neue-montreal font-regular',
+      'flex items-center justify-center flex-shrink-0',
+      'font-neue-montreal font-regular whitespace-nowrap',
       'transition duration-100 ease-in-out',
       
       // Use for accessible frontend components, the focus styles will only be shown 

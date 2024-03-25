@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 // Components
-import { Button, Typography, QuestionCircleIcon, getColorByName } from '../../index';
+import { Button, Typography, QuestionCircleIcon, getColorByName, Tooltip } from '../../index';
 import { ItemWrap } from './ItemWrap';
 
 // Types / Styles
@@ -32,9 +32,9 @@ export const TableMobile: React.FC<TablePropTypes> = ({
                   </Typography>
 
                   {column.infoTooltipProps && (
-                    <QuestionCircleIcon 
-                      stroke={getColorByName('A00')?.hex}
-                      size={22}
+                    <Tooltip 
+                      text={column.infoTooltipProps} 
+                      size="medium" 
                     />
                   )}
                 </div>

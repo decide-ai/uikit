@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 // Components
-import { Typography, ButtonIcon, QuestionCircleIcon, getColorByName } from '../../../index';
+import { Typography, ButtonIcon, QuestionCircleIcon, getColorByName, Tooltip } from '../../../index';
 import { ItemWrap } from '../ItemWrap';
 import { GridWrap } from '../GridWrap';
 
@@ -40,10 +40,12 @@ export const Header: React.FC<TableHeaderPropTypes> = ({
         )}
 
         {column?.infoTooltipProps && (
-          <QuestionCircleIcon 
-            stroke={getColorByName('A00')?.hex}
-            className='ml-2'
-          />
+          <div className='ml-2'>
+            <Tooltip 
+              text={column.infoTooltipProps} 
+              size="medium" 
+            />
+          </div>
         )}
       </ItemWrap>
     ))}

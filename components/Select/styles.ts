@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
 export const wrapperNodeStyles = cn(
-  'relative mt-1'
+  'relative flex-shrink-0'
 )
 
 export const listBoxStyles = cn(

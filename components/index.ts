@@ -25,3 +25,5 @@ export { TextInput } from './TextInput';
 export { Tooltip } from './Tooltip';
 export { BubbleGum } from './BubbleGum';
 export { Select } from './Select';
+export { Filters } from './Filters';
+export { ScrollContainer } from './ScrollContainer';
