@@ -25,6 +25,7 @@ export const SelectItem: React.FC<SelectItemPropTypes> = ({
           truncate
           size="sm"
           weight={selected ? 'bold' : 'normal'}
+          whitespaceNowrap
         >
           {selectItem.name}
         </Typography>

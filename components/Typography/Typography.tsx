@@ -20,6 +20,7 @@ export const Typography: React.FC<TypographyProps> = ({
   color = 'A00',
   truncate,
   htmlFor,
+  whitespaceNowrap,
 }) => {
   /**
    * Convert string to JSX tag.
@@ -42,6 +43,7 @@ export const Typography: React.FC<TypographyProps> = ({
         `${style} ${getColor?.text}`, 
         'font-neue-montreal',
         {
+          'whitespace-nowrap': whitespaceNowrap,
           'truncate block': truncate,
           'inline-block': !truncate,
           'font-light': weight === 'light',

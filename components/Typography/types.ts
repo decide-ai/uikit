@@ -41,4 +41,9 @@ export type TypographyProps = {
    * Use props if we need use a label and connect the label to the input.
    */
   htmlFor?: string;
+
+  /**
+   * White space nowrap. Default prop equal false;
+   */
+  whitespaceNowrap?: boolean;
 };

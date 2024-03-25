@@ -5,7 +5,7 @@ export const innerListBoxStyles = ({
   active, 
   selected 
 }: ListBoxBehaviorTypes) => (cn(
-  'py-2 pr-10 pl-4',
+  'py-2 pr-10 pl-5',
   'relative cursor-pointer select-none',
   'text-A00',
   {
