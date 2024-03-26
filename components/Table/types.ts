@@ -129,6 +129,16 @@ export type TablePropTypes = VerticalSpaceTypes & TruncateTypes & {
    * An array of columns to display.
    */
   columns: ColumnTypes[];
+
+  /**
+   *  An optional subtitle to provide additional information or context.
+   */
+  stubSubTitle?: string;
+
+  /** 
+   * The main title displayed in the Stub component. Default text `Empty table`
+   */
+  stubTitle?: string;
 };
 
 export type GridWrapPropTypes = VerticalSpaceTypes 
@@ -156,3 +166,4 @@ export type GridWrapPropTypes = VerticalSpaceTypes
 }
 
 export type MobileItemWrapPropTypes = Pick<GridWrapPropTypes, 'record' | 'highlightedRows' | 'children'>;
+export type TableStublePropTypes = Pick<TablePropTypes, 'stubSubTitle' | 'stubTitle'>;

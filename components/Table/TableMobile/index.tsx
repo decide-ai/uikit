@@ -1,9 +1,9 @@
 import React from 'react';
-import cn from 'classnames';
 
 // Components
-import { Button, Typography, QuestionCircleIcon, getColorByName, Tooltip } from '../../index';
+import { Button, Typography, Tooltip } from '../../index';
 import { ItemWrap } from './ItemWrap';
+import { TableStub } from '../TableStub';
 
 // Types / Styles
 import { TablePropTypes } from '../types';
@@ -12,8 +12,17 @@ export const TableMobile: React.FC<TablePropTypes> = ({
   highlightedRows,
   records,
   columns,
+  stubSubTitle,
+  stubTitle,
 }) => (
   <div className='flex flex-col gap-3'>
+    {!records.length && (
+      <TableStub 
+        stubSubTitle={stubSubTitle}
+        stubTitle={stubTitle}
+      />
+    )}
+
     {records.map((record, index) => (
       <ItemWrap 
         key={index}
