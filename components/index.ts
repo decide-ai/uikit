@@ -27,3 +27,4 @@ export { BubbleGum } from './BubbleGum';
 export { Select } from './Select';
 export { Filters } from './Filters';
 export { ScrollContainer } from './ScrollContainer';
+export { Skeleton } from './Skeleton';

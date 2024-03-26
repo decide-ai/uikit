@@ -433,3 +433,25 @@ export const TruncateText: Story = {
     ],
   }
 };
+
+export const EmptyTable: Story = {
+  args: {
+    records: [],
+    stubSubTitle: "The quick brown fox, full of curiosity, leaped over a lazy dog that was basking in the warm afternoon sun.",
+    stubTitle: "Table is empty",
+    columns: [
+      {
+        title: 'Name',
+        render: (row) => row.name,
+      },
+      {
+        title: 'Inventory',
+        render: (row) => row.inventory,
+      },
+      {
+        title: 'Price',
+        render: (row) => row.price,
+      }
+    ],
+  }
+};

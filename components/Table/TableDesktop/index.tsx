@@ -1,6 +1,7 @@
 import React from 'react';
 
 // Components
+import { TableStub } from '../TableStub';
 import { Header } from './Header';
 import { Row } from './Row';
 
@@ -13,6 +14,8 @@ export const TableDesktop: React.FC<TablePropTypes> = ({
   truncate,
   records,
   columns,
+  stubSubTitle,
+  stubTitle,
 }) => (
   <React.Fragment>
     <Header 
@@ -20,6 +23,13 @@ export const TableDesktop: React.FC<TablePropTypes> = ({
       columns={columns}
       truncate={truncate}
     />
+
+    {!records.length && (
+      <TableStub 
+        stubSubTitle={stubSubTitle}
+        stubTitle={stubTitle}
+      />
+    )}
 
     {records.map((record, index) => (
       <Row 
