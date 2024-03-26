@@ -58,6 +58,6 @@ export const SelectComponent: React.FC<SelectPropTypes> = () => {
  */
 export const Select: React.FC<SelectPropTypes> = (props) => (
   <SelectProvider {...props}>
-    <SelectComponent />
+    <SelectComponent {...props} />
   </SelectProvider>
 );
