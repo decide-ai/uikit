@@ -23,7 +23,7 @@ export const SideBarMobile: React.FC<SideBarPropTypes> = ({
   const expandedIconName = isExpanded ? "CrossIcon" : "HamburgerMenuIcon";
   return (
     <div className={cn(
-      'fixed z-index-10 top-0 left-0 w-full'
+      'fixed z-index-10 top-0 left-0 w-full bg-white'
     )}>
       <div className={cn(
         'relative z-index-10',

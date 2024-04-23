@@ -33,10 +33,10 @@ export const SideBarItem: React.FC<ItemsPropTypes> = ({
         <div 
           className={cn(
             'flex-grow', 
-            `transition-opacity transition-absolute ease-in-out overflow-hidden`,
+            `transition-opacity transition-absolute ease-in-out overflow-hidden transition-all`,
             {
               'opacity-100 w-full': !isExpanded,
-              'opacity-0 w-0': isExpanded,
+              'opacity-20 w-0': isExpanded,
             }
           )}
           style={{ 
