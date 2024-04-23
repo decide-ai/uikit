@@ -20,7 +20,7 @@ export const SideBarTablet: React.FC<SideBarPropTypes> = ({
   if (afterDeviderList && afterDeviderList.length) list.push(...afterDeviderList);
   if (extraList && extraList.length) list.push(...extraList);
   return (
-    <div className='flex justify-between items-center px-3 py-2 border-b-[1px] border-b-A100'>
+    <div className='flex justify-between items-center px-3 py-2 rounded-lg bg-white border-b-A100'>
       <ModClubLogo />
       <div className='flex flex-row items-center'>
         {beforeDeviderList && (

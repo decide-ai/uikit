@@ -29,7 +29,7 @@ export const SideBarDesktop: React.FC<SideBarPropTypes> = ({
   return (
     <Wrapper>
       <div>
-        <div className='pb-4 pt-2'>
+        <div className='pb-4 pt-2 flex justify-start pl-1 transition-all'>
           <ModClubLogo isLess={isExpanded} />
         </div>
         

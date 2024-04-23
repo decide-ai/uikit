@@ -15,7 +15,7 @@ export const Wrapper: React.FC<ChildrenNodePropTypes> = ({
         'flex flex-col justify-between gap-12',
         'max-w-60 h-full p-2',
         'border-r-[1px] border-r-A100', 
-        `transition-width duration-200 ease-in-out`,
+        `transition-all bg-white overflow-hidden`,
         {
           'w-full': !isExpanded,
           'w-14': isExpanded,
