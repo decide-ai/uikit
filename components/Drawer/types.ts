@@ -1,3 +1,5 @@
+type SizeTypes = 'large' | 'medium';
+
 export type DrawerPropTypes = {
   /**
    * `children`: Represents the content to be rendered within the Drawer component. This prop is
@@ -26,4 +28,18 @@ export type DrawerPropTypes = {
    * green - this skin add green B50 background to drawer.
    */
   skin?: 'standard' | 'grey' | 'green';
+
+  /**
+   * Controls the drower size with the `size` prop. Available sizes are:
+   * 'large', 'medium'. This props changes padding in box;
+   */
+  size?: SizeTypes;
+
+  /**
+   * When `rounded` is `true`, the drawer become `rounded-3xl` rounded for large screen, 
+   * `rounded-2xl` for small screen and rounded-xl for mobile.
+   * By default, the `rounded` prop is `false`, which gives the button `rounded-lg` corners 
+   * for large and medium sizes, and `rounded-md` corners for small and tiny sizes.
+   */
+  rounded?: boolean;
 }

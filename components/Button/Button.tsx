@@ -1,15 +1,22 @@
 import React from 'react';
 import cn from 'classnames';
-import { ButtonPropsTypes } from './types';
+
+// Components
 import { Indicator } from './Indicator';
 import { ButtonIcon } from './ButtonIcon';
 import { Loader } from './Loader';
+
+// types
 import { 
-  skinClasses, 
+  ButtonPropsTypes,
+} from './types';
+
+// Styles
+import {
   sizeClasses, 
   sizeClassesWithIcon,
-  hoverAndActiveStyles,
-  disabledSkin,
+  roundedSizeClasses,
+  skinClasses,
 } from './styles';
 
 /**
@@ -19,6 +26,8 @@ import {
 export const Button: React.FC<ButtonPropsTypes> = ({
   size = 'medium',
   skin = 'standard',
+  them = 'darkGreen',
+  spaceBetween = false,
   disabled,
   fullWidth,
   loading,
@@ -27,52 +36,58 @@ export const Button: React.FC<ButtonPropsTypes> = ({
   indicator,
   buttonText,
   onClick,
-}) => (
-  <button
-    onClick={onClick}
-    disabled={disabled}
-    className={cn({
-        'pointer-events-none': disabled,
-        'w-full': fullWidth,
-      },
-      skinClasses[skin],
-      hoverAndActiveStyles[skin],
-      disabledSkin[skin],
-      iconName ? sizeClassesWithIcon[size] : sizeClasses[size],
-      'svgGroup relative overflow-hidden',
-      'flex items-center justify-center flex-shrink-0',
-      'font-neue-montreal font-regular whitespace-nowrap',
-      'transition duration-100 ease-in-out',
+}) => {
+  const skinClassesInline = skinClasses(them);
+  const skinClass = skinClassesInline[skin];
+  return (
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className={cn({
+          'pointer-events-none': disabled,
+          'w-full': fullWidth,
+          'justify-center': !spaceBetween,
+          'justify-between': spaceBetween,
+        },
+        skinClass,
+        iconName ? sizeClassesWithIcon[size] : sizeClasses[size],
+        roundedSizeClasses[size],
+        'svgGroup relative overflow-hidden',
+        'flex items-center flex-shrink-0',
+        'font-neue-montreal font-regular whitespace-nowrap',
+        'transition duration-100 ease-in-out',
+        
+        // Use for accessible frontend components, the focus styles will only be shown 
+        // when a user uses a keyboard to focus an element.
+        'focus:outline-none focus:box-shadow-focus-ring focus-visible:box-shadow-focus-ring',
+      )}
+    >
+      {loading && (
+        <Loader
+          them={them}
+          size={size} 
+          skin={skin}
+        />
+      )}
+
+      {indicator && (
+        <Indicator 
+          indicator={indicator} 
+          disabled={disabled}
+        />
+      )}
+
+      {buttonText}
       
-      // Use for accessible frontend components, the focus styles will only be shown 
-      // when a user uses a keyboard to focus an element.
-      'focus:outline-none focus:box-shadow-focus-ring focus-visible:box-shadow-focus-ring',
-    )}
-  >
-    {loading && (
-      <Loader 
-        size={size} 
-        skin={skin} 
-      />
-    )}
-
-    {indicator && (
-      <Indicator 
-        indicator={indicator} 
-        disabled={disabled}
-      />
-    )}
-
-    {buttonText}
-    
-    {children && children}
-    
-    {iconName && (
-      <ButtonIcon 
-        iconName={iconName}
-        skin={skin}
-        size={size}
-      />
-    )}
-  </button>
-);
+      {children && children}
+      
+      {iconName && (
+        <ButtonIcon 
+          iconName={iconName}
+          skin={skin}
+          size={size}
+        />
+      )}
+    </button>
+  );
+}

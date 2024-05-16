@@ -9,7 +9,11 @@ import { TextInputContext } from '../TextInputContext';
 import { IconWrapPropTypes } from '../types';
 
 export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
-  const { checked, isError } = useContext(TextInputContext);
+  const { 
+    checked, 
+    isError,
+    them,
+  } = useContext(TextInputContext);
   
   // Get color for icon container background;
   const skinClassName = checked 
@@ -19,12 +23,12 @@ export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
   // Get color for icon;
   const iconColorName = checked 
     ? 'B00' : isError 
-    ? 'D00' : 'A00';
+    ? 'D00' : them === 'darkGreen' ? 'A00' : 'F00';
 
   return (
     <div className={cn(
       'border-solid border-[1px] rounded-[6px] cursor-pointer p-0.5',
-      skinClassName,
+      skinClassName
     )}>
       <DynamicIcon 
         iconName={iconName}

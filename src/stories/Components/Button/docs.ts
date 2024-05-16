@@ -18,8 +18,19 @@ export const argTypes = {
       'inline',
       'grey',
       'inlineGrey',
-      'light'
+      'light',
+      'pink'
     ]
+  },
+  them: {
+    control: 'select',
+    options: [
+      'darkGreen',
+      'black',
+    ],
+    table: {
+      defaultValue: { summary: 'darkGreen' }
+    }
   },
   iconName: {
     control: 'text',
