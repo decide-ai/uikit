@@ -7,8 +7,9 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
   className,
   skin = 'standard',
   size = 'medium',
+  rounded = 'lg',
   empty,
-  rounded,
+  shadow,
 }) => {
   /**
    * Validates the existence of `children` to ensure the Drawer component has content to display.
@@ -26,14 +27,16 @@ export const Drawer: React.FC<DrawerPropTypes> = ({
    * removed to allow for alternative content styling or to reflect an empty state visually.
    */
   return (
-    <div className={cn('', className, {
+    <div className={cn(className, {
       'p-3 md:p-4 lg:p-5': !empty && size === 'medium',
-      'p-3 p-8 md:px-4 md:py-10 lg:px-5 lg:py-16': !empty && size === 'large',
+      'p-3 p-8 md:px-4 md:py-10 lg:px-5': !empty && size === 'large',
       'bg-C00': skin === 'grey',
       'bg-white': skin === 'standard',
       'bg-B90': skin === 'green',
-      'rounded-md md:rounded-lg': !rounded,
-      'rounded-xl sm:rounded-2xl md:rounded-3xl': rounded,
+      'rounded-xl sm:rounded-2xl': rounded === 'xl',
+      'md:rounded-lg': rounded === 'lg',
+      'md:rounded-md': rounded === 'md',
+      'drop-shadow-lg': shadow,
     })}>{children}</div>
   );
 }

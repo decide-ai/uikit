@@ -23,6 +23,13 @@ export const argTypes = {
     }
   },
   rounded: {
+    control: 'select',
+    options: ['xl', 'lg', 'md'],
+    table: {
+      defaultValue: { summary: 'lg' }
+    }
+  },
+  shadow: {
     control: 'boolean',
     table: {
       defaultValue: { summary: false }

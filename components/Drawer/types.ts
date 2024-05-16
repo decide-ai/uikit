@@ -1,4 +1,5 @@
 type SizeTypes = 'large' | 'medium';
+type RoundedTypes = 'xl' | 'lg' | 'md';
 
 export type DrawerPropTypes = {
   /**
@@ -36,10 +37,13 @@ export type DrawerPropTypes = {
   size?: SizeTypes;
 
   /**
-   * When `rounded` is `true`, the drawer become `rounded-3xl` rounded for large screen, 
+   * When `rounded` is `xl`, the drawer become `rounded-3xl` rounded for large screen, 
    * `rounded-2xl` for small screen and rounded-xl for mobile.
-   * By default, the `rounded` prop is `false`, which gives the button `rounded-lg` corners 
+   * By default, the `rounded` prop is `lg`, which gives the drawer `rounded-lg` corners 
    * for large and medium sizes, and `rounded-md` corners for small and tiny sizes.
    */
-  rounded?: boolean;
+  rounded?: RoundedTypes;
+
+  /** Add shadow to the component Drawer. Shadow styles located in tailwind.config.js */
+  shadow?: boolean;
 }
