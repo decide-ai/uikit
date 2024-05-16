@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import { Spinner } from '../../Spinner';
 import { LoaderPropTypes } from '../types';
-import { SPINNER_SIZE, SPINNER_SKIN, SPINNER_BG } from './constants';
+import { SPINNER_SIZE, spinnerSkin, spinnerThemColor } from './constants';
 
 /**
  * The loader is embedded within the button component, rendering with absolute positioning 
@@ -12,23 +12,24 @@ import { SPINNER_SIZE, SPINNER_SKIN, SPINNER_BG } from './constants';
  * current state and styling context.
  */
 export const Loader: React.FC<LoaderPropTypes> = ({
+  them = 'darkGreen',
   skin,
-  size
+  size,
 }) => {
   const spinnerSize = SPINNER_SIZE[size];
-  const spinnerSkin = SPINNER_SKIN[skin];
-  const loaderBg = SPINNER_BG[skin];
+  const spinnerSkinStyle = spinnerSkin(them);
+  const loaderBg = spinnerThemColor(them);
   return (
     <span className={cn(
       'absolute z-10',
       'w-full h-full',
       'flex items-center justify-center',
       'pointer-events-none',
-      loaderBg
+      loaderBg[skin]
     )}>
       <Spinner 
         size={spinnerSize}
-        skin={spinnerSkin}
+        skin={spinnerSkinStyle[skin]}
       />
     </span>
   );

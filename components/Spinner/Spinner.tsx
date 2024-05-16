@@ -15,6 +15,8 @@ const skinClasses: SkinTypes = {
   standard: 'border-l-A00',
   grey: 'border-l-A70',
   green: 'border-l-B00',
+  black: 'border-l-F00',
+  pink: 'border-l-G20'
 }
 
 /**

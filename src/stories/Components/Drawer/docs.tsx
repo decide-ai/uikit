@@ -9,7 +9,27 @@ export const argTypes = {
       defaultValue: { summary: 'standard' }
     }
   },
+  size: {
+    control: 'select',
+    options: ['medium', 'large'],
+    table: {
+      defaultValue: { summary: 'medium' }
+    }
+  },
   empty: {
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false }
+    }
+  },
+  rounded: {
+    control: 'select',
+    options: ['xl', 'lg', 'md'],
+    table: {
+      defaultValue: { summary: 'lg' }
+    }
+  },
+  shadow: {
     control: 'boolean',
     table: {
       defaultValue: { summary: false }

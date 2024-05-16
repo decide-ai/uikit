@@ -1,5 +1,9 @@
 import React from 'react';
 
+export type SkinTypes = 'inline' | 'grey';
+export type ThemTypes = 'darkGreen' | 'black';
+export type SizeTypes = 'medium' | 'small';
+
 export type TextInputPropsTypes = {
   /** 
    * Placeholder text for the input/textarea. This text is displayed when the input is empty,
@@ -91,6 +95,28 @@ export type TextInputPropsTypes = {
    * !!! IMPORTANT: Works only for textarea;
    */
   height?: string;
+
+  /**
+   * Control input size with size prop:
+   * large - is best for calls to action that require more emphasis.
+   * medium - is for main page actions and common use cases.
+   */
+  size?: SizeTypes;
+
+  /**
+   * Change the appearance of a input with a skin prop.
+   * inline - this skin add grey burder.
+   * grey - this skin add grey background to input.
+   */
+  skin?: SkinTypes;
+
+  /**
+   * This prop sets the color for the text and skin. 
+   * For example, if the theme prop is set to black, all input 
+   * skins will have a black border, or color.
+   * Default value: 'darkGreen'
+   */
+  them?: ThemTypes;
 }
 
 export type IconWrapPropTypes = {

@@ -19,19 +19,26 @@ export const TextInputComponent: React.FC<TextInputPropsTypes> = () => {
     viewOnly, 
     inputText, 
     isError, 
-    errorMessage 
+    errorMessage,
+    them,
   } = useContext(TextInputContext);
+  
+  /** Dark Green or Black */
+  const labelColor = them === 'darkGreen' ? 'A00' : 'F00';
 
   return (
     <React.Fragment>
       {label && (
-        <Typography 
-          tagName="label" 
-          size="sm"
-          htmlFor={inputId}
-        >
-          {label}
-        </Typography>
+        <div className='pb-0.5'>
+          <Typography 
+            tagName="label" 
+            size="sm"
+            color={labelColor}
+            htmlFor={inputId}
+          >
+            {label}
+          </Typography>
+        </div>
       )}
       <div className="relative">
         <InputTextareaCombo />

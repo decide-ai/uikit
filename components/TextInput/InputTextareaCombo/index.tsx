@@ -15,7 +15,10 @@ export const InputTextareaCombo = () => {
     viewOnly,
     isError,
     clearText,
-    height
+    height,
+    them,
+    skin,
+    size,
   } = useContext(TextInputContext);
 
   const inputCommonProps = {
@@ -25,14 +28,16 @@ export const InputTextareaCombo = () => {
     placeholder: placeholder,
     disabled: disabled || viewOnly,
     className: cn(
-      'py-2 pl-3',
-      'text-sm',
-      'border rounded-lg w-full',
-      'placeholder:text-sm placeholder:text-A50',
+      'rounded-lg w-full',
       'focus:outline-none focus-visible:ring-1 focus-visible:ring-white/75 focus-visible:ring-offset-1 focus-visible:ring-offset-B00',
       {
-        'border-D00': isError,
-        'border-A100': !isError,
+        'py-3 px-5 text-base placeholder:text-base': size === 'medium',
+        'py-2.5 pl-4 text-sm placeholder:text-sm': size === 'small',
+        'placeholder:text-A50 disabled:text-A70 disabled:placeholder:text-A70': them === 'darkGreen',
+        'placeholder:text-AF0 disabled:text-F70 disabled:placeholder:text-F70': them === 'black',
+        'bg-C30 disabled:bg-C60': skin === 'grey',
+        'border-D00 border': isError,
+        'border-A100 border': !isError && skin === 'inline',
         'pointer-events-none': disabled,
         'pr-10': clearText || require,
         'pr-3': !clearText && !require,

@@ -64,6 +64,34 @@ export const colorsMap = [
   { group: "Yellow", name: "E80", bg: "bg-E80", text: "text-E80", hex: "#FFFEF7" },
   { group: "Yellow", name: "E90", bg: "bg-E90", text: "text-E90", hex: "#FFFFFB" },
   { group: "Yellow", name: "E100", bg: "bg-E100", text: "text-E100", hex: "#FFFFFD" },
+
+  // Black
+  { group: "Black", name: "F00", bg: "bg-F00", text: "text-F00", hex: "#000000" },
+  { group: "Black", name: "F10", bg: "bg-F10", text: "text-F10", hex: "#202020" },
+  { group: "Black", name: "F20", bg: "bg-F20", text: "text-F20", hex: "#242424" },
+  { group: "Black", name: "F30", bg: "bg-F30", text: "text-F30", hex: "#303030" },
+  { group: "Black", name: "F40", bg: "bg-F40", text: "text-F40", hex: "#363636" },
+  { group: "Black", name: "F50", bg: "bg-F50", text: "text-F50", hex: "#4D4D4D" },
+  { group: "Black", name: "F60", bg: "bg-F60", text: "text-F60", hex: "#666666" },
+  { group: "Black", name: "F70", bg: "bg-F70", text: "text-F70", hex: "#808080" },
+  { group: "Black", name: "F80", bg: "bg-F80", text: "text-F80", hex: "#999999" },
+  { group: "Black", name: "F90", bg: "bg-F90", text: "text-F90", hex: "#B3B3B3" },
+  { group: "Black", name: "F100", bg: "bg-F100", text: "text-F100", hex: "#CCCCCC" },
+  { group: "Black", name: "F110", bg: "bg-F100", text: "text-F100", hex: "#E6E6E6" },
+
+  // Pink
+  { group: "Pink", name: "G00", bg: "bg-G00", text: "text-G00", hex: "#EC54A7" },
+  { group: "Pink", name: "G10", bg: "bg-G10", text: "text-G10", hex: "#F065B2" },
+  { group: "Pink", name: "G20", bg: "bg-G20", text: "text-G20", hex: "#F376BD" },
+  { group: "Pink", name: "G30", bg: "bg-G30", text: "text-G30", hex: "#F687C8" },
+  { group: "Pink", name: "G40", bg: "bg-G40", text: "text-G40", hex: "#F998D3" },
+  { group: "Pink", name: "G50", bg: "bg-G50", text: "text-G50", hex: "#FC9ADD" },
+  { group: "Pink", name: "G60", bg: "bg-G60", text: "text-G60", hex: "#FFAFE6" },
+  { group: "Pink", name: "G70", bg: "bg-G70", text: "text-G70", hex: "#FFCCF2" },
+  { group: "Pink", name: "G80", bg: "bg-G80", text: "text-G80", hex: "#FFE0F7" },
+  { group: "Pink", name: "G90", bg: "bg-G90", text: "text-G90", hex: "#FFEEFD" },
+  { group: "Pink", name: "G100", bg: "bg-G100", text: "text-G100", hex: "#FFF5FE" },
+  { group: "Pink", name: "G110", bg: "bg-G100", text: "text-G100", hex: "#FFF9FE" },
 ];
 
 /**

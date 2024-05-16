@@ -1,3 +1,7 @@
+export type SkinTypes = 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey' | 'pink';
+export type ThemTypes = 'darkGreen' | 'black';
+type SizeTypes = 'large' | 'medium' | 'small' | 'tiny';
+
 export type IndicatorStyleTypes = {
   [key: string]: string;
   red: string;
@@ -8,6 +12,7 @@ export type IndicatorStyleTypes = {
 
 export type LoaderSizeTypes = {
   [key: string]: string;
+  largeXl: string;
   large: string;
   medium: string;
   small: string;
@@ -21,10 +26,8 @@ export type LoaderSkinTypes = {
   grey: string;
   inlineGrey: string;
   light: string;
+  pink: string;
 }
-
-export type LoaderSizeKeys = 'large' | 'medium' | 'small' | 'tiny';
-export type LoaderSkinKeys = 'standard' | 'inline' | 'grey' | 'inlineGrey' | 'light';
 
 export type LoaderPropTypes = {
   /**
@@ -32,13 +35,21 @@ export type LoaderPropTypes = {
    * 'large', 'medium', 'small', and 'tiny'.
    * Depends on the button skin.
    */
-  size: LoaderSizeKeys;
+  size: SizeTypes;
 
   /**
    * Changes the appearance of the spinner with the `skin` prop.
    * Depends on the button skin.
    */
-  skin: LoaderSkinKeys;
+  skin: SkinTypes;
+
+  /**
+   * This prop sets the color for the loader. 
+   * For example, if the theme prop is set to black, all loader 
+   * skins will have a black background, border, or color.
+   * Default value: 'darkGreen'
+   */
+  them?: ThemTypes;
 }
 
 export type ButtonPropsTypes = {
@@ -49,7 +60,7 @@ export type ButtonPropsTypes = {
    * small - fits into smaller UI elements like cards, table and widgets.
    * tiny - is used for dense layouts.
    */
-  size?: 'large' | 'medium' | 'small' | 'tiny';
+  size?: SizeTypes;
 
   /**
    * Change the appearance of a button with a skin prop.
@@ -59,7 +70,7 @@ export type ButtonPropsTypes = {
    * inline-gray - this skin mix with inline and gray buttons styles.
    * light - this skin add green background to button.
    */
-  skin?: 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey';
+  skin?: SkinTypes;
   
   /**
    * To disable a button, use the disabled prop which indicates a button can't be selected.
@@ -102,6 +113,20 @@ export type ButtonPropsTypes = {
    * Button event callback.
    */
   onClick?: () => void;
+
+  /**
+   * When `spaceBetween` is `true`, the text and icon will be with justify-between class.
+   * By default, the `spaceBetween` prop is `false`, which makess the text and icon justify-center.
+   */
+  spaceBetween?: boolean;
+
+  /**
+   * This prop sets the color for the text and skin. 
+   * For example, if the theme prop is set to black, all button 
+   * skins will have a black background, border, or color.
+   * Default value: 'darkGreen'
+   */
+  them?: ThemTypes;
 }
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>

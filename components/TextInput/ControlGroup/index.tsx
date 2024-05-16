@@ -13,7 +13,7 @@ export const ControlGroup = () => {
     inputText, 
     clearText, 
     require, 
-    viewOnly, 
+    viewOnly,
     handleClear 
   } = useContext(TextInputContext);
 

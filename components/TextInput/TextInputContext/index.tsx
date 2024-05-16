@@ -20,6 +20,9 @@ export const TextInputContext = createContext<ITextInputContext>(defaultValue);
 export const TextInputProvider = ({ 
   children,
   type = 'input',
+  them = 'darkGreen',
+  skin = 'inline',
+  size = 'small',
   ...props
 }: TextInputPropsTypes & { children: React.ReactNode }) => {
   const [value, setValue] = useState('');
@@ -38,6 +41,9 @@ export const TextInputProvider = ({
       handleChange, 
       handleClear,
       type,
+      them,
+      skin,
+      size,
       ...props
     }}>
       {children}
