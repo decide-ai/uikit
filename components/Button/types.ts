@@ -12,7 +12,6 @@ export type IndicatorStyleTypes = {
 
 export type LoaderSizeTypes = {
   [key: string]: string;
-  largeXl: string;
   large: string;
   medium: string;
   small: string;
