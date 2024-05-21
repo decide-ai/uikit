@@ -25,6 +25,15 @@ export const Standard: Story = {
   }
 };
 
+export const Rounded: Story = {
+  args: {
+    size: 'medium',
+    skin: 'standard',
+    rounded: true,
+    buttonText: 'Button text'
+  }
+};
+
 export const Inline: Story = {
   args: {
     size: 'medium',

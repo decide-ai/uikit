@@ -27,7 +27,8 @@ export const Button: React.FC<ButtonPropsTypes> = ({
   size = 'medium',
   skin = 'standard',
   them = 'darkGreen',
-  spaceBetween = false,
+  spaceBetween,
+  rounded,
   disabled,
   fullWidth,
   loading,
@@ -39,6 +40,9 @@ export const Button: React.FC<ButtonPropsTypes> = ({
 }) => {
   const skinClassesInline = skinClasses(them);
   const skinClass = skinClassesInline[skin];
+  const roundedClasses = rounded ? 'rounded-full' : roundedSizeClasses[size];
+  const iconIndentationClasses = iconName ? sizeClassesWithIcon[size] : sizeClasses[size];
+
   return (
     <button
       onClick={onClick}
@@ -50,8 +54,8 @@ export const Button: React.FC<ButtonPropsTypes> = ({
           'justify-between': spaceBetween,
         },
         skinClass,
-        iconName ? sizeClassesWithIcon[size] : sizeClasses[size],
-        roundedSizeClasses[size],
+        iconIndentationClasses,
+        roundedClasses,
         'svgGroup relative overflow-hidden',
         'flex items-center flex-shrink-0',
         'font-neue-montreal font-regular whitespace-nowrap',

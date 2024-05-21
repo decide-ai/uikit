@@ -45,6 +45,18 @@ export const argTypes = {
       'grey',
       'yellow'
     ]
+  },
+  spaceBetween: {
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false }
+    }
+  },
+  rounded: {
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false }
+    }
   }
 }
 

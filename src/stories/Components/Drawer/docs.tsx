@@ -24,7 +24,7 @@ export const argTypes = {
   },
   rounded: {
     control: 'select',
-    options: ['xl', 'lg', 'md'],
+    options: ['3xl', '2xl', 'xl', 'lg', 'md'],
     table: {
       defaultValue: { summary: 'lg' }
     }
