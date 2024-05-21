@@ -1,5 +1,5 @@
 type SizeTypes = 'large' | 'medium';
-type RoundedTypes = 'xl' | 'lg' | 'md';
+type RoundedTypes = '3xl' | '2xl' | 'xl' | 'lg' | 'md';
 
 export type DrawerPropTypes = {
   /**
@@ -37,10 +37,16 @@ export type DrawerPropTypes = {
   size?: SizeTypes;
 
   /**
-   * When `rounded` is `xl`, the drawer become `rounded-3xl` rounded for large screen, 
-   * `rounded-2xl` for small screen and rounded-xl for mobile.
-   * By default, the `rounded` prop is `lg`, which gives the drawer `rounded-lg` corners 
-   * for large and medium sizes, and `rounded-md` corners for small and tiny sizes.
+   * When `rounded` is `3xl`, the drawer become `rounded-3xl` rounded for large screen, 
+   * `rounded-2xl` for small screen and for mobile.
+   * 
+   * `rounded-3xl: mobile/tablet - 2xl, desktop - md:3xl`;
+   * `rounded-3xl: mobile/tablet - xl, desktop - md:2xl`;
+   * `rounded-3xl: mobile/tablet/desktop - xl`;
+   * `rounded-3xl: mobile/tablet/desktop - lg`;
+   * `rounded-3xl: mobile/tablet/desktop - md`;
+   * 
+   * By default, the `rounded` prop is `lg`;
    */
   rounded?: RoundedTypes;
 

@@ -126,6 +126,13 @@ export type ButtonPropsTypes = {
    * Default value: 'darkGreen'
    */
   them?: ThemTypes;
+
+  /**
+   * When `rounded` is `true`, the button corners become fully rounded.
+   * By default, the `rounded` prop is `false`, which gives the button `rounded-lg` corners 
+   * for large and medium sizes, and `rounded-md` corners for small and tiny sizes.
+  */
+  rounded?: boolean;
 }
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>

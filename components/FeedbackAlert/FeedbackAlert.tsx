@@ -1,39 +1,14 @@
 import React from 'react';
 import cn from 'classnames';
+
+// Components
 import { DynamicIcon, Typography, getColorByName } from '../index';
 
-type FeedbackAlertPropTypes = {
-  /**
-   * Optional icon name for the icon displayed in the alert
-   */
-  iconName?: string;
+// Types
+import { FeedbackAlertPropTypes } from './types';
 
-  /**
-   * The main text message to be displayed in the alert
-   */
-  text: string;
-
-  /**
-   * Optional skin color for the alert background
-   */
-  skin?: 'green' | 'yellow' | 'red' | 'grey' | 'darkGreen',
-
-  /**
-   * Optional children to render additional elements inside the alert
-   */
-  children?: React.ReactNode;
-}
-
-/**
- * Defines styles for different skins using a mapping object
- */
-const skinStyles: Record<string, string> = {
-  green: 'B80',
-  yellow: 'E00',
-  red: 'D50',
-  grey: 'C00',
-  darkGreen: 'A00'
-}
+// Styles
+import { skinStyles } from './styles';
 
 export const FeedbackAlert: React.FC<FeedbackAlertPropTypes> = ({
   iconName = 'DangerCircleIcon',
