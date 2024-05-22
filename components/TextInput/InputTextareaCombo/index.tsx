@@ -19,11 +19,13 @@ export const InputTextareaCombo = () => {
     them,
     skin,
     size,
+    name
   } = useContext(TextInputContext);
 
   const inputCommonProps = {
     id: inputId,
     value: value,
+    name,
     onChange: handleChange,
     placeholder: placeholder,
     disabled: disabled || viewOnly,

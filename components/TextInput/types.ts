@@ -117,6 +117,11 @@ export type TextInputPropsTypes = {
    * Default value: 'darkGreen'
    */
   them?: ThemTypes;
+
+  /** 
+   * The unique identifier for the input element. Necessary for associating the input with its label for accessibility.
+   */
+  name?: string;
 }
 
 export type IconWrapPropTypes = {
