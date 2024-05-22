@@ -111,7 +111,7 @@ export type ButtonPropsTypes = {
   /**
    * Button event callback.
    */
-  onClick?: () => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 
   /**
    * When `spaceBetween` is `true`, the text and icon will be with justify-between class.
