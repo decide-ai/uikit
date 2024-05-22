@@ -28,10 +28,10 @@ export type TextInputPropsTypes = {
   errorMessage?: string;
   
   /** 
-   * Callback function that is called when the input's value changes. It receives the current value as an argument.
+   * Callback function that is called when the input's value changes. It receives the event as an argument.
    * This is where you would handle data binding and form state management.
    */
-  onChange?: (value: string) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
   
   /** 
    * Text label for the input. This label is associated with the input by using the `inputId` prop.

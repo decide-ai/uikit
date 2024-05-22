@@ -30,7 +30,7 @@ export const TextInputProvider = ({
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
     setValue(newValue);
-    if (props.onChange) props.onChange(newValue);
+    if (props.onChange) props.onChange(e);
   };
 
   const handleClear = () => setValue('');
