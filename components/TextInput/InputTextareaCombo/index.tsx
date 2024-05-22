@@ -30,6 +30,7 @@ export const InputTextareaCombo = () => {
     className: cn(
       'rounded-lg w-full',
       'focus:outline-none focus-visible:ring-1 focus-visible:ring-white/75 focus-visible:ring-offset-1 focus-visible:ring-offset-B00',
+      'placeholder:neue-montreal',
       {
         'py-3 px-5 text-base placeholder:text-base': size === 'medium',
         'py-2.5 pl-4 text-sm placeholder:text-sm': size === 'small',
