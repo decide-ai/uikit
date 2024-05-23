@@ -51,6 +51,12 @@ export const argTypes = {
     table: {
       defaultValue: { summary: 'A00' }
     }
+  },
+  uppercase: {
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false }
+    }
   }
 };
 
