@@ -46,4 +46,10 @@ export type TypographyProps = {
    * White space nowrap. Default prop equal false;
    */
   whitespaceNowrap?: boolean;
+
+  /**
+   * Prop makes text UPPERCASE.
+   * Default value `false`
+   */
+  uppercase?: boolean;
 };

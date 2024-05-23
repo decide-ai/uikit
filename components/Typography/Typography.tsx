@@ -21,6 +21,7 @@ export const Typography: React.FC<TypographyProps> = ({
   truncate,
   htmlFor,
   whitespaceNowrap,
+  uppercase,
 }) => {
   /**
    * Convert string to JSX tag.
@@ -43,6 +44,7 @@ export const Typography: React.FC<TypographyProps> = ({
         `${style} ${getColor?.text}`, 
         'font-neue-montreal',
         {
+          'uppercase': uppercase,
           'whitespace-nowrap': whitespaceNowrap,
           'truncate block': truncate,
           'inline-block': !truncate,
