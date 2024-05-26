@@ -28,3 +28,4 @@ export { Select } from './Select';
 export { Filters } from './Filters';
 export { ScrollContainer } from './ScrollContainer';
 export { Skeleton } from './Skeleton';
+export { Checkbox } from './Checkbox';
