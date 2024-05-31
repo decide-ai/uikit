@@ -24,6 +24,10 @@ Our UIkit library is hosted on GitHub's npm registry. To use it, you'll need a P
 
 ### Setting Up Your Personal Access Token (PAT)
 Generate a PAT: Follow the instructions here to create a new PAT on GitHub. Ensure you select the read:packages scope to allow package downloads.
+1. Goto https://github.com/settings/apps
+2. Select Personal access tokens on the left
+3. Use Token(classic): Click `generate new token (classic)`
+4. Make sure to select Read Packages
 
 Configure npm with Your PAT:
 
