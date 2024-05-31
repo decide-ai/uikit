@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type SkinTypes = 'inline' | 'grey';
-export type ThemTypes = 'darkGreen' | 'black';
+export type ThemTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
 export type SizeTypes = 'medium' | 'small';
 
 export type TextInputPropsTypes = {

@@ -27,8 +27,8 @@ export const Button: React.FC<ButtonPropsTypes> = ({
   size = 'medium',
   skin = 'standard',
   them = 'darkGreen',
+  rounded = 'lg',
   spaceBetween,
-  rounded,
   disabled,
   fullWidth,
   loading,
@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
 }) => {
   const skinClassesInline = skinClasses(them);
   const skinClass = skinClassesInline[skin];
-  const roundedClasses = rounded ? 'rounded-full' : roundedSizeClasses[size];
+  const roundedClasses = roundedSizeClasses[rounded];
   const iconIndentationClasses = iconName ? sizeClassesWithIcon[size] : sizeClasses[size];
 
   return (

@@ -6,5 +6,6 @@ export const skinStyles: Record<string, string> = {
  yellow: 'E00',
  red: 'D50',
  grey: 'C00',
- darkGreen: 'A00'
+ darkGreen: 'A00',
+ black: 'F00'
 }

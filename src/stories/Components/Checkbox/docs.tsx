@@ -5,7 +5,7 @@ export const argTypes = {
       "black",
       "darkGreen",
       "lightGreen",
-      "pink",
+      "blue",
     ],
     table: {
       defaultValue: { summary: 'darkGreen' }

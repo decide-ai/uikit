@@ -14,15 +14,29 @@ export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
     isError,
     them,
   } = useContext(TextInputContext);
+
+  const chackedClasses = {
+    darkGreen: 'bg-B90 border-B90',
+    black: 'bg-B90 border-B90',
+    blue: 'bg-G80 border-G80',
+    lightGreen: 'bg-B90 border-B90'
+  };
+
+  const iconColor = {
+    darkGreen: 'A00',
+    black: 'F00',
+    blue: 'G00',
+    lightGreen: 'B00'
+  }
   
   // Get color for icon container background;
   const skinClassName = checked 
-    ? 'bg-B90 border-B90' : isError 
+    ? chackedClasses[them || 'darkGreen'] : isError 
     ? 'bg-D90 border-D90' : 'border-C00 bg-C00';
 
   // Get color for icon;
   const iconColorName = checked 
-    ? 'B00' : isError 
+    ? iconColor[them || 'darkGreen'] : isError 
     ? 'D00' : them === 'darkGreen' ? 'A00' : 'F00';
 
   return (

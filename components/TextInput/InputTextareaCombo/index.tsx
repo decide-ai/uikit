@@ -4,6 +4,9 @@ import cn from 'classnames';
 // Components
 import { TextInputContext } from '../TextInputContext';
 
+// Styles
+import { outlineClasses } from './styles';
+
 export const InputTextareaCombo = () => {
   const { 
     type,
@@ -21,6 +24,7 @@ export const InputTextareaCombo = () => {
     size,
     name
   } = useContext(TextInputContext);
+  const focusOutline = them ? outlineClasses[them] : outlineClasses['lightGreen'];
 
   const inputCommonProps = {
     id: inputId,
@@ -30,8 +34,9 @@ export const InputTextareaCombo = () => {
     placeholder: placeholder,
     disabled: disabled || viewOnly,
     className: cn(
+      focusOutline,
       'rounded-lg w-full',
-      'focus:outline-none focus-visible:ring-1 focus-visible:ring-white/75 focus-visible:ring-offset-1 focus-visible:ring-offset-B00',
+      'focus:outline-none',
       'placeholder:neue-montreal',
       {
         'py-3 px-5 text-base placeholder:text-base': size === 'medium',

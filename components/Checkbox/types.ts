@@ -1,4 +1,4 @@
-type ThemTypes = 'black' | 'darkGreen' | 'lightGreen' | 'pink';
+type ThemTypes = 'black' | 'darkGreen' | 'lightGreen' | 'blue';
 type SizeTypes = 'large' | 'medium' | 'small';
 type RoundedTypes = 'md' | 'lg' | 'xl' | '2xl';
 
