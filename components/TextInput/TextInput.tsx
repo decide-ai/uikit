@@ -29,7 +29,7 @@ export const TextInputComponent: React.FC<TextInputPropsTypes> = () => {
   return (
     <React.Fragment>
       {label && (
-        <div className='pb-0.5'>
+        <div className='pb-1.5'>
           <Typography 
             tagName="label" 
             size="sm"

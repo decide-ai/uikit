@@ -12,11 +12,11 @@ export type SkinTypes = {
   grey: string;
   green: string;
   black: string;
-  pink: string;
+  blue: string;
 }
 
 export type SizeSpinnerKeys = 'large' | 'medium' | 'small' | 'tiny';
-export type SkinSpinnerKeys = 'standard' | 'grey' | 'green' | 'black' | 'pink';
+export type SkinSpinnerKeys = 'standard' | 'grey' | 'green' | 'black' | 'blue';
 
 export type SpinnerPropTypes = {
   /**

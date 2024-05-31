@@ -1,6 +1,7 @@
-export type SkinTypes = 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey' | 'pink';
-export type ThemTypes = 'darkGreen' | 'black';
-type SizeTypes = 'large' | 'medium' | 'small' | 'tiny';
+export type SkinTypes = 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey' | 'limpid';
+export type ThemTypes = 'darkGreen' | 'black' | 'blue';
+export type SizeTypes = 'large' | 'medium' | 'small' | 'tiny';
+type RoundedTypes = 'full' | 'xl' | 'lg' | 'md';
 
 export type IndicatorStyleTypes = {
   [key: string]: string;
@@ -25,7 +26,7 @@ export type LoaderSkinTypes = {
   grey: string;
   inlineGrey: string;
   light: string;
-  pink: string;
+  limpid: string;
 }
 
 export type LoaderPropTypes = {
@@ -128,11 +129,11 @@ export type ButtonPropsTypes = {
   them?: ThemTypes;
 
   /**
-   * When `rounded` is `true`, the button corners become fully rounded.
-   * By default, the `rounded` prop is `false`, which gives the button `rounded-lg` corners 
-   * for large and medium sizes, and `rounded-md` corners for small and tiny sizes.
+   * When `rounded` is `full`, the button corners become fully rounded.
+   * By default, the `rounded` prop is `lg`, which gives the button `rounded-lg` corners large;
+   * For medium sizes `rounded-md` corners.
   */
-  rounded?: boolean;
+  rounded?: RoundedTypes;
 }
 
 export type IndicatorTypes = Pick<ButtonPropsTypes, 'indicator' | 'disabled'>

@@ -19,11 +19,12 @@ export const sizeClassesWithIcon = {
 };
 
 export const roundedSizeClasses = {
-  large: 'rounded-lg',
-  medium: 'rounded-lg',
-  small: 'rounded-md',
-  tiny: 'rounded-md',
-}
+  'full': 'rounded-full', /* 	border-radius: 9999px; */
+  '2xl': 'rounded-2xl', /* 16px */
+  'xl': 'rounded-xl',  /* 12px */
+  'lg': 'rounded-lg',  /* 8px */
+  'md': 'rounded-md', /* 6px */
+};
 
 export const skinClasses = ((them: string) => ({
   standard: cn(
@@ -40,6 +41,11 @@ export const skinClasses = ((them: string) => ({
     'border-F00 bg-F00 text-C100': them === 'black',
     'hover:bg-F30 hover:border-F30 active:bg-F00 active:border-F00': them === 'black',
     'disabled:text-F80': them === 'black',
+
+    // Blue
+    'border-G00 bg-G00 text-C100': them === 'blue',
+    'hover:bg-G30 hover:border-G30 active:bg-G00 active:border-G00': them === 'blue',
+    'disabled:text-F70': them === 'blue',
   }),
   inline: cn(
     // Common
@@ -56,6 +62,11 @@ export const skinClasses = ((them: string) => ({
     'border-F00 text-F00': them === 'black',
     'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': them === 'black',
     'disabled:text-F80': them === 'black',
+
+    // Blue
+    'border-G00 text-G00': them === 'blue',
+    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': them === 'blue',
+    'disabled:text-F70': them === 'blue',
   }),
   grey: cn(
     // Common
@@ -71,6 +82,11 @@ export const skinClasses = ((them: string) => ({
     'text-F00': them === 'black',
     'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': them === 'black',
     'disabled:text-F80': them === 'black',
+
+    // Blue
+    'text-G00': them === 'blue',
+    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': them === 'blue',
+    'disabled:text-F70': them === 'blue',
   }),
   inlineGrey: cn(
     // Common
@@ -87,6 +103,10 @@ export const skinClasses = ((them: string) => ({
     // Black
     'border-F80 text-F00': them === 'black',
     'disabled:text-F80': them === 'black',
+
+    // Blue
+    'border-G50 text-G00': them === 'blue',
+    'disabled:text-F70': them === 'blue',
   }),
   light: cn(
     // Common
@@ -102,11 +122,27 @@ export const skinClasses = ((them: string) => ({
 
     // Black
     'border-C00 text-F00': them === 'black',
+    'hover:border-F90 hover:bg-F110 hover:text-F00 active:border-F90 active:bg-F100 active:text-F00': them === 'black',
     'disabled:text-F80': them === 'black',
+
+    // Blue
+    'border-C00 text-G00': them === 'blue',
+    'hover:border-G50 hover:bg-G80 hover:text-G00 active:border-G50 active:bg-G50 active:text-G00': them === 'blue',
+    'disabled:text-F70': them === 'blue',
   }),
-  pink: cn(
-    'border-solid border-[1px] border-G00 bg-G00 text-white',
-    'hover:bg-G10 hover:border-G10 active:bg-G00 active:border-G00',
-    'disabled:border-C00 disabled:bg-C00'
-  ),
+  limpid: cn(
+    // Common
+    'border-C00 text-C00',
+    'disabled:border-C00 disabled:bg-C00',
+    BORDER_SOLID,
+    {
+    // darkGreen
+    'hover:border-A20 hover:bg-A10 active:border-A30 active:bg-A20': them === 'darkGreen',
+
+    // black
+    'hover:border-F60 hover:bg-F40 active:border-F60 active:bg-F50': them === 'black',
+
+    // black
+    'hover:border-G30 hover:text-F00 hover:bg-G30 active:border-G30 active:bg-G40': them === 'blue',
+  })
 }))

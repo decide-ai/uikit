@@ -2,7 +2,7 @@ export const THEM_COLOR_SET = {
   black: 'bg-F00 border-F00',
   darkGreen: 'bg-A00 border-A00',
   lightGreen: 'bg-B00 border-B00',
-  pink: 'bg-G00 border-G00'
+  blue: 'bg-G00 border-G00'
 }
 
 export const SIZE_SET = {

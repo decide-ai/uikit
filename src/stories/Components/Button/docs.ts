@@ -19,7 +19,7 @@ export const argTypes = {
       'grey',
       'inlineGrey',
       'light',
-      'pink'
+      'limpid'
     ]
   },
   them: {
@@ -27,6 +27,7 @@ export const argTypes = {
     options: [
       'darkGreen',
       'black',
+      'blue'
     ],
     table: {
       defaultValue: { summary: 'darkGreen' }
@@ -46,13 +47,16 @@ export const argTypes = {
       'yellow'
     ]
   },
-  spaceBetween: {
-    control: 'boolean',
-    table: {
-      defaultValue: { summary: false }
-    }
-  },
   rounded: {
+    control: 'select',
+    options: [
+      'full',
+      'xl',
+      'lg',
+      'md'
+    ]
+  },
+  spaceBetween: {
     control: 'boolean',
     table: {
       defaultValue: { summary: false }

@@ -79,19 +79,18 @@ export const colorsMap = [
   { group: "Black", name: "F100", bg: "bg-F100", text: "text-F100", hex: "#CCCCCC" },
   { group: "Black", name: "F110", bg: "bg-F100", text: "text-F100", hex: "#E6E6E6" },
 
-  // Pink
-  { group: "Pink", name: "G00", bg: "bg-G00", text: "text-G00", hex: "#EC54A7" },
-  { group: "Pink", name: "G10", bg: "bg-G10", text: "text-G10", hex: "#F065B2" },
-  { group: "Pink", name: "G20", bg: "bg-G20", text: "text-G20", hex: "#F376BD" },
-  { group: "Pink", name: "G30", bg: "bg-G30", text: "text-G30", hex: "#F687C8" },
-  { group: "Pink", name: "G40", bg: "bg-G40", text: "text-G40", hex: "#F998D3" },
-  { group: "Pink", name: "G50", bg: "bg-G50", text: "text-G50", hex: "#FC9ADD" },
-  { group: "Pink", name: "G60", bg: "bg-G60", text: "text-G60", hex: "#FFAFE6" },
-  { group: "Pink", name: "G70", bg: "bg-G70", text: "text-G70", hex: "#FFCCF2" },
-  { group: "Pink", name: "G80", bg: "bg-G80", text: "text-G80", hex: "#FFE0F7" },
-  { group: "Pink", name: "G90", bg: "bg-G90", text: "text-G90", hex: "#FFEEFD" },
-  { group: "Pink", name: "G100", bg: "bg-G100", text: "text-G100", hex: "#FFF5FE" },
-  { group: "Pink", name: "G110", bg: "bg-G100", text: "text-G100", hex: "#FFF9FE" },
+  // Blue
+  { group: "Blue", name: "G00", bg: "bg-G00", text: "text-G00", hex: "#4D80EE" },
+  { group: "Blue", name: "G10", bg: "bg-G10", text: "text-G10", hex: "#6693F0" },
+  { group: "Blue", name: "G20", bg: "bg-G20", text: "text-G20", hex: "#7FA6F2" },
+  { group: "Blue", name: "G30", bg: "bg-G30", text: "text-G30", hex: "#99BAF4" },
+  { group: "Blue", name: "G40", bg: "bg-G40", text: "text-G40", hex: "#B2CDF6" },
+  { group: "Blue", name: "G50", bg: "bg-G50", text: "text-G50", hex: "#CCDEF8" },
+  { group: "Blue", name: "G60", bg: "bg-G60", text: "text-G60", hex: "#E5F1FA" },
+  { group: "Blue", name: "G70", bg: "bg-G70", text: "text-G70", hex: "#EAF3FB" },
+  { group: "Blue", name: "G80", bg: "bg-G80", text: "text-G80", hex: "#EEF5FB" },
+  { group: "Blue", name: "G90", bg: "bg-G90", text: "text-G90", hex: "#F3F7FC" },
+  { group: "Blue", name: "G100", bg: "bg-G100", text: "text-G100", hex: "#F7FAFD" },
 ];
 
 /**

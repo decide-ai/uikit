@@ -2,7 +2,7 @@ export const argTypes = {
   skin: {
     control: 'select',
     options: [
-      'green', 'yellow', 'red', 'grey', 'darkGreen',
+      'green', 'yellow', 'red', 'grey', 'darkGreen', 'black',
     ],
     table: {
       defaultValue: {

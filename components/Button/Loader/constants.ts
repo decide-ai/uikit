@@ -6,11 +6,10 @@ import { LoaderSizeTypes, ThemTypes } from '../types';
  */
 export const spinnerSkin = (them: ThemTypes) => ({
   standard: 'grey',
-  inline: them === 'darkGreen' ? 'standard' : 'black',
-  grey: them === 'darkGreen' ? 'standard' : 'black',
-  inlineGrey: them === 'darkGreen' ? 'standard' : 'black',
-  light: 'green',
-  pink: 'pink'
+  inline: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
+  grey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
+  inlineGrey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
+  light: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
 }) 
 
 /**
@@ -33,10 +32,12 @@ export const spinnerThemColor = (them: ThemTypes) => ({
 
     // Black
     'bg-F00': them === 'black',
+
+    // Blue
+    'bg-G00': them === 'blue',
   }),
   inline: 'bg-white',
   grey: 'bg-C00',
   inlineGrey: 'bg-white',
-  light: 'bg-white',
-  pink: 'bg-G00'
+  light: 'bg-white'
 })
