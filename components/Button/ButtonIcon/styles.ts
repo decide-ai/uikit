@@ -30,6 +30,6 @@ export const svgIconSkinColors = {
   grey: `${iconStrokeColorSet.A00} ${hoverAndActiveColorSet.C100} ${disabledColorSet.A50}`,
   inlineGrey: `${iconStrokeColorSet.A00} ${hoverAndActiveColorSet.A00} ${disabledColorSet.A50}`,
   light: `${iconStrokeColorSet.A00} ${hoverAndActiveColorSet.A00} ${disabledColorSet.A50}`,
-
   blue: `${iconStrokeColorSet.C100} ${hoverAndActiveColorSet.C100} ${disabledColorSet.A50}`,
+  limpid: `${iconStrokeColorSet.C100} ${hoverAndActiveColorSet.C100} ${disabledColorSet.A50}`,
 }
