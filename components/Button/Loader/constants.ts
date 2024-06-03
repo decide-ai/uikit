@@ -10,6 +10,7 @@ export const spinnerSkin = (them: ThemTypes) => ({
   grey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
   inlineGrey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
   light: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
+  limpid: them === 'darkGreen' ? 'grey' : them === 'blue' ? 'blue' : 'black',
 }) 
 
 /**
@@ -39,5 +40,6 @@ export const spinnerThemColor = (them: ThemTypes) => ({
   inline: 'bg-white',
   grey: 'bg-C00',
   inlineGrey: 'bg-white',
-  light: 'bg-white'
+  light: 'bg-white',
+  limpid: 'bg-white',
 })
