@@ -47,8 +47,8 @@ export const InputTextareaCombo = () => {
         'border-D00 border': isError,
         'border-A100 border': !isError && skin === 'inline',
         'pointer-events-none': disabled,
-        'pr-10': clearText || require,
-        'pr-3': !clearText && !require,
+        'pr-10': clearText,
+        'pr-3': !clearText,
       }
     ),
   };
