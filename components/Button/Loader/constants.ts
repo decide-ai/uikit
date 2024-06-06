@@ -1,16 +1,16 @@
 import cn from 'classnames';
-import { LoaderSizeTypes, ThemTypes } from '../types';
+import { LoaderSizeTypes, ThemeTypes } from '../types';
 
 /**
  * Spinner Style Display Options
  */
-export const spinnerSkin = (them: ThemTypes) => ({
+export const spinnerSkin = (theme: ThemeTypes) => ({
   standard: 'grey',
-  inline: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
-  grey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
-  inlineGrey: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
-  light: them === 'darkGreen' ? 'standard' : them === 'blue' ? 'blue' : 'black',
-  limpid: them === 'darkGreen' ? 'grey' : them === 'blue' ? 'blue' : 'black',
+  inline: theme === 'darkGreen' ? 'standard' : theme === 'blue' ? 'blue' : 'black',
+  grey: theme === 'darkGreen' ? 'standard' : theme === 'blue' ? 'blue' : 'black',
+  inlineGrey: theme === 'darkGreen' ? 'standard' : theme === 'blue' ? 'blue' : 'black',
+  light: theme === 'darkGreen' ? 'standard' : theme === 'blue' ? 'blue' : 'black',
+  limpid: theme === 'darkGreen' ? 'grey' : theme === 'blue' ? 'blue' : 'black',
 }) 
 
 /**
@@ -26,16 +26,16 @@ export const SPINNER_SIZE: LoaderSizeTypes = {
 /**
  * Spinner Background Display Options
  */
-export const spinnerThemColor = (them: ThemTypes) => ({
+export const spinnerThemeColor = (theme: ThemeTypes) => ({
   standard: cn({
     // Dark green
-    'bg-A00': them === 'darkGreen',
+    'bg-A00': theme === 'darkGreen',
 
     // Black
-    'bg-F00': them === 'black',
+    'bg-F00': theme === 'black',
 
     // Blue
-    'bg-G00': them === 'blue',
+    'bg-G00': theme === 'blue',
   }),
   inline: 'bg-white',
   grey: 'bg-C00',

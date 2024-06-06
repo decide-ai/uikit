@@ -12,7 +12,7 @@ export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
   const { 
     checked, 
     isError,
-    them,
+    theme,
   } = useContext(TextInputContext);
 
   const chackedClasses = {
@@ -31,13 +31,13 @@ export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
   
   // Get color for icon container background;
   const skinClassName = checked 
-    ? chackedClasses[them || 'darkGreen'] : isError 
+    ? chackedClasses[theme || 'darkGreen'] : isError 
     ? 'bg-D90 border-D90' : 'border-C00 bg-C00';
 
   // Get color for icon;
   const iconColorName = checked 
-    ? iconColor[them || 'darkGreen'] : isError 
-    ? 'D00' : them === 'darkGreen' ? 'A00' : 'F00';
+    ? iconColor[theme || 'darkGreen'] : isError 
+    ? 'D00' : theme === 'darkGreen' ? 'A00' : 'F00';
 
   return (
     <div className={cn(

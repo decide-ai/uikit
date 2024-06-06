@@ -29,7 +29,6 @@ export const Rounded: Story = {
   args: {
     size: 'medium',
     skin: 'standard',
-    rounded: true,
     buttonText: 'Button text'
   }
 };

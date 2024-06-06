@@ -9,7 +9,7 @@ export const argTypes = {
       defaultValue: { summary: 'inline' }
     }
   },
-  them: {
+  theme: {
     control: 'select',
     options: [
       'darkGreen',

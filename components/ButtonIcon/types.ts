@@ -1,4 +1,4 @@
-type ThemTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
+type ThemeTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
 type RoundedTypes = 'full' | 'xl' | 'lg' | 'md';
 type SkinTypes = 'standard' | 'grey' | 'linear';
 
@@ -41,5 +41,5 @@ export type ButtonIconPropTypes = {
    * skins will have a black background, border, or color.
    * Default value: 'lightGreen'
    */
-  them?: ThemTypes;
+  theme?: ThemeTypes;
 }

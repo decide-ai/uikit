@@ -7,14 +7,14 @@ import { CheckIcon, getColorByName } from '../index';
 import { CheckboxPropTypes } from './types';
 
 // Classes
-import { THEM_COLOR_SET, SIZE_SET, ROUNDED_SET } from './styles';
+import { THEME_COLOR_SET, SIZE_SET, ROUNDED_SET } from './styles';
 
 /**
  * Checkbox component with customizable styles and state management.
  */
 export const Checkbox: React.FC<CheckboxPropTypes> = ({ 
   checked = false,
-  them = 'darkGreen',
+  theme = 'darkGreen',
   size = 'medium',
   rounded = 'md',
   disabled,
@@ -50,7 +50,7 @@ export const Checkbox: React.FC<CheckboxPropTypes> = ({
         SIZE_SET[size],
         ROUNDED_SET[rounded],
         {
-          [`${THEM_COLOR_SET[them]}`]: isChecked,
+          [`${THEME_COLOR_SET[theme]}`]: isChecked,
           'border-F100': !isChecked,
           'pointer-events-none border-C20 bg-C50': disabled
         })

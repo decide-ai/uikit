@@ -14,79 +14,79 @@ export const roundedSizeClasses = {
   'md': 'rounded-md', /* 6px */
 };
 
-export const iconSkinClasses = (them: string) => ({
+export const iconSkinClasses = (theme: string) => ({
   standard: cn({
     // darkGreen | black | blue
-    'group-hover:text-C100 group-active:text-C100': them === 'darkGreen' || them === 'black' || them === 'blue',
+    'group-hover:text-C100 group-active:text-C100': theme === 'darkGreen' || theme === 'black' || theme === 'blue',
 
     // lightGreen
-    'group-hover:text-F00 group-active:text-F00': them === 'lightGreen'
+    'group-hover:text-F00 group-active:text-F00': theme === 'lightGreen'
   }),
   grey: cn({
     // darkGreen | black | blue
-    'group-hover:text-C100 group-active:text-C100': them === 'darkGreen' || them === 'black' || them === 'blue',
+    'group-hover:text-C100 group-active:text-C100': theme === 'darkGreen' || theme === 'black' || theme === 'blue',
 
     // lightGreen
-    'group-hover:text-F00 group-active:text-F00': them === 'lightGreen'
+    'group-hover:text-F00 group-active:text-F00': theme === 'lightGreen'
   }),
   linear: cn({
     // darkGreen
-    'group-hover:text-A00 group-active:text-A00': them === 'darkGreen',
+    'group-hover:text-A00 group-active:text-A00': theme === 'darkGreen',
 
     // black
-    'group-hover:text-F00 group-active:text-F00': them === 'black' || them === 'lightGreen',
+    'group-hover:text-F00 group-active:text-F00': theme === 'black' || theme === 'lightGreen',
 
     // blue
-    'group-hover:text-G00 group-active:text-G00': them === 'blue',
+    'group-hover:text-G00 group-active:text-G00': theme === 'blue',
   })
 });
 
-export const skinClasses = (them: string) => ({
+export const skinClasses = (theme: string) => ({
   standard: cn(
     // Common
     'border-transparent',
     {
     // darkGreen
-    'hover:bg-A10 active:bg-A00': them === 'darkGreen',
+    'hover:bg-A10 active:bg-A00': theme === 'darkGreen',
 
     // black
-    'hover:bg-F30 active:bg-F00': them === 'black',
+    'hover:bg-F30 active:bg-F00': theme === 'black',
 
     // blue
-    'hover:bg-G10 active:bg-G00': them === 'blue',
+    'hover:bg-G10 active:bg-G00': theme === 'blue',
 
     // light green
-    'hover:bg-B90 active:bg-B80': them === 'lightGreen',
+    'hover:bg-B90 active:bg-B80': theme === 'lightGreen',
   }),
   grey: cn(
     // Common
     'bg-C00 border-C00 hover:border-transparent',
     {
     // darkGreen
-    'hover:bg-A10 active:bg-A00': them === 'darkGreen',
+    'hover:bg-A10 active:bg-A00': theme === 'darkGreen',
 
     // black
-    'hover:bg-F30 active:bg-F00': them === 'black',
+    'hover:bg-F30 active:bg-F00': theme === 'black',
 
     // blue
-    'hover:bg-G10 active:bg-G00': them === 'blue',
+    'hover:bg-G10 active:bg-G00': theme === 'blue',
 
     // light green
-    'hover:bg-B90 active:bg-B80': them === 'lightGreen',
+    'hover:bg-B90 active:bg-B80': theme === 'lightGreen',
   }),
   linear: cn(
     'border-[1px] border-C00', 
     {
     // darkGreen
-    'hover:border-A50 active:border-A40': them === 'darkGreen',
+    'hover:border-A50 active:border-A40': theme === 'darkGreen',
 
     // black
-    'hover:border-F50 active:border-F40': them === 'black',
+    'hover:border-F50 active:border-F40': theme === 'black',
 
     // blue
-    'hover:border-G40 active:border-G30': them === 'blue',
+    'hover:border-G40 active:border-G30': theme === 'blue',
 
     // light green
-    'hover:border-B70 active:border-B80': them === 'lightGreen',
+    'hover:border-B70 active:border-B80': theme === 'lightGreen',
   })
 })

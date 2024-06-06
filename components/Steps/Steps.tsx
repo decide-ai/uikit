@@ -6,7 +6,7 @@ import { StepDot } from './StepDot';
 import { StepsPropTypes } from './types';
 
 /**
- * Renders a sequence of steps with dynamic skins and connectors between them.
+ * Renders a sequence of steps with dynamic skins and connectors between theme.
  * 
  * @param skin The visual style of the step ('num', 'dot', or 'icon').
  * @param steps Array of step objects, each representing a step in the sequence.
