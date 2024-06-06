@@ -26,21 +26,21 @@ import {
 export const ButtonIcon: React.FC<ButtonIconPropTypes> = ({ 
   iconName,
   disabled,
-  them = 'lightGreen',
+  theme = 'lightGreen',
   skin = 'standard',
   rounded = 'lg',
   size = 24,
   onClick,
 }) => {
-  /** Skin styles dependent from them */
-  const skinClassesInline = skinClasses(them);
+  /** Skin styles dependent from theme */
+  const skinClassesInline = skinClasses(theme);
   const skinClass = skinClassesInline[skin];
 
   /**
-   * Hover styles that depend on them; 
+   * Hover styles that depend on theme; 
    * These variables are used for the hover color of the icon;
    */
-  const groupHoverClasses = iconSkinClasses(them);
+  const groupHoverClasses = iconSkinClasses(theme);
   const skinGroupHover = groupHoverClasses[skin];
 
   return (

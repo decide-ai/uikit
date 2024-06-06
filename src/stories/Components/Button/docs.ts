@@ -22,7 +22,7 @@ export const argTypes = {
       'limpid'
     ]
   },
-  them: {
+  theme: {
     control: 'select',
     options: [
       'darkGreen',

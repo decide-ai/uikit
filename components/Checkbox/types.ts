@@ -1,4 +1,4 @@
-type ThemTypes = 'black' | 'darkGreen' | 'lightGreen' | 'blue';
+type ThemeTypes = 'black' | 'darkGreen' | 'lightGreen' | 'blue';
 type SizeTypes = 'large' | 'medium' | 'small';
 type RoundedTypes = 'md' | 'lg' | 'xl' | '2xl';
 
@@ -18,7 +18,7 @@ export interface CheckboxPropTypes {
    * 
    * @default 'darkGreen'
    */
-  them?: ThemTypes;
+  theme?: ThemeTypes;
 
   /**
    * Size of the checkbox. Can be 'small', 'medium', or 'large'.

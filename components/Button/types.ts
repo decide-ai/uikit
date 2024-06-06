@@ -1,5 +1,5 @@
 export type SkinTypes = 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey' | 'limpid';
-export type ThemTypes = 'darkGreen' | 'black' | 'blue';
+export type ThemeTypes = 'darkGreen' | 'black' | 'blue';
 export type SizeTypes = 'large' | 'medium' | 'small' | 'tiny';
 type RoundedTypes = 'full' | 'xl' | 'lg' | 'md';
 
@@ -49,7 +49,7 @@ export type LoaderPropTypes = {
    * skins will have a black background, border, or color.
    * Default value: 'darkGreen'
    */
-  them?: ThemTypes;
+  theme?: ThemeTypes;
 }
 
 export type ButtonPropsTypes = {
@@ -126,7 +126,7 @@ export type ButtonPropsTypes = {
    * skins will have a black background, border, or color.
    * Default value: 'darkGreen'
    */
-  them?: ThemTypes;
+  theme?: ThemeTypes;
 
   /**
    * When `rounded` is `full`, the button corners become fully rounded.

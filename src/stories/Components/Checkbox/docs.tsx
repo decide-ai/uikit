@@ -1,5 +1,5 @@
 export const argTypes = {
-  them: {
+  theme: {
     control: 'select',
     options: [
       "black",

@@ -7,7 +7,7 @@ import { SideBarItem } from '../../SideBarItem';
 import { MapWrapperPropTypes } from '../../types';
 
 /**
- * Component to map through lists of items and render them using SideBarItem component.
+ * Component to map through lists of items and render theme using SideBarItem component.
  */
 export const MapWrapper: React.FC<MapWrapperPropTypes> = ({ 
   itemsList,

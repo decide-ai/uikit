@@ -1,4 +1,4 @@
-export const THEM_COLOR_SET = {
+export const THEME_COLOR_SET = {
   black: 'bg-F00 border-F00',
   darkGreen: 'bg-A00 border-A00',
   lightGreen: 'bg-B00 border-B00',

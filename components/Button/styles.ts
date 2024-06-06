@@ -26,26 +26,26 @@ export const roundedSizeClasses = {
   'md': 'rounded-md', /* 6px */
 };
 
-export const skinClasses = ((them: string) => ({
+export const skinClasses = ((theme: string) => ({
   standard: cn(
     // Common
     BORDER_SOLID, 
     'disabled:border-C00 disabled:bg-C00', 
     {
     // Dark green
-    'border-A00 bg-A00 text-C100': them === 'darkGreen',
-    'hover:bg-A10 hover:border-A10 active:bg-A00 active:border-A00': them === 'darkGreen',
-    'disabled:text-A50': them === 'darkGreen',
+    'border-A00 bg-A00 text-C100': theme === 'darkGreen',
+    'hover:bg-A10 hover:border-A10 active:bg-A00 active:border-A00': theme === 'darkGreen',
+    'disabled:text-A50': theme === 'darkGreen',
 
     // Black
-    'border-F00 bg-F00 text-C100': them === 'black',
-    'hover:bg-F30 hover:border-F30 active:bg-F00 active:border-F00': them === 'black',
-    'disabled:text-F80': them === 'black',
+    'border-F00 bg-F00 text-C100': theme === 'black',
+    'hover:bg-F30 hover:border-F30 active:bg-F00 active:border-F00': theme === 'black',
+    'disabled:text-F80': theme === 'black',
 
     // Blue
-    'border-G00 bg-G00 text-C100': them === 'blue',
-    'hover:bg-G30 hover:border-G30 active:bg-G00 active:border-G00': them === 'blue',
-    'disabled:text-F70': them === 'blue',
+    'border-G00 bg-G00 text-C100': theme === 'blue',
+    'hover:bg-G30 hover:border-G30 active:bg-G00 active:border-G00': theme === 'blue',
+    'disabled:text-F70': theme === 'blue',
   }),
   inline: cn(
     // Common
@@ -54,19 +54,19 @@ export const skinClasses = ((them: string) => ({
     BORDER_SOLID, 
     {
     // Dark green
-    'border-A00 text-A00': them === 'darkGreen',
-    'hover:border-A10 hover:bg-A10 hover:text-C100 active:border-A00 active:bg-A00 active:text-C100': them === 'darkGreen',
-    'disabled:text-A50': them === 'darkGreen',
+    'border-A00 text-A00': theme === 'darkGreen',
+    'hover:border-A10 hover:bg-A10 hover:text-C100 active:border-A00 active:bg-A00 active:text-C100': theme === 'darkGreen',
+    'disabled:text-A50': theme === 'darkGreen',
 
     // Black
-    'border-F00 text-F00': them === 'black',
-    'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': them === 'black',
-    'disabled:text-F80': them === 'black',
+    'border-F00 text-F00': theme === 'black',
+    'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': theme === 'black',
+    'disabled:text-F80': theme === 'black',
 
     // Blue
-    'border-G00 text-G00': them === 'blue',
-    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': them === 'blue',
-    'disabled:text-F70': them === 'blue',
+    'border-G00 text-G00': theme === 'blue',
+    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': theme === 'blue',
+    'disabled:text-F70': theme === 'blue',
   }),
   grey: cn(
     // Common
@@ -74,19 +74,19 @@ export const skinClasses = ((them: string) => ({
     'disabled:border-C00 disabled:bg-C00', 
     {
     // Dark green
-    'text-A00': them === 'darkGreen',
-    'hover:border-A10 hover:bg-A10 hover:text-C100 active:border-A00 active:bg-A00 active:text-C100': them === 'darkGreen',
-    'disabled:text-A50': them === 'darkGreen',
+    'text-A00': theme === 'darkGreen',
+    'hover:border-A10 hover:bg-A10 hover:text-C100 active:border-A00 active:bg-A00 active:text-C100': theme === 'darkGreen',
+    'disabled:text-A50': theme === 'darkGreen',
 
     // Black
-    'text-F00': them === 'black',
-    'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': them === 'black',
-    'disabled:text-F80': them === 'black',
+    'text-F00': theme === 'black',
+    'hover:border-F30 hover:bg-F30 hover:text-C100 active:border-F00 active:bg-F00 active:text-C100': theme === 'black',
+    'disabled:text-F80': theme === 'black',
 
     // Blue
-    'text-G00': them === 'blue',
-    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': them === 'blue',
-    'disabled:text-F70': them === 'blue',
+    'text-G00': theme === 'blue',
+    'hover:border-G00 hover:bg-G00 hover:text-C100 active:border-G00 active:bg-G00 active:text-C100': theme === 'blue',
+    'disabled:text-F70': theme === 'blue',
   }),
   inlineGrey: cn(
     // Common
@@ -97,16 +97,16 @@ export const skinClasses = ((them: string) => ({
     BORDER_SOLID, 
     {
     // Dark green
-    'border-A80 text-A00': them === 'darkGreen',
-    'disabled:text-A50': them === 'darkGreen',
+    'border-A80 text-A00': theme === 'darkGreen',
+    'disabled:text-A50': theme === 'darkGreen',
 
     // Black
-    'border-F80 text-F00': them === 'black',
-    'disabled:text-F80': them === 'black',
+    'border-F80 text-F00': theme === 'black',
+    'disabled:text-F80': theme === 'black',
 
     // Blue
-    'border-G50 text-G00': them === 'blue',
-    'disabled:text-F70': them === 'blue',
+    'border-G50 text-G00': theme === 'blue',
+    'disabled:text-F70': theme === 'blue',
   }),
   light: cn(
     // Common
@@ -117,18 +117,18 @@ export const skinClasses = ((them: string) => ({
     BORDER_SOLID, 
     {
     // Dark green
-    'border-A80 text-A00': them === 'darkGreen',
-    'disabled:text-A50': them === 'darkGreen',
+    'border-A80 text-A00': theme === 'darkGreen',
+    'disabled:text-A50': theme === 'darkGreen',
 
     // Black
-    'border-C00 text-F00': them === 'black',
-    'hover:border-F90 hover:bg-F110 hover:text-F00 active:border-F90 active:bg-F100 active:text-F00': them === 'black',
-    'disabled:text-F80': them === 'black',
+    'border-C00 text-F00': theme === 'black',
+    'hover:border-F90 hover:bg-F110 hover:text-F00 active:border-F90 active:bg-F100 active:text-F00': theme === 'black',
+    'disabled:text-F80': theme === 'black',
 
     // Blue
-    'border-C00 text-G00': them === 'blue',
-    'hover:border-G50 hover:bg-G80 hover:text-G00 active:border-G50 active:bg-G50 active:text-G00': them === 'blue',
-    'disabled:text-F70': them === 'blue',
+    'border-C00 text-G00': theme === 'blue',
+    'hover:border-G50 hover:bg-G80 hover:text-G00 active:border-G50 active:bg-G50 active:text-G00': theme === 'blue',
+    'disabled:text-F70': theme === 'blue',
   }),
   limpid: cn(
     // Common
@@ -137,12 +137,12 @@ export const skinClasses = ((them: string) => ({
     BORDER_SOLID,
     {
     // darkGreen
-    'hover:border-A20 hover:bg-A10 active:border-A30 active:bg-A20': them === 'darkGreen',
+    'hover:border-A20 hover:bg-A10 active:border-A30 active:bg-A20': theme === 'darkGreen',
 
     // black
-    'hover:border-F60 hover:bg-F40 active:border-F60 active:bg-F50': them === 'black',
+    'hover:border-F60 hover:bg-F40 active:border-F60 active:bg-F50': theme === 'black',
 
     // black
-    'hover:border-G30 hover:text-F00 hover:bg-G30 active:border-G30 active:bg-G40': them === 'blue',
+    'hover:border-G30 hover:text-F00 hover:bg-G30 active:border-G30 active:bg-G40': theme === 'blue',
   })
 }))

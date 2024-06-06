@@ -20,7 +20,7 @@ export const TextInputContext = createContext<ITextInputContext>(defaultValue);
 export const TextInputProvider = ({ 
   children,
   type = 'input',
-  them = 'darkGreen',
+  theme = 'darkGreen',
   skin = 'inline',
   size = 'small',
   ...props
@@ -41,7 +41,7 @@ export const TextInputProvider = ({
       handleChange, 
       handleClear,
       type,
-      them,
+      theme,
       skin,
       size,
       ...props

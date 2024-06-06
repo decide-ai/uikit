@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type SkinTypes = 'inline' | 'grey';
-export type ThemTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
+export type ThemeTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
 export type SizeTypes = 'medium' | 'small';
 
 export type TextInputPropsTypes = {
@@ -116,7 +116,7 @@ export type TextInputPropsTypes = {
    * skins will have a black border, or color.
    * Default value: 'darkGreen'
    */
-  them?: ThemTypes;
+  theme?: ThemeTypes;
 
   /** 
    * The unique identifier for the input element. Necessary for associating the input with its label for accessibility.

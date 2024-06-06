@@ -16,7 +16,7 @@ export const argTypes = {
       'md'
     ]
   },
-  them: {
+  theme: {
     control: 'select',
     options: [
       'darkGreen',

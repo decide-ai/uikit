@@ -7,7 +7,7 @@ import { Typography, DynamicIcon, getColorByName } from '../../../index';
 import { MapWrapperPropTypes } from '../../types';
 
 /**
- * Component to map through lists of items and render them.
+ * Component to map through lists of items and render theme.
  */
 export const MapWrapper: React.FC<MapWrapperPropTypes> = ({ 
   itemsList,

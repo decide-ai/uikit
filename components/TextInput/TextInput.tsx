@@ -20,11 +20,11 @@ export const TextInputComponent: React.FC<TextInputPropsTypes> = () => {
     inputText, 
     isError, 
     errorMessage,
-    them,
+    theme,
   } = useContext(TextInputContext);
   
   /** Dark Green or Black */
-  const labelColor = them === 'darkGreen' ? 'A00' : 'F00';
+  const labelColor = theme === 'darkGreen' ? 'A00' : 'F00';
 
   return (
     <React.Fragment>
