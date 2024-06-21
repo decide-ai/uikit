@@ -17,10 +17,9 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-
 export const TextInputWithClearText: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputWithClearText',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -30,7 +29,7 @@ export const TextInputWithClearText: Story = {
 
 export const TextInputError: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputError',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -41,7 +40,7 @@ export const TextInputError: Story = {
 
 export const TextInputRequire: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputRequire',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -51,7 +50,7 @@ export const TextInputRequire: Story = {
 
 export const TextInputRequireChecked: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputRequireChecked',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -62,7 +61,7 @@ export const TextInputRequireChecked: Story = {
 
 export const TextInputWithInputText: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputWithInputText',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -72,7 +71,7 @@ export const TextInputWithInputText: Story = {
 
 export const TextInputViewOnly: Story = {
   args: {
-    type: 'input',
+    view: 'input',
     inputId: 'TextInputViewOnly',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -82,7 +81,7 @@ export const TextInputViewOnly: Story = {
 
 export const TextInputWithTextareaType: Story = {
   args: {
-    type: 'textarea',
+    view: 'textarea',
     inputId: 'TextInputViewOnly',
     label: 'Input label',
     placeholder: 'Input placeholder',
@@ -91,7 +90,7 @@ export const TextInputWithTextareaType: Story = {
 
 export const TextInputWithTextareaHeight: Story = {
   args: {
-    type: 'textarea',
+    view: 'textarea',
     inputId: 'TextInputViewOnly',
     label: 'Input label',
     placeholder: 'Input placeholder',

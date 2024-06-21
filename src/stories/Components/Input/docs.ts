@@ -28,6 +28,13 @@ export const argTypes = {
       defaultValue: { summary: 'medium' }
     }
   },
+  type: {
+    control: 'select',
+    options: ['text', 'email', 'date', 'number', 'tel', 'time', 'password', 'month', 'date'],
+    table: {
+      defaultValue: { summary: 'text' }
+    }
+  }
 }
 
 export const args = {};
