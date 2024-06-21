@@ -33,6 +33,17 @@ export type TextInputPropsTypes = {
    */
   onChange?: (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => void;
   
+  /**
+   * Callback function that is called when user unfocuses input.
+   */
+  handleOnBlur?: (e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>) => void;
+
+  /**
+   * Callback function that is called when user focuses input.
+   */
+  handleOnFocus?: (e: React.FocusEvent<HTMLInputElement> | React.FocusEvent<HTMLTextAreaElement>) => void;
+
+  
   /** 
    * Text label for the input. This label is associated with the input by using the `inputId` prop.
    */
@@ -87,7 +98,12 @@ export type TextInputPropsTypes = {
    * Specifies the type of control to render. When set to 'input', a single-line text input is displayed.
    * When set to 'textarea', a multi-line textarea is displayed. Defaults to 'input'.
    */
-  type?: 'input' | 'textarea';
+  view?: 'input' | 'textarea';
+
+  /**
+   * A string specifying the type of control to render. For example: email, date, number
+   */
+  type?: 'email' | 'text' | 'date' | 'number' | 'tel' | 'time' | 'password' | 'month' | 'date';
 
   /**
    * Add size tot the textarea, it can be '300px' or '10rem';

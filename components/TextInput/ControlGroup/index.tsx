@@ -8,7 +8,7 @@ import { Typography, ButtonIcon } from '../../index';
 
 export const ControlGroup = () => {
   const { 
-    type,
+    view,
     value,
     inputText, 
     clearText, 
@@ -20,7 +20,7 @@ export const ControlGroup = () => {
   return (
     <ControlGroupWrap>
       <React.Fragment>
-        {(inputText && type === 'input') && (
+        {(inputText && view === 'input') && (
           <Typography 
             tagName="span" 
             size="sm"
@@ -36,7 +36,7 @@ export const ControlGroup = () => {
           />
         )}
 
-        {(require && type === 'input') && (
+        {(require && view === 'input') && (
           <IconWrap iconName="DoubleCheckIcon" />
         )}
 

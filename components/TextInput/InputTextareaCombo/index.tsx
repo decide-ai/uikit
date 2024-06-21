@@ -9,9 +9,12 @@ import { outlineClasses } from './styles';
 
 export const InputTextareaCombo = () => {
   const { 
+    view,
     type,
     value, 
     handleChange, 
+    handleOnBlur,
+    handleOnFocus,
     inputId, 
     placeholder, 
     disabled, 
@@ -31,6 +34,8 @@ export const InputTextareaCombo = () => {
     value: value,
     name,
     onChange: handleChange,
+    onBlur: handleOnBlur,
+    onFocus: handleOnFocus,
     placeholder: placeholder,
     disabled: disabled || viewOnly,
     className: cn(
@@ -55,10 +60,10 @@ export const InputTextareaCombo = () => {
 
   return (
     <React.Fragment>
-      {type === 'input' ? (
-        <input type="text" {...inputCommonProps} />
+      {view === 'input' ? (
+        <input type={type} {...inputCommonProps} />
       ) : (
-        <textarea 
+        <textarea
           {...inputCommonProps} 
           style={{
             resize: 'vertical',

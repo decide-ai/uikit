@@ -10,7 +10,7 @@ import { ControlGroupWrapPropTypes } from '../types';
 export const ControlGroupWrap: React.FC<ControlGroupWrapPropTypes> = ({ 
   children,
 }) => {
-  const { type } = useContext(TextInputContext);
+  const { view } = useContext(TextInputContext);
   return (
     <div className={cn(
       'flex gap-1 px-1',
@@ -18,8 +18,8 @@ export const ControlGroupWrap: React.FC<ControlGroupWrapPropTypes> = ({
       'absolute right-0.5',
       'text-gray-500 hover:text-gray-700',
       {
-        'items-center top-1/2 transform -translate-y-1/2': type === 'input',
-        'flex-col py-1 top-1': type === 'textarea'
+        'items-center top-1/2 transform -translate-y-1/2': view === 'input',
+        'flex-col py-1 top-1': view === 'textarea'
       }
     )}>
       {children}
