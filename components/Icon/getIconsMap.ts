@@ -2,6 +2,20 @@ import * as Icons from "./index";
 import { IconProps, IconListItem } from "./types";
 
 export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
+  // Social
+  { group: 'Social', name: 'FacebookLogoIcon', component: Icons.FacebookLogoIcon },
+  { group: 'Social', name: 'InstagramLogoIcon', component: Icons.InstagramLogoIcon },
+  { group: 'Social', name: 'TelegramLogoIcon', component: Icons.TelegramLogoIcon },
+  { group: 'Social', name: 'LinkedinLogoIcon', component: Icons.LinkedinLogoIcon },
+  { group: 'Social', name: 'MediumLogoIcon', component: Icons.MediumLogoIcon },
+  { group: 'Social', name: 'MetaLogoIcon', component: Icons.MetaLogoIcon },
+  { group: 'Social', name: 'SnapchatLogoIcon', component: Icons.SnapchatLogoIcon },
+  { group: 'Social', name: 'TiktokLogoIcon', component: Icons.TiktokLogoIcon },
+  { group: 'Social', name: 'TwitterLogoIcon', component: Icons.TwitterLogoIcon },
+  { group: 'Social', name: 'XLogoIcon', component: Icons.XLogoIcon },
+  { group: 'Social', name: 'YoutubeLogoIcon', component: Icons.YoutubeLogoIcon },
+  { group: 'Social', name: 'DiscordLogoIcon', component: Icons.DiscordLogoIcon },
+
   // Arrow
   { group: 'Arrow', name: 'AltArrowDownIcon', component: Icons.AltArrowDownIcon },
   { group: 'Arrow', name: 'AltArrowLeftIcon', component: Icons.AltArrowLeftIcon },

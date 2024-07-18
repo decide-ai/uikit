@@ -13,5 +13,6 @@ export * from "./Security";
 export * from "./SettingsFineTuning";
 export * from "./Time";
 export * from "./VideoAudioSound";
+export * from "./Social";
 export { getIconsMap } from './getIconsMap';
 export { getIconByName } from './getIconByName';

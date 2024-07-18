@@ -1,0 +1,12 @@
+export { FacebookLogoIcon } from './FacebookLogoIcon';
+export { InstagramLogoIcon } from './InstagramLogoIcon';
+export { TelegramLogoIcon } from './TelegramLogoIcon';
+export { LinkedinLogoIcon } from './LinkedinLogoIcon';
+export { MediumLogoIcon } from './MediumLogoIcon';
+export { MetaLogoIcon } from './MetaLogoIcon';
+export { SnapchatLogoIcon } from './SnapchatLogoIcon';
+export { TiktokLogoIcon } from './TiktokLogoIcon';
+export { TwitterLogoIcon } from './TwitterLogoIcon';
+export { XLogoIcon } from './XLogoIcon';
+export { YoutubeLogoIcon } from './YoutubeLogoIcon';
+export { DiscordLogoIcon } from './DiscordLogoIcon';
