@@ -1,3 +1,4 @@
+export { FacebookInCircleLogoIcon } from './FacebookInCircleLogoIcon';
 export { FacebookLogoIcon } from './FacebookLogoIcon';
 export { InstagramLogoIcon } from './InstagramLogoIcon';
 export { TelegramLogoIcon } from './TelegramLogoIcon';

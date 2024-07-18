@@ -4,6 +4,7 @@ import { IconProps, IconListItem } from "./types";
 export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
   // Social
   { group: 'Social', name: 'FacebookLogoIcon', component: Icons.FacebookLogoIcon },
+  { group: 'Social', name: 'FacebookInCircleLogoIcon', component: Icons.FacebookInCircleLogoIcon },
   { group: 'Social', name: 'InstagramLogoIcon', component: Icons.InstagramLogoIcon },
   { group: 'Social', name: 'TelegramLogoIcon', component: Icons.TelegramLogoIcon },
   { group: 'Social', name: 'LinkedinLogoIcon', component: Icons.LinkedinLogoIcon },
