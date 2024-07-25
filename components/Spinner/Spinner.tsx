@@ -6,8 +6,9 @@ import { SpinnerPropTypes, SizeTypes, SkinTypes } from './types';
 const sizeClasses: SizeTypes = {
   large: 'w-12 h-12',
   medium: 'w-9 h-9',
-  small: 'w-8 h-8',
-  tiny: 'w-5 h-5',
+  base: 'w-[1.5rem] h-[1.5rem]',
+  small: 'w-[1.35rem] h-[1.35rem]',
+  tiny: 'w-[1.13rem] h-[1.13rem]',
 }
 
 // Defining classes for different color schemes (skins) of the spinner

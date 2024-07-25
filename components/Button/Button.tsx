@@ -22,6 +22,16 @@ import {
 /**
  * This component is responsible for rendering a customizable button in a React application.
  * It utilizes Tailwind CSS for styling and supports a variety of props to control its appearance and behavior.
+ * ### Displaying `buttonText`:
+
+ - `buttonText` is displayed if `loading` is `true` and `spaceBetween` is `true`.
+ - `buttonText` is displayed if `loading` is `false`.
+
+ ### Other Elements:
+
+ - The indicator (`Indicator`) is displayed if `indicator` is present and `loading` is `false`.
+ - The loader (`Loader`) is displayed if `loading` is `true`.
+ - The icon (`ButtonIcon`) is displayed if `iconName` is present and `loading` is `false`.
  */
 export const Button: React.FC<ButtonPropsTypes> = ({
   size = 'medium',
@@ -56,7 +66,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
         skinClass,
         iconIndentationClasses,
         roundedClasses,
-        'svgGroup relative overflow-hidden',
+        'svgGroup relative overflow-hidden gap-2',
         'flex items-center flex-shrink-0',
         'font-neue-montreal font-regular whitespace-nowrap',
         'transition duration-100 ease-in-out',
@@ -65,7 +75,28 @@ export const Button: React.FC<ButtonPropsTypes> = ({
         // when a user uses a keyboard to focus an element.
         'focus:outline-none focus:box-shadow-focus-ring focus-visible:box-shadow-focus-ring',
       )}
-    >
+    > 
+      {/**
+       * 
+       * Displaying buttonText:
+       *  'buttonText' is displayed if 'loading' is true and 'spaceBetween' is true.
+       *  'buttonText' is displayed if 'loading' is false.
+       * Other Elements:
+       *  The indicator (Indicator) is displayed if 'indicator' is present and 'loading' is false.
+       *  The loader (Loader) is displayed if 'loading' is true.
+       *  The icon (ButtonIcon) is displayed if 'iconName' is present and 'loading' is false.
+       */}   
+      {indicator && !loading && (
+        <Indicator 
+          indicator={indicator} 
+          disabled={disabled}
+        />
+      )}
+
+      {(loading && spaceBetween) || !loading ? buttonText : null}
+      
+      {children && children}
+
       {loading && (
         <Loader
           theme={theme}
@@ -73,19 +104,8 @@ export const Button: React.FC<ButtonPropsTypes> = ({
           skin={skin}
         />
       )}
-
-      {indicator && (
-        <Indicator 
-          indicator={indicator} 
-          disabled={disabled}
-        />
-      )}
-
-      {buttonText}
       
-      {children && children}
-      
-      {iconName && (
+      {iconName && !loading && (
         <ButtonIcon 
           iconName={iconName}
           skin={skin}
