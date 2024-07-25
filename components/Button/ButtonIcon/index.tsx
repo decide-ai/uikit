@@ -35,7 +35,7 @@ export const ButtonIcon: React.FC<ButtonIconTypes> = ({
   const iconSize = size && SIZE[size];
 
   return (
-    <span className={cn('rounded-md ml-2')}>
+    <span className={cn('rounded-md')}>
       <DynamicIcon
         iconName={iconName}
         size={iconSize}

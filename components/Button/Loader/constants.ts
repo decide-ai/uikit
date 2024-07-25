@@ -17,7 +17,7 @@ export const spinnerSkin = (theme: ThemeTypes) => ({
  * Spinner Size Display Options
  */
 export const SPINNER_SIZE: LoaderSizeTypes = {
-  large: 'small',
+  large: 'base',
   medium: 'small',
   small: 'tiny',
   tiny: 'tiny'

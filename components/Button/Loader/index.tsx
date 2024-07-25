@@ -21,8 +21,7 @@ export const Loader: React.FC<LoaderPropTypes> = ({
   const loaderBg = spinnerThemeColor(theme);
   return (
     <span className={cn(
-      'absolute z-10 left-0 top-0 right-0 bottom-0',
-      'w-full h-full',
+      'w-auto h-full',
       'flex items-center justify-center',
       'pointer-events-none',
       loaderBg[skin]

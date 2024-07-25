@@ -2,6 +2,7 @@ export type SizeTypes = {
   [key: string]: string;
   large: string;
   medium: string;
+  base: string;
   small: string;
   tiny: string;
 }
