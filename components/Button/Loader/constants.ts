@@ -22,24 +22,3 @@ export const SPINNER_SIZE: LoaderSizeTypes = {
   small: 'tiny',
   tiny: 'tiny'
 }
-
-/**
- * Spinner Background Display Options
- */
-export const spinnerThemeColor = (theme: ThemeTypes) => ({
-  standard: cn({
-    // Dark green
-    'bg-A00': theme === 'darkGreen',
-
-    // Black
-    'bg-F00': theme === 'black',
-
-    // Blue
-    'bg-G00': theme === 'blue',
-  }),
-  inline: 'bg-white',
-  grey: 'bg-C00',
-  inlineGrey: 'bg-white',
-  light: 'bg-white',
-  limpid: 'bg-white',
-})
