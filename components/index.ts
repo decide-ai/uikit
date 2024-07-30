@@ -30,3 +30,4 @@ export { ScrollContainer } from './ScrollContainer';
 export { Skeleton } from './Skeleton';
 export { Checkbox } from './Checkbox';
 export { Grid } from './Grid';
+export { OutsideClick } from './OutsideClick';
