@@ -5,6 +5,7 @@ import { Typography, Button, OutsideClick } from '../../../../components';
 export default {
   title: 'Components/OutsideClick',
   component: OutsideClick,
+  tags: ['autodocs'],
   argTypes: {
     onClick: { action: 'clicked' },
     children: {
@@ -30,7 +31,7 @@ const Template: StoryFn<typeof OutsideClick> = (args) => {
   };
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center h-[20vw]">
       {isVisible && (
         <OutsideClick {...args} onClick={handleOutsideClick} />
       )}
