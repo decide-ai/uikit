@@ -132,7 +132,7 @@ module.exports = {
         H60: '#B2B0D8',
         H70: '#C3C1E1',
         H80: '#D4D2E9',
-        H90: '#E5E3F2,',
+        H90: '#E5E3F2',
         H100: '#EFEEF5',
         H110: '#F6F5FA',
       }
