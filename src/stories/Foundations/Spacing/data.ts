@@ -3,7 +3,8 @@ export const DATA = {
     { name: 'sm', remSize: '30rem', pxSize: '480px' },
     { name: 'md', remSize: '48rem', pxSize: '768px' },
     { name: 'lg', remSize: '61rem', pxSize: '976px' },
-    { name: 'xl', remSize: '90rem', pxSize: '1440px' },
+    { name: 'xl', remSize: '64rem', pxSize: '1024px' },
+    { name: 'xxl', remSize: '90rem', pxSize: '1440px' },
   ],
   paddingMargin: [
     { value: '0', remSize: '0rem', pxSize: '0px' },
