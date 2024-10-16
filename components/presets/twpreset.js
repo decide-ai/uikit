@@ -12,7 +12,8 @@ module.exports = {
         sm: "480px", // 30rem
         md: "768px", // 48rem
         lg: "976px", // 61rem
-        xl: "1440px", // 90rem
+        xl: "1024px", // 64rem
+        xxl: "1440px" // 90rem
       },
       fontFamily: {
         'neue-montreal': ['"Neue Montreal"', 'sans-serif']
@@ -120,6 +121,20 @@ module.exports = {
         'G80': '#EEF5FB',
         'G90': '#F3F7FC',
         'G100': '#F7FAFD',
+
+        // Lavender
+        H00: '#4C4AA5',
+        H10: '#5D5BAE',
+        H20: '#6E6CB6',
+        H30: '#7F7DBF',
+        H40: '#908EC7',
+        H50: '#A19FD0',
+        H60: '#B2B0D8',
+        H70: '#C3C1E1',
+        H80: '#D4D2E9',
+        H90: '#E5E3F2,',
+        H100: '#EFEEF5',
+        H110: '#F6F5FA',
       }
     }
   },

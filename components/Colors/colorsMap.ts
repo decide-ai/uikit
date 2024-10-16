@@ -91,6 +91,20 @@ export const colorsMap = [
   { group: "Blue", name: "G80", bg: "bg-G80", text: "text-G80", hex: "#EEF5FB" },
   { group: "Blue", name: "G90", bg: "bg-G90", text: "text-G90", hex: "#F3F7FC" },
   { group: "Blue", name: "G100", bg: "bg-G100", text: "text-G100", hex: "#F7FAFD" },
+
+  // Lavender
+  { group: "Lavender", name: "H00", bg: "bg-H00", text: "text-H00", hex: "#4C4AA5" },
+  { group: "Lavender", name: "H10", bg: "bg-H10", text: "text-H10", hex: "#5D5BAE" },
+  { group: "Lavender", name: "H20", bg: "bg-H20", text: "text-H20", hex: "#6E6CB6" },
+  { group: "Lavender", name: "H30", bg: "bg-H30", text: "text-H30", hex: "#7F7DBF" },
+  { group: "Lavender", name: "H40", bg: "bg-H40", text: "text-H40", hex: "#908EC7" },
+  { group: "Lavender", name: "H50", bg: "bg-H50", text: "text-H50", hex: "#A19FD0" },
+  { group: "Lavender", name: "H60", bg: "bg-H60", text: "text-H60", hex: "#B2B0D8" },
+  { group: "Lavender", name: "H70", bg: "bg-H70", text: "text-H70", hex: "#C3C1E1" },
+  { group: "Lavender", name: "H80", bg: "bg-H80", text: "text-H80", hex: "#D4D2E9" },
+  { group: "Lavender", name: "H90", bg: "bg-H90", text: "text-H90", hex: "#E5E3F2" },
+  { group: "Lavender", name: "H100", bg: "bg-H100", text: "text-H100", hex: "#EFEEF5" },
+  { group: "Lavender", name: "H110", bg: "bg-H110", text: "text-H110", hex: "#F6F5FA" },
 ];
 
 /**
