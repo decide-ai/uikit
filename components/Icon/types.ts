@@ -22,8 +22,8 @@ export type SvgWrapProps = {
 export type IconListItem = {
   /** Icon group name */
   group: string;
-  /** Icon name, use for key */
-  name: string;
+  /** Icon type, stroke or fill */
+  type: string;
   /** Icon Component */
   component: React.ComponentType<IconProps>;
 }

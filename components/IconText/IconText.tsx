@@ -1,5 +1,6 @@
 import React from 'react';
-import { DynamicIcon, Typography } from '../index';
+import cn from 'classnames';
+import { DynamicIcon, Typography, getIconsMap } from '../index';
 import { IconTextPropsTypes } from './types';
 import { getColorByName } from '../index';
 
@@ -28,14 +29,18 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
    */
   const getIconStrokeHex = getColorByName(iconStroke);
 
+  const iconData = getIconsMap().get(iconName);
+  const iconType = iconData?.type;
+
   return (
     <div className='flex justify-center items-center'>
       <DynamicIcon 
         iconName={iconName}
-        stroke={getIconStrokeHex?.hex}
-        strokeWidth={iconStrokeWidth}
         size={iconSize}
-        className='mr-1.5'
+        className={cn('mr-1.5', getIconStrokeHex?.text, {
+          'fill-current': iconType === 'fill',
+          'stroke-current': iconType === 'stroke',
+        })}
       />
       <Typography
         size={textSize}

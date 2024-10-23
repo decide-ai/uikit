@@ -17,6 +17,7 @@ import {
   sizeClassesWithIcon,
   roundedSizeClasses,
   skinClasses,
+  focusOutlineClasses,
 } from './styles';
 
 /**
@@ -51,6 +52,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
   const skinClassesInline = skinClasses(theme);
   const skinClass = skinClassesInline[skin];
   const roundedClasses = roundedSizeClasses[rounded];
+  const focusClasses = focusOutlineClasses[theme];
   const iconIndentationClasses = iconName ? sizeClassesWithIcon[size] : sizeClasses[size];
 
   return (
@@ -66,6 +68,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
         skinClass,
         iconIndentationClasses,
         roundedClasses,
+        focusClasses,
         'svgGroup relative overflow-hidden gap-2',
         'flex items-center flex-shrink-0',
         'font-neue-montreal font-regular whitespace-nowrap',

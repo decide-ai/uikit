@@ -23,7 +23,7 @@ export type BubbleGumPropTypes = BubbleGymChildren & {
   /**
    * Determines the style or theme of the floating element. Defaults to 'grey'.
    */
-  skin?: 'inline' | 'grey' | 'light' | 'dark';
+  skin?: 'inline' | 'grey' | 'light' | 'dark' | 'lavender';
 
   /**
    * Use for customized referred component, require tailwind classes.

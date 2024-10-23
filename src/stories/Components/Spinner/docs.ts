@@ -16,7 +16,10 @@ export const argTypes = {
     options: [
       'standard',
       'grey',
-      'green'
+      'green',
+      'black',
+      'blue',
+      'lavender'
     ]
   }
 }

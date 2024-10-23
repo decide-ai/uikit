@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 
 // Components
-import { DynamicIcon } from '../index';
+import { DynamicIcon, getIconsMap } from '../index';
 
 // Types
 import { ButtonIconPropTypes } from './types';
@@ -12,7 +12,8 @@ import {
   skinClasses, 
   disabledSkinClasses, 
   roundedSizeClasses, 
-  iconSkinClasses 
+  iconSkinClasses,
+  focusOutlineClasses,
 } from './styles';
 
 /**
@@ -35,6 +36,7 @@ export const ButtonIcon: React.FC<ButtonIconPropTypes> = ({
   /** Skin styles dependent from theme */
   const skinClassesInline = skinClasses(theme);
   const skinClass = skinClassesInline[skin];
+  const focusClasses = focusOutlineClasses[theme];
 
   /**
    * Hover styles that depend on theme; 
@@ -43,16 +45,20 @@ export const ButtonIcon: React.FC<ButtonIconPropTypes> = ({
   const groupHoverClasses = iconSkinClasses(theme);
   const skinGroupHover = groupHoverClasses[skin];
 
+  const iconData = getIconsMap().get(iconName);
+  const iconType = iconData?.type;
+
   return (
     <button
       onClick={onClick}
       disabled={disabled}
       className={cn(
         skinClass,
+        focusClasses,
         disabledSkinClasses[skin],
         roundedSizeClasses[rounded],
-        'group',
-        'border-solid border-[1px] cursor-pointer p-1.5',
+        'group focus:outline-none',
+        'border-solid border-[1px] cursor-pointer p-1',
         {
           'pointer-events-none': disabled,
         }
@@ -61,7 +67,10 @@ export const ButtonIcon: React.FC<ButtonIconPropTypes> = ({
       <DynamicIcon
         iconName={iconName}
         size={size}
-        className={cn('stroke-current', skinGroupHover, {
+        className={cn({
+          'fill-current': iconType === 'fill',
+          'stroke-current': iconType === 'stroke',
+        }, skinGroupHover, {
           'text-A00': !disabled,
           'text-A70': disabled
         })} 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getIconByName } from '../index';
+import { getIconsMap } from "../index";
 import { DynamicIconPropTypes } from './types';
 
 /**
@@ -14,14 +14,20 @@ export const DynamicIcon: React.FC<DynamicIconPropTypes> = ({
   /** If the requred prop is not obtained, return null */
   if (!iconName) return null;
 
-  /** Get icon by name */
-  const IconComponent = getIconByName(iconName);
+  /** Get the icons map */
+  const iconsMap = getIconsMap();
 
-  /** Сheck if the icon exists */
-  if (!IconComponent) {
+  /** Get the icon component by name */
+  const IconObject = iconsMap.get(iconName);
+
+  /** Check if the icon exists */
+  if (!IconObject) {
     console.error(`Icon with name ${iconName} does not exist.`);
     return null;
   }
+
+  /** Destructure the component from IconObject */
+  const { component: IconComponent } = IconObject;
 
   return (
     <IconComponent {...restProps} />

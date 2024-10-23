@@ -4,7 +4,7 @@ import { Typography } from '../../../../components';
 export const argTypes = {
   skin: {
     control: 'select',
-    options: ['inline' , 'grey' , 'light' , 'dark'],
+    options: ['inline' , 'grey' , 'light' , 'dark', 'lavender'],
     table: {
       defaultValue: { summary: 'grey' }
     }

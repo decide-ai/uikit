@@ -1,5 +1,5 @@
 export type SkinTypes = 'standard' | 'inline' | 'grey' | 'light' | 'inlineGrey' | 'limpid';
-export type ThemeTypes = 'darkGreen' | 'black' | 'blue';
+export type ThemeTypes = 'darkGreen' | 'black' | 'blue' | 'lavender';
 export type SizeTypes = 'large' | 'medium' | 'small' | 'tiny';
 type RoundedTypes = 'full' | 'xl' | 'lg' | 'md';
 
