@@ -19,14 +19,16 @@ export const IconWrap: React.FC<IconWrapPropTypes> = ({ iconName }) => {
     darkGreen: 'bg-B90 border-B90',
     black: 'bg-B90 border-B90',
     blue: 'bg-G80 border-G80',
-    lightGreen: 'bg-B90 border-B90'
+    lightGreen: 'bg-B90 border-B90',
+    lavender: 'bg-H90 border-H90',
   };
 
   const iconColor = {
     darkGreen: 'A00',
     black: 'F00',
     blue: 'G00',
-    lightGreen: 'B00'
+    lightGreen: 'B00',
+    lavender: 'H00',
   }
   
   // Get color for icon container background;
