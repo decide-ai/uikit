@@ -17,7 +17,8 @@ const skinClasses: SkinTypes = {
   grey: 'border-l-A70',
   green: 'border-l-B00',
   black: 'border-l-F00',
-  blue: 'border-l-G20'
+  blue: 'border-l-G20',
+  lavender: 'border-l-H00'
 }
 
 /**

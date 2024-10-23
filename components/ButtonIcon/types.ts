@@ -1,4 +1,4 @@
-type ThemeTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen';
+type ThemeTypes = 'darkGreen' | 'black' | 'blue' | 'lightGreen' | 'lavender';
 type RoundedTypes = 'full' | 'xl' | 'lg' | 'md';
 type SkinTypes = 'standard' | 'grey' | 'linear';
 

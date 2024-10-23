@@ -1,4 +1,4 @@
-type ThemeTypes = 'black' | 'darkGreen' | 'lightGreen' | 'blue';
+type ThemeTypes = 'black' | 'darkGreen' | 'lightGreen' | 'blue' | 'lavender';
 type SizeTypes = 'large' | 'medium' | 'small';
 type RoundedTypes = 'md' | 'lg' | 'xl' | '2xl';
 

@@ -1,470 +1,521 @@
 import * as Icons from "./index";
 import { IconProps, IconListItem } from "./types";
 
-export const getIconsMap = (props: IconProps = {}): IconListItem[] => ([
+export const getIconsMap = (props: IconProps = {}): Map<string, IconListItem> => {
+  const iconsMap = new Map<string, IconListItem>();
+
   // Social
-  { group: 'Social', name: 'FacebookLogoIcon', component: Icons.FacebookLogoIcon },
-  { group: 'Social', name: 'FacebookInCircleLogoIcon', component: Icons.FacebookInCircleLogoIcon },
-  { group: 'Social', name: 'InstagramLogoIcon', component: Icons.InstagramLogoIcon },
-  { group: 'Social', name: 'TelegramLogoIcon', component: Icons.TelegramLogoIcon },
-  { group: 'Social', name: 'LinkedinLogoIcon', component: Icons.LinkedinLogoIcon },
-  { group: 'Social', name: 'MediumLogoIcon', component: Icons.MediumLogoIcon },
-  { group: 'Social', name: 'MetaLogoIcon', component: Icons.MetaLogoIcon },
-  { group: 'Social', name: 'SnapchatLogoIcon', component: Icons.SnapchatLogoIcon },
-  { group: 'Social', name: 'TiktokLogoIcon', component: Icons.TiktokLogoIcon },
-  { group: 'Social', name: 'TwitterLogoIcon', component: Icons.TwitterLogoIcon },
-  { group: 'Social', name: 'XLogoIcon', component: Icons.XLogoIcon },
-  { group: 'Social', name: 'YoutubeLogoIcon', component: Icons.YoutubeLogoIcon },
-  { group: 'Social', name: 'DiscordLogoIcon', component: Icons.DiscordLogoIcon },
+  iconsMap.set('FacebookLogoIcon', { group: 'Social', type: 'stroke', component: Icons.FacebookLogoIcon });
+  iconsMap.set('FacebookInCircleLogoIcon', { group: 'Social', type: 'stroke', component: Icons.FacebookInCircleLogoIcon });
+  iconsMap.set('InstagramLogoIcon', { group: 'Social', type: 'stroke', component: Icons.InstagramLogoIcon });
+  iconsMap.set('TelegramLogoIcon', { group: 'Social', type: 'stroke', component: Icons.TelegramLogoIcon });
+  iconsMap.set('LinkedinLogoIcon', { group: 'Social', type: 'stroke', component: Icons.LinkedinLogoIcon });
+  iconsMap.set('MediumLogoIcon', { group: 'Social', type: 'stroke', component: Icons.MediumLogoIcon });
+  iconsMap.set('MetaLogoIcon', { group: 'Social', type: 'stroke', component: Icons.MetaLogoIcon });
+  iconsMap.set('SnapchatLogoIcon', { group: 'Social', type: 'stroke', component: Icons.SnapchatLogoIcon });
+  iconsMap.set('TiktokLogoIcon', { group: 'Social', type: 'stroke', component: Icons.TiktokLogoIcon });
+  iconsMap.set('TwitterLogoIcon', { group: 'Social', type: 'stroke', component: Icons.TwitterLogoIcon });
+  iconsMap.set('XLogoIcon', { group: 'Social', type: 'stroke', component: Icons.XLogoIcon });
+  iconsMap.set('YoutubeLogoIcon', { group: 'Social', type: 'stroke', component: Icons.YoutubeLogoIcon });
+  iconsMap.set('DiscordLogoIcon', { group: 'Social', type: 'stroke', component: Icons.DiscordLogoIcon });
 
   // Arrow
-  { group: 'Arrow', name: 'AltArrowDownIcon', component: Icons.AltArrowDownIcon },
-  { group: 'Arrow', name: 'AltArrowLeftIcon', component: Icons.AltArrowLeftIcon },
-  { group: 'Arrow', name: 'AltArrowRightIcon', component: Icons.AltArrowRightIcon },
-  { group: 'Arrow', name: 'AltArrowUpIcon', component: Icons.AltArrowUpIcon },
-  { group: 'Arrow', name: 'ArrowDownIcon', component: Icons.ArrowDownIcon },
-  { group: 'Arrow', name: 'ArrowLeftDownIcon', component: Icons.ArrowLeftDownIcon },
-  { group: 'Arrow', name: 'ArrowLeftIcon', component: Icons.ArrowLeftIcon },
-  { group: 'Arrow', name: 'ArrowLeftUpIcon', component: Icons.ArrowLeftUpIcon },
-  { group: 'Arrow', name: 'ArrowRightDownIcon', component: Icons.ArrowRightDownIcon },
-  { group: 'Arrow', name: 'ArrowRightIcon', component: Icons.ArrowRightIcon },
-  { group: 'Arrow', name: 'ArrowRightUpIcon', component: Icons.ArrowRightUpIcon },
-  { group: 'Arrow', name: 'ArrowUpIcon', component: Icons.ArrowUpIcon },
-  { group: 'Arrow', name: 'DoubleAltArrowDownIcon', component: Icons.DoubleAltArrowDownIcon },
-  { group: 'Arrow', name: 'DoubleAltArrowLeftIcon', component: Icons.DoubleAltArrowLeftIcon },
-  { group: 'Arrow', name: 'DoubleAltArrowRightIcon', component: Icons.DoubleAltArrowRightIcon },
-  { group: 'Arrow', name: 'DoubleAltArrowUpIcon', component: Icons.DoubleAltArrowUpIcon },
-  { group: 'Arrow', name: 'RestartCircleIcon', component: Icons.RestartCircleIcon },
-  { group: 'Arrow', name: 'RestartIcon', component: Icons.RestartIcon },
-  { group: 'Arrow', name: 'RestartSquareIcon', component: Icons.RestartSquareIcon },
-  { group: 'Arrow', name: 'RoundAltArrowDownIcon', component: Icons.RoundAltArrowDownIcon },
-  { group: 'Arrow', name: 'RoundAltArrowLeftIcon', component: Icons.RoundAltArrowLeftIcon },
-  { group: 'Arrow', name: 'RoundAltArrowRightIcon', component: Icons.RoundAltArrowRightIcon },
-  { group: 'Arrow', name: 'RoundAltArrowUpIcon', component: Icons.RoundAltArrowUpIcon },
-  { group: 'Arrow', name: 'RoundArrowDownIcon', component: Icons.RoundArrowDownIcon },
-  { group: 'Arrow', name: 'RoundArrowLeftDownIcon', component: Icons.RoundArrowLeftDownIcon },
-  { group: 'Arrow', name: 'RoundArrowLeftIcon', component: Icons.RoundArrowLeftIcon },
-  { group: 'Arrow', name: 'RoundArrowLeftUpIcon', component: Icons.RoundArrowLeftUpIcon },
-  { group: 'Arrow', name: 'RoundArrowRightDownIcon', component: Icons.RoundArrowRightDownIcon },
-  { group: 'Arrow', name: 'RoundArrowRightIcon', component: Icons.RoundArrowRightIcon },
-  { group: 'Arrow', name: 'RoundArrowRightUpIcon', component: Icons.RoundArrowRightUpIcon },
-  { group: 'Arrow', name: 'RoundArrowUpIcon', component: Icons.RoundArrowUpIcon },
-  { group: 'Arrow', name: 'RoundDoubleAltArrowDownIcon', component: Icons.RoundDoubleAltArrowDownIcon },
-  { group: 'Arrow', name: 'RoundDoubleAltArrowLeftIcon', component: Icons.RoundDoubleAltArrowLeftIcon },
-  { group: 'Arrow', name: 'RoundDoubleAltArrowRightIcon', component: Icons.RoundDoubleAltArrowRightIcon },
-  { group: 'Arrow', name: 'RoundDoubleAltArrowUpIcon', component: Icons.RoundDoubleAltArrowUpIcon },
-  { group: 'Arrow', name: 'RoundSortHorizontalIcon', component: Icons.RoundSortHorizontalIcon },
-  { group: 'Arrow', name: 'RoundSortVerticalIcon', component: Icons.RoundSortVerticalIcon },
-  { group: 'Arrow', name: 'RoundTransferDiagonalIcon', component: Icons.RoundTransferDiagonalIcon },
-  { group: 'Arrow', name: 'RoundTransferHorizontalIcon', component: Icons.RoundTransferHorizontalIcon },
-  { group: 'Arrow', name: 'RoundTransferVerticalIcon', component: Icons.RoundTransferVerticalIcon },
-  { group: 'Arrow', name: 'SortHorizontalIcon', component: Icons.SortHorizontalIcon },
-  { group: 'Arrow', name: 'SortVerticalIcon', component: Icons.SortVerticalIcon },
-  { group: 'Arrow', name: 'SquareAltArrowDownIcon', component: Icons.SquareAltArrowDownIcon },
-  { group: 'Arrow', name: 'SquareAltArrowLeftIcon', component: Icons.SquareAltArrowLeftIcon },
-  { group: 'Arrow', name: 'SquareAltArrowRightIcon', component: Icons.SquareAltArrowRightIcon },
-  { group: 'Arrow', name: 'SquareAltArrowUpIcon', component: Icons.SquareAltArrowUpIcon },
-  { group: 'Arrow', name: 'SquareArrowDownIcon', component: Icons.SquareArrowDownIcon },
-  { group: 'Arrow', name: 'SquareArrowLeftDownIcon', component: Icons.SquareArrowLeftDownIcon },
-  { group: 'Arrow', name: 'SquareArrowLeftIcon', component: Icons.SquareArrowLeftIcon },
-  { group: 'Arrow', name: 'SquareArrowLeftUpIcon', component: Icons.SquareArrowLeftUpIcon },
-  { group: 'Arrow', name: 'SquareArrowRightDownIcon', component: Icons.SquareArrowRightDownIcon },
-  { group: 'Arrow', name: 'SquareArrowRightIcon', component: Icons.SquareArrowRightIcon },
-  { group: 'Arrow', name: 'SquareArrowRightUpIcon', component: Icons.SquareArrowRightUpIcon },
-  { group: 'Arrow', name: 'SquareArrowUpIcon', component: Icons.SquareArrowUpIcon },
-  { group: 'Arrow', name: 'SquareDoubleAltArrowDownIcon', component: Icons.SquareDoubleAltArrowDownIcon },
-  { group: 'Arrow', name: 'SquareDoubleAltArrowLeftIcon', component: Icons.SquareDoubleAltArrowLeftIcon },
-  { group: 'Arrow', name: 'SquareDoubleAltArrowRightIcon', component: Icons.SquareDoubleAltArrowRightIcon },
-  { group: 'Arrow', name: 'SquareDoubleAltArrowUpIcon', component: Icons.SquareDoubleAltArrowUpIcon },
-  { group: 'Arrow', name: 'SquareSortHorizontalIcon', component: Icons.SquareSortHorizontalIcon },
-  { group: 'Arrow', name: 'SquareSortVerticalIcon', component: Icons.SquareSortVerticalIcon },
-  { group: 'Arrow', name: 'SquareTransferHorizontalIcon', component: Icons.SquareTransferHorizontalIcon },
-  { group: 'Arrow', name: 'SquareTransferVerticalIcon', component: Icons.SquareTransferVerticalIcon },
-  { group: 'Arrow', name: 'TransferHorizontalIcon', component: Icons.TransferHorizontalIcon },
-  { group: 'Arrow', name: 'TransferVerticalIcon', component: Icons.TransferVerticalIcon },
-      
-//   // Arrow Action
-  { group: "ArrowAction", name: 'ArrowToDownLeftIcon', component: Icons.ArrowToDownLeftIcon },
-  { group: "ArrowAction", name: 'ArrowToDownRightIcon', component: Icons.ArrowToDownRightIcon },
-  { group: "ArrowAction", name: 'ArrowToTopLeftIcon', component: Icons.ArrowToTopLeftIcon },
-  { group: "ArrowAction", name: 'ArrowToTopRightIcon', component: Icons.ArrowToTopRightIcon },
-  { group: "ArrowAction", name: 'CircleBottomDownIcon', component: Icons.CircleBottomDownIcon },
-  { group: "ArrowAction", name: 'CircleBottomUpIcon', component: Icons.CircleBottomUpIcon },
-  { group: "ArrowAction", name: 'CircleTopDownIcon', component: Icons.CircleTopDownIcon },
-  { group: "ArrowAction", name: 'CircleTopUpIcon', component: Icons.CircleTopUpIcon },
-  { group: "ArrowAction", name: 'DownloadMinimalisticIcon', component: Icons.DownloadMinimalisticIcon },
-  { group: "ArrowAction", name: 'DownloadSquareIcon', component: Icons.DownloadSquareIcon },
-  { group: "ArrowAction", name: 'DownloadTwiceSquareIcon', component: Icons.DownloadTwiceSquareIcon },
-  { group: "ArrowAction", name: 'DownloadIcon', component: Icons.DownloadIcon },
-  { group: "ArrowAction", name: 'ExitIcon', component: Icons.ExitIcon },
-  { group: "ArrowAction", name: 'ExportIcon', component: Icons.ExportIcon },
-  { group: "ArrowAction", name: 'ForwardArrowIcon', component: Icons.ForwardArrowIcon },
-  { group: "ArrowAction", name: 'ForwardV2Icon', component: Icons.ForwardV2Icon },
-  { group: "ArrowAction", name: 'ImportIcon', component: Icons.ImportIcon },
-  { group: "ArrowAction", name: 'LoginV2Icon', component: Icons.LoginV2Icon },
-  { group: "ArrowAction", name: 'LoginV3Icon', component: Icons.LoginV3Icon },
-  { group: "ArrowAction", name: 'LoginIcon', component: Icons.LoginIcon },
-  { group: "ArrowAction", name: 'LogoutV2Icon', component: Icons.LogoutV2Icon },
-  { group: "ArrowAction", name: 'LogoutV3Icon', component: Icons.LogoutV3Icon },
-  { group: "ArrowAction", name: 'LogoutIcon', component: Icons.LogoutIcon },
-  { group: "ArrowAction", name: 'MaximizeSquareV2Icon', component: Icons.MaximizeSquareV2Icon },
-  { group: "ArrowAction", name: 'MaximizeSquareV3Icon', component: Icons.MaximizeSquareV3Icon },
-  { group: "ArrowAction", name: 'MaximizeSquareMinimalisticIcon', component: Icons.MaximizeSquareMinimalisticIcon },
-  { group: "ArrowAction", name: 'MaximizeSquareIcon', component: Icons.MaximizeSquareIcon },
-  { group: "ArrowAction", name: 'MaximizeIcon', component: Icons.MaximizeIcon },
-  { group: "ArrowAction", name: 'MinimizeSquareV2Icon', component: Icons.MinimizeSquareV2Icon },
-  { group: "ArrowAction", name: 'MinimizeSquareV3Icon', component: Icons.MinimizeSquareV3Icon },
-  { group: "ArrowAction", name: 'MinimizeSquareMinimalisticIcon', component: Icons.MinimizeSquareMinimalisticIcon },
-  { group: "ArrowAction", name: 'MinimizeSquareIcon', component: Icons.MinimizeSquareIcon },
-  { group: "ArrowAction", name: 'MinimizeIcon', component: Icons.MinimizeIcon },
-  { group: "ArrowAction", name: 'ReciveSquareIcon', component: Icons.ReciveSquareIcon },
-  { group: "ArrowAction", name: 'ReciveTwiceSquareIcon', component: Icons.ReciveTwiceSquareIcon },
-  { group: "ArrowAction", name: 'ReorderArrowIcon', component: Icons.ReorderArrowIcon },
-  { group: "ArrowAction", name: 'ReplyV2Icon', component: Icons.ReplyV2Icon },
-  { group: "ArrowAction", name: 'ReplyIcon', component: Icons.ReplyIcon },
-  { group: "ArrowAction", name: 'ScaleIcon', component: Icons.ScaleIcon },
-  { group: "ArrowAction", name: 'ScreenShareIcon', component: Icons.ScreenShareIcon },
-  { group: "ArrowAction", name: 'SendSquareIcon', component: Icons.SendSquareIcon },
-  { group: "ArrowAction", name: 'SendTwiceSquareIcon', component: Icons.SendTwiceSquareIcon },
-  { group: "ArrowAction", name: 'SquareBottomDownIcon', component: Icons.SquareBottomDownIcon },
-  { group: "ArrowAction", name: 'SquareBottomUpIcon', component: Icons.SquareBottomUpIcon },
-  { group: "ArrowAction", name: 'SquareTopDownIcon', component: Icons.SquareTopDownIcon },
-  { group: "ArrowAction", name: 'SquareTopUpIcon', component: Icons.SquareTopUpIcon },
-  { group: "ArrowAction", name: 'UndoLeftRoundSquareIcon', component: Icons.UndoLeftRoundSquareIcon },
-  { group: "ArrowAction", name: 'UndoLeftRoundIcon', component: Icons.UndoLeftRoundIcon },
-  { group: "ArrowAction", name: 'UndoLeftSquareIcon', component: Icons.UndoLeftSquareIcon },
-  { group: "ArrowAction", name: 'UndoLeftIcon', component: Icons.UndoLeftIcon },
-  { group: "ArrowAction", name: 'UndoRightRoundSquareIcon', component: Icons.UndoRightRoundSquareIcon },
-  { group: "ArrowAction", name: 'UndoRightRoundIcon', component: Icons.UndoRightRoundIcon },
-  { group: "ArrowAction", name: 'UndoRightSquareIcon', component: Icons.UndoRightSquareIcon },
-  { group: "ArrowAction", name: 'UndoRightIcon', component: Icons.UndoRightIcon },
-  { group: "ArrowAction", name: 'UploadMinimalisticIcon', component: Icons.UploadMinimalisticIcon },
-  { group: "ArrowAction", name: 'UploadSquareIcon', component: Icons.UploadSquareIcon },
-  { group: "ArrowAction", name: 'UploadTwiceSquareIcon', component: Icons.UploadTwiceSquareIcon },
-  { group: "ArrowAction", name: 'UploadIcon', component: Icons.UploadIcon },
-      
-//   // Business & Statistic
-  { group:'BusinessStatistic', name: 'ChartV2Icon', component: Icons.ChartV2Icon },
-  { group:'BusinessStatistic', name: 'ChartIcon', component: Icons.ChartIcon },
-  { group:'BusinessStatistic', name: 'ChartSquareIcon', component: Icons.ChartSquareIcon },
-  { group:'BusinessStatistic', name: 'ChartSquareV2Icon', component: Icons.ChartSquareV2Icon },
-  { group:'BusinessStatistic', name: 'CourseDownIcon', component: Icons.CourseDownIcon },
-  { group:'BusinessStatistic', name: 'CourseUpIcon', component: Icons.CourseUpIcon },
-  { group:'BusinessStatistic', name: 'DiagramDownIcon', component: Icons.DiagramDownIcon },
-  { group:'BusinessStatistic', name: 'DiagramUpIcon', component: Icons.DiagramUpIcon },
-  { group:'BusinessStatistic', name: 'GraphDownIcon', component: Icons.GraphDownIcon },
-  { group:'BusinessStatistic', name: 'GraphUpIcon', component: Icons.GraphUpIcon },
-  { group:'BusinessStatistic', name: 'GraphIcon', component: Icons.GraphIcon },
-  { group:'BusinessStatistic', name: 'PieChartV2Icon', component: Icons.PieChartV2Icon },
-  { group:'BusinessStatistic', name: 'PieChartV3Icon', component: Icons.PieChartV3Icon },
-  { group:'BusinessStatistic', name: 'PieChartIcon', component: Icons.PieChartIcon },
-  { group:'BusinessStatistic', name: 'PresentationGraphIcon', component: Icons.PresentationGraphIcon },
-  { group:'BusinessStatistic', name: 'RoundGraphIcon', component: Icons.RoundGraphIcon },
-      
-//   // Design Tools 
-  { group: "DesignTools", name: 'AlignBottomIcon', component: Icons.AlignBottomIcon },
-  { group: "DesignTools", name: 'AlignHorizontalSpacingIcon', component: Icons.AlignHorizontalSpacingIcon },
-  { group: "DesignTools", name: 'AlignHorizontalCenterIcon', component: Icons.AlignHorizontalCenterIcon },
-  { group: "DesignTools", name: 'AlignLeftIcon', component: Icons.AlignLeftIcon },
-  { group: "DesignTools", name: 'AlignRightIcon', component: Icons.AlignRightIcon },
-  { group: "DesignTools", name: 'AlignTopIcon', component: Icons.AlignTopIcon },
-  { group: "DesignTools", name: 'AlignVerticalCenterIcon', component: Icons.AlignVerticalCenterIcon },
-  { group: "DesignTools", name: 'AlignVerticalSpacingIcon', component: Icons.AlignVerticalSpacingIcon },
-  { group: "DesignTools", name: 'ColourTuneingIcon', component: Icons.ColourTuneingIcon },
-  { group: "DesignTools", name: 'CropIcon', component: Icons.CropIcon },
-  { group: "DesignTools", name: 'FlipHorizontalIcon', component: Icons.FlipHorizontalIcon },
-  { group: "DesignTools", name: 'FlipVerticalIcon', component: Icons.FlipVerticalIcon },
-  { group: "DesignTools", name: 'LayersIcon', component: Icons.LayersIcon },
-  { group: "DesignTools", name: 'MirrorLeftIcon', component: Icons.MirrorLeftIcon },
-  { group: "DesignTools", name: 'MirrorRightIcon', component: Icons.MirrorRightIcon },
-  { group: "DesignTools", name: 'RadialBlurIcon', component: Icons.RadialBlurIcon },
-  { group: "DesignTools", name: 'RulerAngularIcon', component: Icons.RulerAngularIcon },
-  { group: "DesignTools", name: 'RulerPenIcon', component: Icons.RulerPenIcon },
-  { group: "DesignTools", name: 'RulerIcon', component: Icons.RulerIcon },
-  { group: "DesignTools", name: 'ThreeSquaresIcon', component: Icons.ThreeSquaresIcon },
-      
-//   // EssentionalUI
-  { group: 'EssentionalUI', name: 'AddCircleIcon', component: Icons.AddCircleIcon },
-  { group: 'EssentionalUI', name: 'AddSquareIcon', component: Icons.AddSquareIcon },
-  { group: 'EssentionalUI', name: 'BoltCircleIcon', component: Icons.BoltCircleIcon },
-  { group: 'EssentionalUI', name: 'BoltIcon', component: Icons.BoltIcon },
-  { group: 'EssentionalUI', name: 'BoxMinimalisticIcon', component: Icons.BoxMinimalisticIcon },
-  { group: 'EssentionalUI', name: 'BoxIcon', component: Icons.BoxIcon },
-  { group: 'EssentionalUI', name: 'CheckCircleIcon', component: Icons.CheckCircleIcon },
-  { group: 'EssentionalUI', name: 'CheckSquareIcon', component: Icons.CheckSquareIcon },
-  { group: 'EssentionalUI', name: 'CloseCircleIcon', component: Icons.CloseCircleIcon },
-  { group: 'EssentionalUI', name: 'CloseSquareIcon', component: Icons.CloseSquareIcon },
-  { group: 'EssentionalUI', name: 'CrossIcon', component: Icons.CrossIcon },
-  { group: 'EssentionalUI', name: 'CopyIcon', component: Icons.CopyIcon },
-  { group: 'EssentionalUI', name: 'CrownMinimalisticIcon', component: Icons.CrownMinimalisticIcon },
-  { group: 'EssentionalUI', name: 'CrownStarIcon', component: Icons.CrownStarIcon },
-  { group: 'EssentionalUI', name: 'CursorIcon', component: Icons.CursorIcon },
-  { group: 'EssentionalUI', name: 'DatabaseIcon', component: Icons.DatabaseIcon },
-  { group: 'EssentionalUI', name: 'FeedIcon', component: Icons.FeedIcon },
-  { group: 'EssentionalUI', name: 'FlagV2Icon', component: Icons.FlagV2Icon },
-  { group: 'EssentionalUI', name: 'FlagIcon', component: Icons.FlagIcon },
-  { group: 'EssentionalUI', name: 'ForbiddenCircleIcon', component: Icons.ForbiddenCircleIcon },
-  { group: 'EssentionalUI', name: 'ForbiddenIcon', component: Icons.ForbiddenIcon },
-  { group: 'EssentionalUI', name: 'GiftIcon', component: Icons.GiftIcon },
-  { group: 'EssentionalUI', name: 'HamburgerMenuIcon', component: Icons.HamburgerMenuIcon },
-  { group: 'EssentionalUI', name: 'HomeV2Icon', component: Icons.HomeV2Icon },
-  { group: 'EssentionalUI', name: 'HomeAddIcon', component: Icons.HomeAddIcon },
-  { group: 'EssentionalUI', name: 'HomeSmileIcon', component: Icons.HomeSmileIcon },
-  { group: 'EssentionalUI', name: 'HomeIcon', component: Icons.HomeIcon },
-  { group: 'EssentionalUI', name: 'MagnetIcon', component: Icons.MagnetIcon },
-  { group: 'EssentionalUI', name: 'MentionSquareIcon', component: Icons.MentionSquareIcon },
-  { group: 'EssentionalUI', name: 'MinusCircleIcon', component: Icons.MinusCircleIcon },
-  { group: 'EssentionalUI', name: 'MinusSquareIcon', component: Icons.MinusSquareIcon },
-  { group: 'EssentionalUI', name: 'PaperBinIcon', component: Icons.PaperBinIcon },
-  { group: 'EssentionalUI', name: 'PinListIcon', component: Icons.PinListIcon },
-  { group: 'EssentionalUI', name: 'PlateIcon', component: Icons.PlateIcon },
-  { group: 'EssentionalUI', name: 'PostsCarouselHorizontalIcon', component: Icons.PostsCarouselHorizontalIcon },
-  { group: 'EssentionalUI', name: 'PostsCarouselVerticalIcon', component: Icons.PostsCarouselVerticalIcon },
-  { group: 'EssentionalUI', name: 'PowerIcon', component: Icons.PowerIcon },
-  { group: 'EssentionalUI', name: 'ReorderIcon', component: Icons.ReorderIcon },
-  { group: 'EssentionalUI', name: 'ShareCircleIcon', component: Icons.ShareCircleIcon },
-  { group: 'EssentionalUI', name: 'SliderHorizontalIcon', component: Icons.SliderHorizontalIcon },
-  { group: 'EssentionalUI', name: 'SliderMinimalisticHorizontalIcon', component: Icons.SliderMinimalisticHorizontalIcon },
-  { group: 'EssentionalUI', name: 'SliderVerticalMinimalisticIcon', component: Icons.SliderVerticalMinimalisticIcon },
-  { group: 'EssentionalUI', name: 'SliderVerticalIcon', component: Icons.SliderVerticalIcon },
-  { group: 'EssentionalUI', name: 'SortIcon', component: Icons.SortIcon },
-  { group: 'EssentionalUI', name: 'SubtitlesIcon', component: Icons.SubtitlesIcon },
-  { group: 'EssentionalUI', name: 'TargetIcon', component: Icons.TargetIcon },
-  { group: 'EssentionalUI', name: 'TrafficEconomyIcon', component: Icons.TrafficEconomyIcon },
-  { group: 'EssentionalUI', name: 'TrafficIcon', component: Icons.TrafficIcon },
-  { group: 'EssentionalUI', name: 'TrashBinV2Icon', component: Icons.TrashBinV2Icon },
-  { group: 'EssentionalUI', name: 'TrashBinMinimalisticV2Icon', component: Icons.TrashBinMinimalisticV2Icon },
-  { group: 'EssentionalUI', name: 'TrashBinMinimalisticIcon', component: Icons.TrashBinMinimalisticIcon },
-  { group: 'EssentionalUI', name: 'TrashBinTrashIcon', component: Icons.TrashBinTrashIcon },
-  { group: 'EssentionalUI', name: 'DangerTriangleIcon', component: Icons.DangerTriangleIcon },
-  { group: 'EssentionalUI', name: 'DangerCircleIcon', component: Icons.DangerCircleIcon },
-  { group: 'EssentionalUI', name: 'QuestionCircleIcon', component: Icons.QuestionCircleIcon },
-      
-//   // List
-  { group: 'List', name: 'BillIcon', component: Icons.BillIcon },
-  { group: 'List', name: 'ChecklistMinimalisticIcon', component: Icons.ChecklistMinimalisticIcon },
-  { group: 'List', name: 'ChecklistIcon', component: Icons.ChecklistIcon },
-  { group: 'List', name: 'ListArrowDownMinimalisticIcon', component: Icons.ListArrowDownMinimalisticIcon },
-  { group: 'List', name: 'ListArrowDownIcon', component: Icons.ListArrowDownIcon },
-  { group: 'List', name: 'ListArrowUpMinimalisticIcon', component: Icons.ListArrowUpMinimalisticIcon },
-  { group: 'List', name: 'ListArrowUpIcon', component: Icons.ListArrowUpIcon },
-  { group: 'List', name: 'ListCheckMinimalisticIcon', component: Icons.ListCheckMinimalisticIcon },
-  { group: 'List', name: 'ListCheckIcon', component: Icons.ListCheckIcon },
-  { group: 'List', name: 'ListCrossMinimalisticIcon', component: Icons.ListCrossMinimalisticIcon },
-  { group: 'List', name: 'ListCrossIcon', component: Icons.ListCrossIcon },
-  { group: 'List', name: 'ListDownMinimalisticIcon', component: Icons.ListDownMinimalisticIcon },
-  { group: 'List', name: 'ListDownIcon', component: Icons.ListDownIcon },
-  { group: 'List', name: 'ListUpMinimalisticIcon', component: Icons.ListUpMinimalisticIcon },
-  { group: 'List', name: 'ListUpIcon', component: Icons.ListUpIcon },
-  { group: 'List', name: 'ListV1Icon', component: Icons.ListV1Icon },
-  { group: 'List', name: 'ListIcon', component: Icons.ListIcon },
-  { group: 'List', name: 'PlaylistMinimalisticIcon', component: Icons.PlaylistMinimalisticIcon },
-  { group: 'List', name: 'PlaylistV2Icon', component: Icons.PlaylistV2Icon },
-  { group: 'List', name: 'PlaylistMinimalistic3Icon', component: Icons.PlaylistMinimalistic3Icon },
-  { group: 'List', name: 'PlaylistIcon', component: Icons.PlaylistIcon },
-  { group: 'List', name: 'SortFromBottomToTopIcon', component: Icons.SortFromBottomToTopIcon },
-  { group: 'List', name: 'SortFromTopToBottomIcon', component: Icons.SortFromTopToBottomIcon },
-  
-//   // Messages & Conversation
-  { group: 'MessagesConversation', name: 'ForwardIcon', component: Icons.ForwardIcon },
-  { group: 'MessagesConversation', name: 'InboxArchiveIcon', component: Icons.InboxArchiveIcon },
-  { group: 'MessagesConversation', name: 'InboxInIcon', component: Icons.InboxInIcon },
-  { group: 'MessagesConversation', name: 'InboxOutIcon', component: Icons.InboxOutIcon },
-  { group: 'MessagesConversation', name: 'InboxIcon', component: Icons.InboxIcon },
-  { group: 'MessagesConversation', name: 'LetterOpenedIcon', component: Icons.LetterOpenedIcon },
-  { group: 'MessagesConversation', name: 'LetterIcon', component: Icons.LetterIcon },
-  { group: 'MessagesConversation', name: 'MultipleForwardLeftIcon', component: Icons.MultipleForwardLeftIcon },
-  { group: 'MessagesConversation', name: 'MultipleForwardRightIcon', component: Icons.MultipleForwardRightIcon },
-  { group: 'MessagesConversation', name: 'PaperclipV2Icon', component: Icons.PaperclipV2Icon },
-  { group: 'MessagesConversation', name: 'PaperclipRoundedV2Icon', component: Icons.PaperclipRoundedV2Icon },
-  { group: 'MessagesConversation', name: 'PaperclipRoundedIcon', component: Icons.PaperclipRoundedIcon },
-  { group: 'MessagesConversation', name: 'PaperclipIcon', component: Icons.PaperclipIcon },
-  { group: 'MessagesConversation', name: 'PenV2Icon', component: Icons.PenV2Icon },
-  { group: 'MessagesConversation', name: 'PenNewSquareIcon', component: Icons.PenNewSquareIcon },
-  { group: 'MessagesConversation', name: 'PenIcon', component: Icons.PenIcon },
-  { group: 'MessagesConversation', name: 'PlainV2Icon', component: Icons.PlainV2Icon },
-  { group: 'MessagesConversation', name: 'PlainV3Icon', component: Icons.PlainV3Icon },
-  { group: 'MessagesConversation', name: 'SquareForwardIcon', component: Icons.SquareForwardIcon },
-  { group: 'MessagesConversation', name: 'SquareShareLineIcon', component: Icons.SquareShareLineIcon },
-  { group: 'MessagesConversation', name: 'CheckIcon', component: Icons.CheckIcon },
-  { group: 'MessagesConversation', name: 'DoubleCheckIcon', component: Icons.DoubleCheckIcon },
-      
-//   // Money
-  { group: 'Money', name: 'BanknoteV2Icon', component: Icons.BanknoteV2Icon },
-  { group: 'Money', name: 'BanknoteIcon', component: Icons.BanknoteIcon },
-  { group: 'Money', name: 'BillCrossIcon', component: Icons.BillCrossIcon },
-  { group: 'Money', name: 'BillCheckIcon', component: Icons.BillCheckIcon },
-  { group: 'Money', name: 'BillListIcon', component: Icons.BillListIcon },
-  { group: 'Money', name: 'MoneyBillIcon', component: Icons.MoneyBillIcon },
-  { group: 'Money', name: 'CardV2Icon', component: Icons.CardV2Icon },
-  { group: 'Money', name: 'CardReciveIcon', component: Icons.CardReciveIcon },
-  { group: 'Money', name: 'CardSendIcon', component: Icons.CardSendIcon },
-  { group: 'Money', name: 'CardTransferIcon', component: Icons.CardTransferIcon },
-  { group: 'Money', name: 'CardIcon', component: Icons.CardIcon },
-  { group: 'Money', name: 'CardholderIcon', component: Icons.CardholderIcon },
-  { group: 'Money', name: 'DollarMinimalisticIcon', component: Icons.DollarMinimalisticIcon },
-  { group: 'Money', name: 'DollarIcon', component: Icons.DollarIcon },
-  { group: 'Money', name: 'MoneyBagIcon', component: Icons.MoneyBagIcon },
-  { group: 'Money', name: 'SafeCircleIcon', component: Icons.SafeCircleIcon },
-  { group: 'Money', name: 'SafeSquareIcon', component: Icons.SafeSquareIcon },
-  { group: 'Money', name: 'TagHorizontalIcon', component: Icons.TagHorizontalIcon },
-  { group: 'Money', name: 'TagPriceIcon', component: Icons.TagPriceIcon },
-  { group: 'Money', name: 'TagIcon', component: Icons.TagIcon },
-  { group: 'Money', name: 'TickerStarIcon', component: Icons.TickerStarIcon },
-  { group: 'Money', name: 'VerifiedCheckIcon', component: Icons.VerifiedCheckIcon },
-  { group: 'Money', name: 'WadOfMoneyIcon', component: Icons.WadOfMoneyIcon },
-  { group: 'Money', name: 'WalletV2Icon', component: Icons.WalletV2Icon },
-  { group: 'Money', name: 'WalletMoneyIcon', component: Icons.WalletMoneyIcon },
-  { group: 'Money', name: 'WalletIcon', component: Icons.WalletIcon },
-      
-//   // Notes
-  { group: 'Notes', name: 'ArchiveCheckIcon', component: Icons.ArchiveCheckIcon },
-  { group: 'Notes', name: 'ArchiveDownMinimlisticIcon', component: Icons.ArchiveDownMinimlisticIcon },
-  { group: 'Notes', name: 'ArchiveDownIcon', component: Icons.ArchiveDownIcon },
-  { group: 'Notes', name: 'ArchiveMinimalisticIcon', component: Icons.ArchiveMinimalisticIcon },
-  { group: 'Notes', name: 'ArchiveUpMinimlisticIcon', component: Icons.ArchiveUpMinimlisticIcon },
-  { group: 'Notes', name: 'ArchiveUpIcon', component: Icons.ArchiveUpIcon },
-  { group: 'Notes', name: 'ArchiveIcon', component: Icons.ArchiveIcon },
-  { group: 'Notes', name: 'ClipboardAddIcon', component: Icons.ClipboardAddIcon },
-  { group: 'Notes', name: 'ClipboardCheckIcon', component: Icons.ClipboardCheckIcon },
-  { group: 'Notes', name: 'ClipboardListIcon', component: Icons.ClipboardListIcon },
-  { group: 'Notes', name: 'ClipboardRemoveIcon', component: Icons.ClipboardRemoveIcon },
-  { group: 'Notes', name: 'ClipboardTextIcon', component: Icons.ClipboardTextIcon },
-  { group: 'Notes', name: 'ClipboardIcon', component: Icons.ClipboardIcon },
-  { group: 'Notes', name: 'DocumentMedicineIcon', component: Icons.DocumentMedicineIcon },
-  { group: 'Notes', name: 'DocumentTextIcon', component: Icons.DocumentTextIcon },
-  { group: 'Notes', name: 'DocumentIcon', component: Icons.DocumentIcon },
-  { group: 'Notes', name: 'DocumentsMinimalisticIcon', component: Icons.DocumentsMinimalisticIcon },
-  { group: 'Notes', name: 'DocumentsIcon', component: Icons.DocumentsIcon },
-  { group: 'Notes', name: 'NotebookIcon', component: Icons.NotebookIcon },
-  { group: 'Notes', name: 'NotesMinimalisticIcon', component: Icons.NotesMinimalisticIcon },
-  { group: 'Notes', name: 'NotesIcon', component: Icons.NotesIcon },
-      
-//   // Notifications
-  { group: 'Notifications', name: 'BellBingIcon', component: Icons.BellBingIcon },
-  { group: 'Notifications', name: 'BellOffIcon', component: Icons.BellOffIcon },
-  { group: 'Notifications', name: 'BellIcon', component: Icons.BellIcon },
-  { group: 'Notifications', name: 'NotificationLinesRemoveIcon', component: Icons.NotificationLinesRemoveIcon },
-  { group: 'Notifications', name: 'NotificationRemoveIcon', component: Icons.NotificationRemoveIcon },
-      
-//   // Search
-  { group: 'Search', name: 'MagniferBugIcon', component: Icons.MagniferBugIcon },
-  { group: 'Search', name: 'MagniferZoomInIcon', component: Icons.MagniferZoomInIcon },
-  { group: 'Search', name: 'MagniferZoomOutIcon', component: Icons.MagniferZoomOutIcon },
-  { group: 'Search', name: 'MagniferIcon', component: Icons.MagniferIcon },
-  { group: 'Search', name: 'MinimalisticMagniferBugIcon', component: Icons.MinimalisticMagniferBugIcon },
-  { group: 'Search', name: 'MinimalisticMagniferZoomInIcon', component: Icons.MinimalisticMagniferZoomInIcon },
-  { group: 'Search', name: 'MinimalisticMagniferZoomOutIcon', component: Icons.MinimalisticMagniferZoomOutIcon },
-  { group: 'Search', name: 'MinimalisticMagniferIcon', component: Icons.MinimalisticMagniferIcon },
-      
-//   // Security
-  { group: 'Security', name: 'CodeScanIcon', component: Icons.CodeScanIcon },
-  { group: 'Security', name: 'EyeIcon', component: Icons.EyeIcon },
-  { group: 'Security', name: 'IncognitoIcon', component: Icons.IncognitoIcon },
-  { group: 'Security', name: 'KeyMinimalisticSquareV3Icon', component: Icons.KeyMinimalisticSquareV3Icon },
-  { group: 'Security', name: 'KeySquareV2Icon', component: Icons.KeySquareV2Icon },
-  { group: 'Security', name: 'KeySquareIcon', component: Icons.KeySquareIcon },
-  { group: 'Security', name: 'KeyIcon', component: Icons.KeyIcon },
-  { group: 'Security', name: 'LockKeyholeMinimalisticUnlockedIcon', component: Icons.LockKeyholeMinimalisticUnlockedIcon },
-  { group: 'Security', name: 'LockKeyholeMinimalisticIcon', component: Icons.LockKeyholeMinimalisticIcon },
-  { group: 'Security', name: 'LockUnlockedIcon', component: Icons.LockUnlockedIcon },
-  { group: 'Security', name: 'LockIcon', component: Icons.LockIcon },
-  { group: 'Security', name: 'PasswordIcon', component: Icons.PasswordIcon },
-  { group: 'Security', name: 'ScannerV2Icon', component: Icons.ScannerV2Icon },
-  { group: 'Security', name: 'ScannerIcon', component: Icons.ScannerIcon },
-  { group: 'Security', name: 'ShieldCheckIcon', component: Icons.ShieldCheckIcon },
-  { group: 'Security', name: 'ShieldCrossIcon', component: Icons.ShieldCrossIcon },
-  { group: 'Security', name: 'ShieldKeyholeMinimalisticIcon', component: Icons.ShieldKeyholeMinimalisticIcon },
-  { group: 'Security', name: 'ShieldKeyholeIcon', component: Icons.ShieldKeyholeIcon },
-  { group: 'Security', name: 'ShieldMinimalisticIcon', component: Icons.ShieldMinimalisticIcon },
-  { group: 'Security', name: 'ShieldMinusIcon', component: Icons.ShieldMinusIcon },
-  { group: 'Security', name: 'ShieldNetworkIcon', component: Icons.ShieldNetworkIcon },
-  { group: 'Security', name: 'ShieldPlusIcon', component: Icons.ShieldPlusIcon },
-  { group: 'Security', name: 'ShieldStarIcon', component: Icons.ShieldStarIcon },
-  { group: 'Security', name: 'ShieldUpIcon', component: Icons.ShieldUpIcon },
-  { group: 'Security', name: 'ShieldIcon', component: Icons.ShieldIcon },
-  { group: 'Security', name: 'SirenRoundedIcon', component: Icons.SirenRoundedIcon },
-  { group: 'Security', name: 'SirenIcon', component: Icons.SirenIcon },
-      
-//   // Settings Fine Tuning
-  { group: 'SettingsFineTuning', name: 'TuningV2Icon', component: Icons.TuningV2Icon },
-  { group: 'SettingsFineTuning', name: 'TuningV4Icon', component: Icons.TuningV4Icon },
-  { group: 'SettingsFineTuning', name: 'TuningIcon', component: Icons.TuningIcon },
-  { group: 'SettingsFineTuning', name: 'WidgetV2Icon', component: Icons.WidgetV2Icon },
-  { group: 'SettingsFineTuning', name: 'WidgetV3Icon', component: Icons.WidgetV3Icon },
-  { group: 'SettingsFineTuning', name: 'WidgetV4Icon', component: Icons.WidgetV4Icon },
-  { group: 'SettingsFineTuning', name: 'WidgetV5Icon', component: Icons.WidgetV5Icon },
-  { group: 'SettingsFineTuning', name: 'WidgetV6Icon', component: Icons.WidgetV6Icon },
-  { group: 'SettingsFineTuning', name: 'WidgetAddIcon', component: Icons.WidgetAddIcon },
-  { group: 'SettingsFineTuning', name: 'WidgetIcon', component: Icons.WidgetIcon },
-      
-//   // Time
-  { group: 'Time', name: 'AlarmAddIcon', component: Icons.AlarmAddIcon },
-  { group: 'Time', name: 'AlarmPauseIcon', component: Icons.AlarmPauseIcon },
-  { group: 'Time', name: 'AlarmPlayIcon', component: Icons.AlarmPlayIcon },
-  { group: 'Time', name: 'AlarmRemoveIcon', component: Icons.AlarmRemoveIcon },
-  { group: 'Time', name: 'AlarmSleepIcon', component: Icons.AlarmSleepIcon },
-  { group: 'Time', name: 'AlarmTurnOffIcon', component: Icons.AlarmTurnOffIcon },
-  { group: 'Time', name: 'AlarmIcon', component: Icons.AlarmIcon },
-  { group: 'Time', name: 'CalendarAddIcon', component: Icons.CalendarAddIcon },
-  { group: 'Time', name: 'CalendarDateIcon', component: Icons.CalendarDateIcon },
-  { group: 'Time', name: 'ClockCircleIcon', component: Icons.ClockCircleIcon },
-  { group: 'Time', name: 'ClockSquareIcon', component: Icons.ClockSquareIcon },
-  { group: 'Time', name: 'HistoryV2Icon', component: Icons.HistoryV2Icon },
-  { group: 'Time', name: 'HistoryV3Icon', component: Icons.HistoryV3Icon },
-  { group: 'Time', name: 'HourglassLineIcon', component: Icons.HourglassLineIcon },
-  { group: 'Time', name: 'HourglassIcon', component: Icons.HourglassIcon },
-  { group: 'Time', name: 'StopwatchPauseIcon', component: Icons.StopwatchPauseIcon },
-  { group: 'Time', name: 'StopwatchPlayIcon', component: Icons.StopwatchPlayIcon },
-  { group: 'Time', name: 'StopwatchIcon', component: Icons.StopwatchIcon },
-  { group: 'Time', name: 'WatchRoundIcon', component: Icons.WatchRoundIcon },
-  { group: 'Time', name: 'WatchSquareMinimalisticChargeIcon', component: Icons.WatchSquareMinimalisticChargeIcon },
-  { group: 'Time', name: 'WatchSquareMinimalisticIcon', component: Icons.WatchSquareMinimalisticIcon },
-  { group: 'Time', name: 'WatchSquareIcon', component: Icons.WatchSquareIcon },
-      
-//   // VideoAudioSound 
-  { group: 'VideoAudioSound', name: 'CameraAddIcon', component: Icons.CameraAddIcon },
-  { group: 'VideoAudioSound', name: 'CameraRotateIcon', component: Icons.CameraRotateIcon },
-  { group: 'VideoAudioSound', name: 'ClapperboardOpenPlayIcon', component: Icons.ClapperboardOpenPlayIcon },
-  { group: 'VideoAudioSound', name: 'ClapperboardOpenIcon', component: Icons.ClapperboardOpenIcon },
-  { group: 'VideoAudioSound', name: 'ClapperboardTextIcon', component: Icons.ClapperboardTextIcon },
-  { group: 'VideoAudioSound', name: 'ClapperboardIcon', component: Icons.ClapperboardIcon },
-  { group: 'VideoAudioSound', name: 'FullScreenCircleIcon', component: Icons.FullScreenCircleIcon },
-  { group: 'VideoAudioSound', name: 'FullScreenSquareIcon', component: Icons.FullScreenSquareIcon },
-  { group: 'VideoAudioSound', name: 'FullScreenIcon', component: Icons.FullScreenIcon },
-  { group: 'VideoAudioSound', name: 'GalleryAddIcon', component: Icons.GalleryAddIcon },
-  { group: 'VideoAudioSound', name: 'GalleryCheckIcon', component: Icons.GalleryCheckIcon },
-  { group: 'VideoAudioSound', name: 'GalleryDownloadIcon', component: Icons.GalleryDownloadIcon },
-  { group: 'VideoAudioSound', name: 'GalleryEditIcon', component: Icons.GalleryEditIcon },
-  { group: 'VideoAudioSound', name: 'GalleryRemoveIcon', component: Icons.GalleryRemoveIcon },
-  { group: 'VideoAudioSound', name: 'GallerySendIcon', component: Icons.GallerySendIcon },
-  { group: 'VideoAudioSound', name: 'LibraryIcon', component: Icons.LibraryIcon },
-  { group: 'VideoAudioSound', name: 'MusicNoteSliderV2Icon', component: Icons.MusicNoteSliderV2Icon },
-  { group: 'VideoAudioSound', name: 'MutedIcon', component: Icons.MutedIcon },
-  { group: 'VideoAudioSound', name: 'PauseIcon', component: Icons.PauseIcon },
-  { group: 'VideoAudioSound', name: 'PanoramaIcon', component: Icons.PanoramaIcon },
-  { group: 'VideoAudioSound', name: 'PipV2Icon', component: Icons.PipV2Icon },
-  { group: 'VideoAudioSound', name: 'PipIcon', component: Icons.PipIcon },
-  { group: 'VideoAudioSound', name: 'PlayIcon', component: Icons.PlayIcon },
-  { group: 'VideoAudioSound', name: 'PlaybackSpeedIcon', component: Icons.PlaybackSpeedIcon },
-  { group: 'VideoAudioSound', name: 'QuitPipIcon', component: Icons.QuitPipIcon },
-  { group: 'VideoAudioSound', name: 'RecordIcon', component: Icons.RecordIcon },
-  { group: 'VideoAudioSound', name: 'ReelIcon', component: Icons.ReelIcon },
-  { group: 'VideoAudioSound', name: 'RewindBackIcon', component: Icons.RewindBackIcon },
-  { group: 'VideoAudioSound', name: 'RewindForwardIcon', component: Icons.RewindForwardIcon },
-  { group: 'VideoAudioSound', name: 'SkipNextIcon', component: Icons.SkipNextIcon },
-  { group: 'VideoAudioSound', name: 'SkipPreviousIcon', component: Icons.SkipPreviousIcon },
-  { group: 'VideoAudioSound', name: 'SoundwaveSquareIcon', component: Icons.SoundwaveSquareIcon },
-  { group: 'VideoAudioSound', name: 'StopIcon', component: Icons.StopIcon },
-  { group: 'VideoAudioSound', name: 'StreamIcon', component: Icons.StreamIcon },
-  { group: 'VideoAudioSound', name: 'ToPipIcon', component: Icons.ToPipIcon },
-  { group: 'VideoAudioSound', name: 'VideoFramePlayHorizontalIcon', component: Icons.VideoFramePlayHorizontalIcon },
-  { group: 'VideoAudioSound', name: 'VideoLibraryIcon', component: Icons.VideoLibraryIcon },
-  { group: 'VideoAudioSound', name: 'VideocameraAddIcon', component: Icons.VideocameraAddIcon },
-  { group: 'VideoAudioSound', name: 'VideocameraRecordIcon', component: Icons.VideocameraRecordIcon },
-  { group: 'VideoAudioSound', name: 'VideocameraIcon', component: Icons.VideocameraIcon },
-  { group: 'VideoAudioSound', name: 'VolumeCrossIcon', component: Icons.VolumeCrossIcon },
-  { group: 'VideoAudioSound', name: 'VolumeLoudIcon', component: Icons.VolumeLoudIcon },
-  { group: 'VideoAudioSound', name: 'VolumeSmallIcon', component: Icons.VolumeSmallIcon },
-  { group: 'VideoAudioSound', name: 'VolumeIcon', component: Icons.VolumeIcon },
-]);
+  iconsMap.set('AltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.AltArrowDownIcon });
+  iconsMap.set('AltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.AltArrowLeftIcon });
+  iconsMap.set('AltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.AltArrowRightIcon });
+  iconsMap.set('AltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.AltArrowUpIcon });
+  iconsMap.set('ArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowDownIcon });
+  iconsMap.set('ArrowLeftDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowLeftDownIcon });
+  iconsMap.set('ArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowLeftIcon });
+  iconsMap.set('ArrowLeftUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowLeftUpIcon });
+  iconsMap.set('ArrowRightDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowRightDownIcon });
+  iconsMap.set('ArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowRightIcon });
+  iconsMap.set('ArrowRightUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowRightUpIcon });
+  iconsMap.set('ArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.ArrowUpIcon });
+  iconsMap.set('DoubleAltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.DoubleAltArrowDownIcon });
+  iconsMap.set('DoubleAltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.DoubleAltArrowLeftIcon });
+  iconsMap.set('DoubleAltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.DoubleAltArrowRightIcon });
+  iconsMap.set('DoubleAltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.DoubleAltArrowUpIcon });
+  iconsMap.set('RestartCircleIcon', { group: 'Arrow', type: 'stroke', component: Icons.RestartCircleIcon });
+  iconsMap.set('RestartIcon', { group: 'Arrow', type: 'stroke', component: Icons.RestartIcon });
+  iconsMap.set('RestartSquareIcon', { group: 'Arrow', type: 'stroke', component: Icons.RestartSquareIcon });
+  iconsMap.set('RoundAltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundAltArrowDownIcon });
+  iconsMap.set('RoundAltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundAltArrowLeftIcon });
+  iconsMap.set('RoundAltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundAltArrowRightIcon });
+  iconsMap.set('RoundAltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundAltArrowUpIcon });
+  iconsMap.set('RoundArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowDownIcon });
+  iconsMap.set('RoundArrowLeftDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowLeftDownIcon });
+  iconsMap.set('RoundArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowLeftIcon });
+  iconsMap.set('RoundArrowLeftUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowLeftUpIcon });
+  iconsMap.set('RoundArrowRightDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowRightDownIcon });
+  iconsMap.set('RoundArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowRightIcon });
+  iconsMap.set('RoundArrowRightUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowRightUpIcon });
+  iconsMap.set('RoundArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundArrowUpIcon });
+  iconsMap.set('RoundDoubleAltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundDoubleAltArrowDownIcon });
+  iconsMap.set('RoundDoubleAltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundDoubleAltArrowLeftIcon });
+  iconsMap.set('RoundDoubleAltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundDoubleAltArrowRightIcon });
+  iconsMap.set('RoundDoubleAltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundDoubleAltArrowUpIcon });
+  iconsMap.set('RoundSortHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundSortHorizontalIcon });
+  iconsMap.set('RoundSortVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundSortVerticalIcon });
+  iconsMap.set('RoundTransferDiagonalIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundTransferDiagonalIcon });
+  iconsMap.set('RoundTransferHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundTransferHorizontalIcon });
+  iconsMap.set('RoundTransferVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.RoundTransferVerticalIcon });
+  iconsMap.set('SortHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SortHorizontalIcon });
+  iconsMap.set('SortVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SortVerticalIcon });
+  iconsMap.set('SquareAltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareAltArrowDownIcon });
+  iconsMap.set('SquareAltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareAltArrowLeftIcon });
+  iconsMap.set('SquareAltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareAltArrowRightIcon });
+  iconsMap.set('SquareAltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareAltArrowUpIcon });
+  iconsMap.set('SquareArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowDownIcon });
+  iconsMap.set('SquareArrowLeftDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowLeftDownIcon });
+  iconsMap.set('SquareArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowLeftIcon });
+  iconsMap.set('SquareArrowLeftUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowLeftUpIcon });
+  iconsMap.set('SquareArrowRightDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowRightDownIcon });
+  iconsMap.set('SquareArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowRightIcon });
+  iconsMap.set('SquareArrowRightUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowRightUpIcon });
+  iconsMap.set('SquareArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareArrowUpIcon });
+  iconsMap.set('SquareDoubleAltArrowDownIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareDoubleAltArrowDownIcon });
+  iconsMap.set('SquareDoubleAltArrowLeftIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareDoubleAltArrowLeftIcon });
+  iconsMap.set('SquareDoubleAltArrowRightIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareDoubleAltArrowRightIcon });
+  iconsMap.set('SquareDoubleAltArrowUpIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareDoubleAltArrowUpIcon });
+  iconsMap.set('SquareSortHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareSortHorizontalIcon });
+  iconsMap.set('SquareSortVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareSortVerticalIcon });
+  iconsMap.set('SquareTransferHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareTransferHorizontalIcon });
+  iconsMap.set('SquareTransferVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.SquareTransferVerticalIcon });
+  iconsMap.set('TransferHorizontalIcon', { group: 'Arrow', type: 'stroke', component: Icons.TransferHorizontalIcon });
+  iconsMap.set('TransferVerticalIcon', { group: 'Arrow', type: 'stroke', component: Icons.TransferVerticalIcon });
+
+  // Arrow Action
+  iconsMap.set('ArrowToDownLeftIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ArrowToDownLeftIcon });
+  iconsMap.set('ArrowToDownRightIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ArrowToDownRightIcon });
+  iconsMap.set('ArrowToTopLeftIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ArrowToTopLeftIcon });
+  iconsMap.set('ArrowToTopRightIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ArrowToTopRightIcon });
+  iconsMap.set('CircleBottomDownIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.CircleBottomDownIcon });
+  iconsMap.set('CircleBottomUpIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.CircleBottomUpIcon });
+  iconsMap.set('CircleTopDownIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.CircleTopDownIcon });
+  iconsMap.set('CircleTopUpIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.CircleTopUpIcon });
+  iconsMap.set('DownloadMinimalisticIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.DownloadMinimalisticIcon });
+  iconsMap.set('DownloadSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.DownloadSquareIcon });
+  iconsMap.set('DownloadTwiceSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.DownloadTwiceSquareIcon });
+  iconsMap.set('DownloadIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.DownloadIcon });
+  iconsMap.set('ExitIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ExitIcon });
+  iconsMap.set('ExportIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ExportIcon });
+  iconsMap.set('ForwardArrowIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ForwardArrowIcon });
+  iconsMap.set('ForwardV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.ForwardV2Icon });
+  iconsMap.set('ImportIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ImportIcon });
+  iconsMap.set('LoginV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.LoginV2Icon });
+  iconsMap.set('LoginV3Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.LoginV3Icon });
+  iconsMap.set('LoginIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.LoginIcon });
+  iconsMap.set('LogoutV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.LogoutV2Icon });
+  iconsMap.set('LogoutV3Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.LogoutV3Icon });
+  iconsMap.set('LogoutIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.LogoutIcon });
+  iconsMap.set('MaximizeSquareV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.MaximizeSquareV2Icon });
+  iconsMap.set('MaximizeSquareV3Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.MaximizeSquareV3Icon });
+  iconsMap.set('MaximizeSquareMinimalisticIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MaximizeSquareMinimalisticIcon });
+  iconsMap.set('MaximizeSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MaximizeSquareIcon });
+  iconsMap.set('MaximizeIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MaximizeIcon });
+  iconsMap.set('MinimizeSquareV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.MinimizeSquareV2Icon });
+  iconsMap.set('MinimizeSquareV3Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.MinimizeSquareV3Icon });
+  iconsMap.set('MinimizeSquareMinimalisticIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MinimizeSquareMinimalisticIcon });
+  iconsMap.set('MinimizeSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MinimizeSquareIcon });
+  iconsMap.set('MinimizeIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.MinimizeIcon });
+  iconsMap.set('ReciveSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ReciveSquareIcon });
+  iconsMap.set('ReciveTwiceSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ReciveTwiceSquareIcon });
+  iconsMap.set('ReorderArrowIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ReorderArrowIcon });
+  iconsMap.set('ReplyV2Icon', { group: 'ArrowAction', type: 'stroke', component: Icons.ReplyV2Icon });
+  iconsMap.set('ReplyIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ReplyIcon });
+  iconsMap.set('ScaleIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ScaleIcon });
+  iconsMap.set('ScreenShareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.ScreenShareIcon });
+  iconsMap.set('SendSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SendSquareIcon });
+  iconsMap.set('SendTwiceSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SendTwiceSquareIcon });
+  iconsMap.set('SquareBottomDownIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SquareBottomDownIcon });
+  iconsMap.set('SquareBottomUpIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SquareBottomUpIcon });
+  iconsMap.set('SquareTopDownIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SquareTopDownIcon });
+  iconsMap.set('SquareTopUpIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.SquareTopUpIcon });
+  iconsMap.set('UndoLeftRoundSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoLeftRoundSquareIcon });
+  iconsMap.set('UndoLeftRoundIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoLeftRoundIcon });
+  iconsMap.set('UndoLeftSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoLeftSquareIcon });
+  iconsMap.set('UndoLeftIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoLeftIcon });
+  iconsMap.set('UndoRightRoundSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoRightRoundSquareIcon });
+  iconsMap.set('UndoRightRoundIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoRightRoundIcon });
+  iconsMap.set('UndoRightSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoRightSquareIcon });
+  iconsMap.set('UndoRightIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UndoRightIcon });
+  iconsMap.set('UploadMinimalisticIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UploadMinimalisticIcon });
+  iconsMap.set('UploadSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UploadSquareIcon });
+  iconsMap.set('UploadTwiceSquareIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UploadTwiceSquareIcon });
+  iconsMap.set('UploadIcon', { group: 'ArrowAction', type: 'stroke', component: Icons.UploadIcon });
+
+  // Business & Statistic
+  iconsMap.set('ChartV2Icon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.ChartV2Icon });
+  iconsMap.set('ChartIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.ChartIcon });
+  iconsMap.set('ChartSquareIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.ChartSquareIcon });
+  iconsMap.set('ChartSquareV2Icon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.ChartSquareV2Icon });
+  iconsMap.set('CourseDownIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.CourseDownIcon });
+  iconsMap.set('CourseUpIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.CourseUpIcon });
+  iconsMap.set('DiagramDownIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.DiagramDownIcon });
+  iconsMap.set('DiagramUpIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.DiagramUpIcon });
+  iconsMap.set('GraphDownIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.GraphDownIcon });
+  iconsMap.set('GraphUpIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.GraphUpIcon });
+  iconsMap.set('GraphIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.GraphIcon });
+  iconsMap.set('PieChartV2Icon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.PieChartV2Icon });
+  iconsMap.set('PieChartV3Icon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.PieChartV3Icon });
+  iconsMap.set('PieChartIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.PieChartIcon });
+  iconsMap.set('PresentationGraphIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.PresentationGraphIcon });
+  iconsMap.set('RoundGraphIcon', { group: 'BusinessStatistic', type: 'stroke', component: Icons.RoundGraphIcon });
+
+  // Design Tools
+  iconsMap.set('AlignBottomIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignBottomIcon });
+  iconsMap.set('AlignHorizontalSpacingIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignHorizontalSpacingIcon });
+  iconsMap.set('AlignHorizontalCenterIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignHorizontalCenterIcon });
+  iconsMap.set('AlignLeftIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignLeftIcon });
+  iconsMap.set('AlignRightIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignRightIcon });
+  iconsMap.set('AlignTopIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignTopIcon });
+  iconsMap.set('AlignVerticalCenterIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignVerticalCenterIcon });
+  iconsMap.set('AlignVerticalSpacingIcon', { group: 'DesignTools', type: 'stroke', component: Icons.AlignVerticalSpacingIcon });
+  iconsMap.set('ColourTuneingIcon', { group: 'DesignTools', type: 'stroke', component: Icons.ColourTuneingIcon });
+  iconsMap.set('CropIcon', { group: 'DesignTools', type: 'stroke', component: Icons.CropIcon });
+  iconsMap.set('FlipHorizontalIcon', { group: 'DesignTools', type: 'stroke', component: Icons.FlipHorizontalIcon });
+  iconsMap.set('FlipVerticalIcon', { group: 'DesignTools', type: 'stroke', component: Icons.FlipVerticalIcon });
+  iconsMap.set('LayersIcon', { group: 'DesignTools', type: 'stroke', component: Icons.LayersIcon });
+  iconsMap.set('MirrorLeftIcon', { group: 'DesignTools', type: 'stroke', component: Icons.MirrorLeftIcon });
+  iconsMap.set('MirrorRightIcon', { group: 'DesignTools', type: 'stroke', component: Icons.MirrorRightIcon });
+  iconsMap.set('RadialBlurIcon', { group: 'DesignTools', type: 'stroke', component: Icons.RadialBlurIcon });
+  iconsMap.set('RulerAngularIcon', { group: 'DesignTools', type: 'stroke', component: Icons.RulerAngularIcon });
+  iconsMap.set('RulerPenIcon', { group: 'DesignTools', type: 'stroke', component: Icons.RulerPenIcon });
+  iconsMap.set('RulerIcon', { group: 'DesignTools', type: 'stroke', component: Icons.RulerIcon });
+  iconsMap.set('ThreeSquaresIcon', { group: 'DesignTools', type: 'stroke', component: Icons.ThreeSquaresIcon });
+
+  // EssentionalUI
+  iconsMap.set('AddCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.AddCircleIcon });
+  iconsMap.set('AddSquareIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.AddSquareIcon });
+  iconsMap.set('BoltCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.BoltCircleIcon });
+  iconsMap.set('BoltIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.BoltIcon });
+  iconsMap.set('BoxMinimalisticIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.BoxMinimalisticIcon });
+  iconsMap.set('BoxIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.BoxIcon });
+  iconsMap.set('CheckCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CheckCircleIcon });
+  iconsMap.set('CheckSquareIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CheckSquareIcon });
+  iconsMap.set('CloseCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CloseCircleIcon });
+  iconsMap.set('CloseSquareIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CloseSquareIcon });
+  iconsMap.set('CrossIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CrossIcon });
+  iconsMap.set('CopyIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CopyIcon });
+  iconsMap.set('CrownMinimalisticIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CrownMinimalisticIcon });
+  iconsMap.set('CrownStarIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CrownStarIcon });
+  iconsMap.set('CursorIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.CursorIcon });
+  iconsMap.set('DatabaseIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.DatabaseIcon });
+  iconsMap.set('FeedIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.FeedIcon });
+  iconsMap.set('FlagV2Icon', { group: 'EssentionalUI', type: 'stroke', component: Icons.FlagV2Icon });
+  iconsMap.set('FlagIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.FlagIcon });
+  iconsMap.set('ForbiddenCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.ForbiddenCircleIcon });
+  iconsMap.set('ForbiddenIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.ForbiddenIcon });
+  iconsMap.set('GiftIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.GiftIcon });
+  iconsMap.set('HamburgerMenuIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.HamburgerMenuIcon });
+  iconsMap.set('HomeV2Icon', { group: 'EssentionalUI', type: 'stroke', component: Icons.HomeV2Icon });
+  iconsMap.set('HomeAddIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.HomeAddIcon });
+  iconsMap.set('HomeSmileIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.HomeSmileIcon });
+  iconsMap.set('HomeIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.HomeIcon });
+  iconsMap.set('MagnetIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.MagnetIcon });
+  iconsMap.set('MentionSquareIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.MentionSquareIcon });
+  iconsMap.set('MinusCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.MinusCircleIcon });
+  iconsMap.set('MinusSquareIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.MinusSquareIcon });
+  iconsMap.set('PaperBinIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PaperBinIcon });
+  iconsMap.set('PinListIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PinListIcon });
+  iconsMap.set('PlateIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PlateIcon });
+  iconsMap.set('PostsCarouselHorizontalIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PostsCarouselHorizontalIcon });
+  iconsMap.set('PostsCarouselVerticalIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PostsCarouselVerticalIcon });
+  iconsMap.set('PowerIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.PowerIcon });
+  iconsMap.set('ReorderIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.ReorderIcon });
+  iconsMap.set('ShareCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.ShareCircleIcon });
+  iconsMap.set('SliderHorizontalIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SliderHorizontalIcon });
+  iconsMap.set('SliderMinimalisticHorizontalIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SliderMinimalisticHorizontalIcon });
+  iconsMap.set('SliderVerticalMinimalisticIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SliderVerticalMinimalisticIcon });
+  iconsMap.set('SliderVerticalIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SliderVerticalIcon });
+  iconsMap.set('SortIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SortIcon });
+  iconsMap.set('SubtitlesIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.SubtitlesIcon });
+  iconsMap.set('TargetIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TargetIcon });
+  iconsMap.set('TrafficEconomyIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrafficEconomyIcon });
+  iconsMap.set('TrafficIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrafficIcon });
+  iconsMap.set('TrashBinV2Icon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrashBinV2Icon });
+  iconsMap.set('TrashBinMinimalisticV2Icon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrashBinMinimalisticV2Icon });
+  iconsMap.set('TrashBinMinimalisticIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrashBinMinimalisticIcon });
+  iconsMap.set('TrashBinTrashIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.TrashBinTrashIcon });
+  iconsMap.set('DangerTriangleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.DangerTriangleIcon });
+  iconsMap.set('DangerCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.DangerCircleIcon });
+  iconsMap.set('QuestionCircleIcon', { group: 'EssentionalUI', type: 'stroke', component: Icons.QuestionCircleIcon });
+
+  // List
+  iconsMap.set('BillIcon', { group: 'List', type: 'stroke', component: Icons.BillIcon });
+  iconsMap.set('ChecklistMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ChecklistMinimalisticIcon });
+  iconsMap.set('ChecklistIcon', { group: 'List', type: 'stroke', component: Icons.ChecklistIcon });
+  iconsMap.set('ListArrowDownMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListArrowDownMinimalisticIcon });
+  iconsMap.set('ListArrowDownIcon', { group: 'List', type: 'stroke', component: Icons.ListArrowDownIcon });
+  iconsMap.set('ListArrowUpMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListArrowUpMinimalisticIcon });
+  iconsMap.set('ListArrowUpIcon', { group: 'List', type: 'stroke', component: Icons.ListArrowUpIcon });
+  iconsMap.set('ListCheckMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListCheckMinimalisticIcon });
+  iconsMap.set('ListCheckIcon', { group: 'List', type: 'stroke', component: Icons.ListCheckIcon });
+  iconsMap.set('ListCrossMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListCrossMinimalisticIcon });
+  iconsMap.set('ListCrossIcon', { group: 'List', type: 'stroke', component: Icons.ListCrossIcon });
+  iconsMap.set('ListDownMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListDownMinimalisticIcon });
+  iconsMap.set('ListDownIcon', { group: 'List', type: 'stroke', component: Icons.ListDownIcon });
+  iconsMap.set('ListUpMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.ListUpMinimalisticIcon });
+  iconsMap.set('ListUpIcon', { group: 'List', type: 'stroke', component: Icons.ListUpIcon });
+  iconsMap.set('ListV1Icon', { group: 'List', type: 'stroke', component: Icons.ListV1Icon });
+  iconsMap.set('ListIcon', { group: 'List', type: 'stroke', component: Icons.ListIcon });
+  iconsMap.set('PlaylistMinimalisticIcon', { group: 'List', type: 'stroke', component: Icons.PlaylistMinimalisticIcon });
+  iconsMap.set('PlaylistV2Icon', { group: 'List', type: 'stroke', component: Icons.PlaylistV2Icon });
+  iconsMap.set('PlaylistMinimalistic3Icon', { group: 'List', type: 'stroke', component: Icons.PlaylistMinimalistic3Icon });
+  iconsMap.set('PlaylistIcon', { group: 'List', type: 'stroke', component: Icons.PlaylistIcon });
+  iconsMap.set('SortFromBottomToTopIcon', { group: 'List', type: 'stroke', component: Icons.SortFromBottomToTopIcon });
+  iconsMap.set('SortFromTopToBottomIcon', { group: 'List', type: 'stroke', component: Icons.SortFromTopToBottomIcon });
+
+  // Messages & Conversation
+  iconsMap.set('ForwardIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.ForwardIcon });
+  iconsMap.set('InboxArchiveIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.InboxArchiveIcon });
+  iconsMap.set('InboxInIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.InboxInIcon });
+  iconsMap.set('InboxOutIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.InboxOutIcon });
+  iconsMap.set('InboxIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.InboxIcon });
+  iconsMap.set('LetterOpenedIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.LetterOpenedIcon });
+  iconsMap.set('LetterIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.LetterIcon });
+  iconsMap.set('MultipleForwardLeftIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.MultipleForwardLeftIcon });
+  iconsMap.set('MultipleForwardRightIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.MultipleForwardRightIcon });
+  iconsMap.set('PaperclipV2Icon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PaperclipV2Icon });
+  iconsMap.set('PaperclipRoundedV2Icon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PaperclipRoundedV2Icon });
+  iconsMap.set('PaperclipRoundedIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PaperclipRoundedIcon });
+  iconsMap.set('PaperclipIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PaperclipIcon });
+  iconsMap.set('PenV2Icon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PenV2Icon });
+  iconsMap.set('PenNewSquareIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PenNewSquareIcon });
+  iconsMap.set('PenIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PenIcon });
+  iconsMap.set('PlainV2Icon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PlainV2Icon });
+  iconsMap.set('PlainV3Icon', { group: 'MessagesConversation', type: 'stroke', component: Icons.PlainV3Icon });
+  iconsMap.set('SquareForwardIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.SquareForwardIcon });
+  iconsMap.set('SquareShareLineIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.SquareShareLineIcon });
+  iconsMap.set('CheckIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.CheckIcon });
+  iconsMap.set('DoubleCheckIcon', { group: 'MessagesConversation', type: 'stroke', component: Icons.DoubleCheckIcon });
+
+  // Money
+  iconsMap.set('BanknoteV2Icon', { group: 'Money', type: 'stroke', component: Icons.BanknoteV2Icon });
+  iconsMap.set('BanknoteIcon', { group: 'Money', type: 'stroke', component: Icons.BanknoteIcon });
+  iconsMap.set('BillCrossIcon', { group: 'Money', type: 'stroke', component: Icons.BillCrossIcon });
+  iconsMap.set('BillCheckIcon', { group: 'Money', type: 'stroke', component: Icons.BillCheckIcon });
+  iconsMap.set('BillListIcon', { group: 'Money', type: 'stroke', component: Icons.BillListIcon });
+  iconsMap.set('MoneyBillIcon', { group: 'Money', type: 'stroke', component: Icons.MoneyBillIcon });
+  iconsMap.set('CardV2Icon', { group: 'Money', type: 'stroke', component: Icons.CardV2Icon });
+  iconsMap.set('CardReciveIcon', { group: 'Money', type: 'stroke', component: Icons.CardReciveIcon });
+  iconsMap.set('CardSendIcon', { group: 'Money', type: 'stroke', component: Icons.CardSendIcon });
+  iconsMap.set('CardTransferIcon', { group: 'Money', type: 'stroke', component: Icons.CardTransferIcon });
+  iconsMap.set('CardIcon', { group: 'Money', type: 'stroke', component: Icons.CardIcon });
+  iconsMap.set('CardholderIcon', { group: 'Money', type: 'stroke', component: Icons.CardholderIcon });
+  iconsMap.set('DollarMinimalisticIcon', { group: 'Money', type: 'stroke', component: Icons.DollarMinimalisticIcon });
+  iconsMap.set('DollarIcon', { group: 'Money', type: 'stroke', component: Icons.DollarIcon });
+  iconsMap.set('MoneyBagIcon', { group: 'Money', type: 'stroke', component: Icons.MoneyBagIcon });
+  iconsMap.set('SafeCircleIcon', { group: 'Money', type: 'stroke', component: Icons.SafeCircleIcon });
+  iconsMap.set('SafeSquareIcon', { group: 'Money', type: 'stroke',component: Icons.SafeSquareIcon });
+  iconsMap.set('TagHorizontalIcon', { group: 'Money', type: 'stroke', component: Icons.TagHorizontalIcon });
+  iconsMap.set('TagPriceIcon', { group: 'Money', type: 'stroke', component: Icons.TagPriceIcon });
+  iconsMap.set('TagIcon', { group: 'Money', type: 'stroke', component: Icons.TagIcon });
+  iconsMap.set('TickerStarIcon', { group: 'Money', type: 'stroke', component: Icons.TickerStarIcon });
+  iconsMap.set('VerifiedCheckIcon', { group: 'Money', type: 'stroke', component: Icons.VerifiedCheckIcon });
+  iconsMap.set('WadOfMoneyIcon', { group: 'Money', type: 'stroke', component: Icons.WadOfMoneyIcon });
+  iconsMap.set('WalletV2Icon', { group: 'Money', type: 'stroke', component: Icons.WalletV2Icon });
+  iconsMap.set('WalletMoneyIcon', { group: 'Money', type: 'stroke', component: Icons.WalletMoneyIcon });
+  iconsMap.set('WalletIcon', { group: 'Money', type: 'stroke', component: Icons.WalletIcon });
+
+  // Notes
+  iconsMap.set('ArchiveCheckIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveCheckIcon });
+  iconsMap.set('ArchiveDownMinimlisticIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveDownMinimlisticIcon });
+  iconsMap.set('ArchiveDownIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveDownIcon });
+  iconsMap.set('ArchiveMinimalisticIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveMinimalisticIcon });
+  iconsMap.set('ArchiveUpMinimlisticIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveUpMinimlisticIcon });
+  iconsMap.set('ArchiveUpIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveUpIcon });
+  iconsMap.set('ArchiveIcon', { group: 'Notes', type: 'stroke', component: Icons.ArchiveIcon });
+  iconsMap.set('ClipboardAddIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardAddIcon });
+  iconsMap.set('ClipboardCheckIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardCheckIcon });
+  iconsMap.set('ClipboardListIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardListIcon });
+  iconsMap.set('ClipboardRemoveIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardRemoveIcon });
+  iconsMap.set('ClipboardTextIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardTextIcon });
+  iconsMap.set('ClipboardIcon', { group: 'Notes', type: 'stroke', component: Icons.ClipboardIcon });
+  iconsMap.set('DocumentMedicineIcon', { group: 'Notes', type: 'stroke', component: Icons.DocumentMedicineIcon });
+  iconsMap.set('DocumentTextIcon', { group: 'Notes', type: 'stroke', component: Icons.DocumentTextIcon });
+  iconsMap.set('DocumentIcon', { group: 'Notes', type: 'stroke', component: Icons.DocumentIcon });
+  iconsMap.set('DocumentsMinimalisticIcon', { group: 'Notes', type: 'stroke', component: Icons.DocumentsMinimalisticIcon });
+  iconsMap.set('DocumentsIcon', { group: 'Notes', type: 'stroke', component: Icons.DocumentsIcon });
+  iconsMap.set('NotebookIcon', { group: 'Notes', type: 'stroke', component: Icons.NotebookIcon });
+  iconsMap.set('NotesMinimalisticIcon', { group: 'Notes', type: 'stroke', component: Icons.NotesMinimalisticIcon });
+  iconsMap.set('NotesIcon', { group: 'Notes', type: 'stroke', component: Icons.NotesIcon });
+
+  // Notifications
+  iconsMap.set('BellBingIcon', { group: 'Notifications', type: 'stroke', component: Icons.BellBingIcon });
+  iconsMap.set('BellOffIcon', { group: 'Notifications', type: 'stroke', component: Icons.BellOffIcon });
+  iconsMap.set('BellIcon', { group: 'Notifications', type: 'stroke', component: Icons.BellIcon });
+  iconsMap.set('NotificationLinesRemoveIcon', { group: 'Notifications', type: 'stroke', component: Icons.NotificationLinesRemoveIcon });
+  iconsMap.set('NotificationRemoveIcon', { group: 'Notifications', type: 'stroke', component: Icons.NotificationRemoveIcon });
+
+  // Search
+  iconsMap.set('MagniferBugIcon', { group: 'Search', type: 'stroke', component: Icons.MagniferBugIcon });
+  iconsMap.set('MagniferZoomInIcon', { group: 'Search', type: 'stroke', component: Icons.MagniferZoomInIcon });
+  iconsMap.set('MagniferZoomOutIcon', { group: 'Search', type: 'stroke', component: Icons.MagniferZoomOutIcon });
+  iconsMap.set('MagniferIcon', { group: 'Search', type: 'stroke', component: Icons.MagniferIcon });
+  iconsMap.set('MinimalisticMagniferBugIcon', { group: 'Search', type: 'stroke', component: Icons.MinimalisticMagniferBugIcon });
+  iconsMap.set('MinimalisticMagniferZoomInIcon', { group: 'Search', type: 'stroke', component: Icons.MinimalisticMagniferZoomInIcon });
+  iconsMap.set('MinimalisticMagniferZoomOutIcon', { group: 'Search', type: 'stroke', component: Icons.MinimalisticMagniferZoomOutIcon });
+  iconsMap.set('MinimalisticMagniferIcon', { group: 'Search', type: 'stroke', component: Icons.MinimalisticMagniferIcon });
+
+  // Security
+  iconsMap.set('CodeScanIcon', { group: 'Security', type: 'stroke', component: Icons.CodeScanIcon });
+  iconsMap.set('EyeIcon', { group: 'Security', type: 'stroke', component: Icons.EyeIcon });
+  iconsMap.set('IncognitoIcon', { group: 'Security', type: 'stroke', component: Icons.IncognitoIcon });
+  iconsMap.set('KeyMinimalisticSquareV3Icon', { group: 'Security', type: 'stroke', component: Icons.KeyMinimalisticSquareV3Icon });
+  iconsMap.set('KeySquareV2Icon', { group: 'Security', type: 'stroke', component: Icons.KeySquareV2Icon });
+  iconsMap.set('KeySquareIcon', { group: 'Security', type: 'stroke', component: Icons.KeySquareIcon });
+  iconsMap.set('KeyIcon', { group: 'Security', type: 'stroke', component: Icons.KeyIcon });
+  iconsMap.set('LockKeyholeMinimalisticUnlockedIcon', { group: 'Security', type: 'stroke', component: Icons.LockKeyholeMinimalisticUnlockedIcon });
+  iconsMap.set('LockKeyholeMinimalisticIcon', { group: 'Security', type: 'stroke', component: Icons.LockKeyholeMinimalisticIcon });
+  iconsMap.set('LockUnlockedIcon', { group: 'Security', type: 'stroke', component: Icons.LockUnlockedIcon });
+  iconsMap.set('LockIcon', { group: 'Security', type: 'stroke', component: Icons.LockIcon });
+  iconsMap.set('PasswordIcon', { group: 'Security', type: 'stroke', component: Icons.PasswordIcon });
+  iconsMap.set('ScannerV2Icon', { group: 'Security', type: 'stroke', component: Icons.ScannerV2Icon });
+  iconsMap.set('ScannerIcon', { group: 'Security', type: 'stroke', component: Icons.ScannerIcon });
+  iconsMap.set('ShieldCheckIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldCheckIcon });
+  iconsMap.set('ShieldCrossIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldCrossIcon });
+  iconsMap.set('ShieldKeyholeMinimalisticIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldKeyholeMinimalisticIcon });
+  iconsMap.set('ShieldKeyholeIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldKeyholeIcon });
+  iconsMap.set('ShieldMinimalisticIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldMinimalisticIcon });
+  iconsMap.set('ShieldMinusIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldMinusIcon });
+  iconsMap.set('ShieldNetworkIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldNetworkIcon });
+  iconsMap.set('ShieldPlusIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldPlusIcon });
+  iconsMap.set('ShieldStarIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldStarIcon });
+  iconsMap.set('ShieldUpIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldUpIcon });
+  iconsMap.set('ShieldIcon', { group: 'Security', type: 'stroke', component: Icons.ShieldIcon });
+  iconsMap.set('SirenRoundedIcon', { group: 'Security', type: 'stroke', component: Icons.SirenRoundedIcon });
+  iconsMap.set('SirenIcon', { group: 'Security', type: 'stroke', component: Icons.SirenIcon });
+
+  // Settings Fine Tuning
+  iconsMap.set('TuningV2Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.TuningV2Icon });
+  iconsMap.set('TuningV4Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.TuningV4Icon });
+  iconsMap.set('TuningIcon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.TuningIcon });
+  iconsMap.set('WidgetV2Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetV2Icon });
+  iconsMap.set('WidgetV3Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetV3Icon });
+  iconsMap.set('WidgetV4Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetV4Icon });
+  iconsMap.set('WidgetV5Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetV5Icon });
+  iconsMap.set('WidgetV6Icon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetV6Icon });
+  iconsMap.set('WidgetAddIcon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetAddIcon });
+  iconsMap.set('WidgetIcon', { group: 'SettingsFineTuning', type: 'stroke', component: Icons.WidgetIcon });
+
+  // Time
+  iconsMap.set('AlarmAddIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmAddIcon });
+  iconsMap.set('AlarmPauseIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmPauseIcon });
+  iconsMap.set('AlarmPlayIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmPlayIcon });
+  iconsMap.set('AlarmRemoveIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmRemoveIcon });
+  iconsMap.set('AlarmSleepIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmSleepIcon });
+  iconsMap.set('AlarmTurnOffIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmTurnOffIcon });
+  iconsMap.set('AlarmIcon', { group: 'Time', type: 'stroke', component: Icons.AlarmIcon });
+  iconsMap.set('CalendarAddIcon', { group: 'Time', type: 'stroke', component: Icons.CalendarAddIcon });
+  iconsMap.set('CalendarDateIcon', { group: 'Time', type: 'stroke', component: Icons.CalendarDateIcon });
+  iconsMap.set('ClockCircleIcon', { group: 'Time', type: 'stroke', component: Icons.ClockCircleIcon });
+  iconsMap.set('ClockSquareIcon', { group: 'Time', type: 'stroke', component: Icons.ClockSquareIcon });
+  iconsMap.set('HistoryV2Icon', { group: 'Time', type: 'stroke', component: Icons.HistoryV2Icon });
+  iconsMap.set('HistoryV3Icon', { group: 'Time', type: 'stroke', component: Icons.HistoryV3Icon });
+  iconsMap.set('HourglassLineIcon', { group: 'Time', type: 'stroke', component: Icons.HourglassLineIcon });
+  iconsMap.set('HourglassIcon', { group: 'Time', type: 'stroke', component: Icons.HourglassIcon });
+  iconsMap.set('StopwatchPauseIcon', { group: 'Time', type: 'stroke', component: Icons.StopwatchPauseIcon });
+  iconsMap.set('StopwatchPlayIcon', { group: 'Time', type: 'stroke', component: Icons.StopwatchPlayIcon });
+  iconsMap.set('StopwatchIcon', { group: 'Time', type: 'stroke', component: Icons.StopwatchIcon });
+  iconsMap.set('WatchRoundIcon', { group: 'Time', type: 'stroke', component: Icons.WatchRoundIcon });
+  iconsMap.set('WatchSquareMinimalisticChargeIcon', { group: 'Time', type: 'stroke', component: Icons.WatchSquareMinimalisticChargeIcon });
+  iconsMap.set('WatchSquareMinimalisticIcon', { group: 'Time', type: 'stroke', component: Icons.WatchSquareMinimalisticIcon });
+  iconsMap.set('WatchSquareIcon', { group: 'Time', type: 'stroke', component: Icons.WatchSquareIcon });
+
+  // VideoAudioSound
+  iconsMap.set('CameraAddIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.CameraAddIcon });
+  iconsMap.set('CameraRotateIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.CameraRotateIcon });
+  iconsMap.set('ClapperboardOpenPlayIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ClapperboardOpenPlayIcon });
+  iconsMap.set('ClapperboardOpenIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ClapperboardOpenIcon });
+  iconsMap.set('ClapperboardTextIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ClapperboardTextIcon });
+  iconsMap.set('ClapperboardIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ClapperboardIcon });
+  iconsMap.set('FullScreenCircleIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.FullScreenCircleIcon });
+  iconsMap.set('FullScreenSquareIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.FullScreenSquareIcon });
+  iconsMap.set('FullScreenIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.FullScreenIcon });
+  iconsMap.set('GalleryAddIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GalleryAddIcon });
+  iconsMap.set('GalleryCheckIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GalleryCheckIcon });
+  iconsMap.set('GalleryDownloadIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GalleryDownloadIcon });
+  iconsMap.set('GalleryEditIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GalleryEditIcon });
+  iconsMap.set('GalleryRemoveIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GalleryRemoveIcon });
+  iconsMap.set('GallerySendIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.GallerySendIcon });
+  iconsMap.set('LibraryIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.LibraryIcon });
+  iconsMap.set('MusicNoteSliderV2Icon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.MusicNoteSliderV2Icon });
+  iconsMap.set('MutedIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.MutedIcon });
+  iconsMap.set('PauseIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PauseIcon });
+  iconsMap.set('PanoramaIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PanoramaIcon });
+  iconsMap.set('PipV2Icon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PipV2Icon });
+  iconsMap.set('PipIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PipIcon });
+  iconsMap.set('PlayIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PlayIcon });
+  iconsMap.set('PlaybackSpeedIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.PlaybackSpeedIcon });
+  iconsMap.set('QuitPipIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.QuitPipIcon });
+  iconsMap.set('RecordIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.RecordIcon });
+  iconsMap.set('ReelIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ReelIcon });
+  iconsMap.set('RewindBackIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.RewindBackIcon });
+  iconsMap.set('RewindForwardIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.RewindForwardIcon });
+  iconsMap.set('SkipNextIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.SkipNextIcon });
+  iconsMap.set('SkipPreviousIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.SkipPreviousIcon });
+  iconsMap.set('SoundwaveSquareIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.SoundwaveSquareIcon });
+  iconsMap.set('StopIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.StopIcon });
+  iconsMap.set('StreamIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.StreamIcon });
+  iconsMap.set('ToPipIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.ToPipIcon });
+  iconsMap.set('VideoFramePlayHorizontalIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VideoFramePlayHorizontalIcon });
+  iconsMap.set('VideoLibraryIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VideoLibraryIcon });
+  iconsMap.set('VideocameraAddIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VideocameraAddIcon });
+  iconsMap.set('VideocameraRecordIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VideocameraRecordIcon });
+  iconsMap.set('VideocameraIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VideocameraIcon });
+  iconsMap.set('VolumeCrossIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VolumeCrossIcon });
+  iconsMap.set('VolumeLoudIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VolumeLoudIcon });
+  iconsMap.set('VolumeSmallIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VolumeSmallIcon });
+  iconsMap.set('VolumeIcon', { group: 'VideoAudioSound', type: 'stroke', component: Icons.VolumeIcon });
+
+  // PhosphoreIcons
+  iconsMap.set('ArrowBendDoubleUpLeftIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ArrowBendDoubleUpLeftIcon });
+  iconsMap.set('ArrowBendDoubleUpRightIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ArrowBendDoubleUpRightIcon });
+  iconsMap.set('ArticlesThreeLinesIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ArticlesThreeLinesIcon });
+  iconsMap.set('BrowserIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.BrowserIcon });
+  iconsMap.set('BrowsersIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.BrowsersIcon });
+  iconsMap.set('SimpleCardholderIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SimpleCardholderIcon });
+  iconsMap.set('CardsIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CardsIcon });
+  iconsMap.set('CardsThreeIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CardsThreeIcon });
+  iconsMap.set('ChalkboardSimpleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ChalkboardSimpleIcon });
+  iconsMap.set('ChalkboardTeacherIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ChalkboardTeacherIcon });
+  iconsMap.set('CheckFillIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CheckFillIcon });
+  iconsMap.set('CoinIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CoinIcon });
+  iconsMap.set('CoinVerticalIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CoinVerticalIcon });
+  iconsMap.set('CopyDoubleSimple', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CopyDoubleSimple });
+  iconsMap.set('CopySimpleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CopySimpleIcon });
+  iconsMap.set('CurrencyEthIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.CurrencyEthIcon });
+  iconsMap.set('SimpleDatabaseIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SimpleDatabaseIcon });
+  iconsMap.set('DotsNineIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.DotsNineIcon });
+  iconsMap.set('DoubleChecksIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.DoubleChecksIcon });
+  iconsMap.set('InvoiceSimpleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.InvoiceSimpleIcon });
+  iconsMap.set('KeyboardIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.KeyboardIcon });
+  iconsMap.set('LegoSmileyIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.LegoSmileyIcon });
+  iconsMap.set('PencilSimple', { group: 'PhosphoreIcons', type: 'fill', component: Icons.PencilSimple });
+  iconsMap.set('PencilSimpleLine', { group: 'PhosphoreIcons', type: 'fill', component: Icons.PencilSimpleLine });
+  iconsMap.set('ProhibitIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ProhibitIcon });
+  iconsMap.set('ScanSmileyIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ScanSmileyIcon });
+  iconsMap.set('ShapesIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.ShapesIcon });
+  iconsMap.set('SidebarSimpleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SidebarSimpleIcon });
+  iconsMap.set('SidebarWithLineIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SidebarWithLineIcon });
+  iconsMap.set('SignOutArrowRightIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SignOutArrowRightIcon });
+  iconsMap.set('SimpleListIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SimpleListIcon });
+  iconsMap.set('SimpleUserBodyIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SimpleUserBodyIcon });
+  iconsMap.set('SimpleXIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.SimpleXIcon });
+  iconsMap.set('StackIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.StackIcon });
+  iconsMap.set('StrategyIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.StrategyIcon });
+  iconsMap.set('TextAlignRightIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.TextAlignRightIcon });
+  iconsMap.set('TrashFillIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.TrashFillIcon });
+  iconsMap.set('TrashSimpleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.TrashSimpleIcon });
+  iconsMap.set('UserFocusIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.UserFocusIcon });
+  iconsMap.set('UserSquareIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.UserSquareIcon });
+  iconsMap.set('UsersThreeBodyIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.UsersThreeBodyIcon });
+  iconsMap.set('WarningOctagonIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.WarningOctagonIcon });
+  iconsMap.set('WebLayoutIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.WebLayoutIcon });
+  iconsMap.set('WrenchIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.WrenchIcon });
+  iconsMap.set('XInsideCircleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.XInsideCircleIcon });
+
+  return iconsMap;
+};

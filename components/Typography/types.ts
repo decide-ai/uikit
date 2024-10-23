@@ -14,6 +14,16 @@ export type TypographyProps = {
    */
   weight?: "light" | "normal" | "medium" | "bold";
 
+  /**
+   * Use the text-left, text-center, text-right, and text-justify utilities to control the text alignment of an element.
+   */
+  textAlign?: 'left' | 'center' | 'right' | 'justify';
+
+  /**
+   * The uppercase and lowercase will uppercase and lowercase text respectively, whereas capitalize utility will convert text to title-case. 
+   */
+  textTransform?: 'uppercase' | 'lowercase' | 'capitalize' | 'normalCase';
+
   /** 
    * The font style, either normal or italic.
    */
@@ -31,6 +41,11 @@ export type TypographyProps = {
    * If true, enables responsive text sizing across different screen sizes.
    */
   adaptive?: boolean;
+  
+  /** 
+   * If true, enables responsive text sizing across different screen sizes by `vw`.
+   */
+  responsiveVW?: boolean;
 
   /**
    * Use truncate to prevent text from wrapping and truncate overflowing text with an ellipsis (…) if needed.
@@ -46,10 +61,4 @@ export type TypographyProps = {
    * White space nowrap. Default prop equal false;
    */
   whitespaceNowrap?: boolean;
-
-  /**
-   * Prop makes text UPPERCASE.
-   * Default value `false`
-   */
-  uppercase?: boolean;
 };

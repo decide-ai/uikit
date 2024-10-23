@@ -2,11 +2,11 @@ import { getIconsMap } from "../../../../components";
 import { IconMapItem } from "./types";
 
 /**
- * Convert array to group of objects
+ * Convert Map to group of objects
  */
 export const getIconsGroup = () => {
-  const arr = getIconsMap();
-  const grouped = arr.reduce<Record<string, IconMapItem>>((acc, { group, name, component }) => {
+  const iconsMap = getIconsMap();
+  const grouped = Array.from(iconsMap).reduce<Record<string, IconMapItem>>((acc, [name, { group, component }]) => {
     if (!acc[group]) {
       acc[group] = { group, iconsList: [{ name, component }] };
     } else {

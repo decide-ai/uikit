@@ -17,7 +17,7 @@ export type SkinTypes = {
 }
 
 export type SizeSpinnerKeys = 'large' | 'medium' | 'small' | 'tiny';
-export type SkinSpinnerKeys = 'standard' | 'grey' | 'green' | 'black' | 'blue';
+export type SkinSpinnerKeys = 'standard' | 'grey' | 'green' | 'black' | 'blue' | 'lavender';
 
 export type SpinnerPropTypes = {
   /**

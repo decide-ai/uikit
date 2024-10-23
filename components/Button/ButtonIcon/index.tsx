@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from 'classnames';
-import { DynamicIcon } from '../../index';
+import { DynamicIcon, getIconsMap } from '../../index';
 import { ButtonIconTypes } from '../types';
 import { svgIconSkinColors } from './styles';
 
@@ -34,12 +34,18 @@ export const ButtonIcon: React.FC<ButtonIconTypes> = ({
   const iconColor = skin && svgIconSkinColors[skin];
   const iconSize = size && SIZE[size];
 
+  const iconData = getIconsMap().get(iconName);
+  const iconType = iconData?.type;
+
   return (
     <span className={cn('rounded-md')}>
       <DynamicIcon
         iconName={iconName}
         size={iconSize}
-        className={`stroke-current ${iconColor}`}
+        className={cn(iconColor, {
+          'fill-current': iconType === 'fill',
+          'stroke-current': iconType === 'stroke',
+        })}
         strokeWidth={1.5}
       />
     </span>

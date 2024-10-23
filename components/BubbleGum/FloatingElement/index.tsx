@@ -12,7 +12,8 @@ const SKIN_CLASSES = {
   inline: 'bg-white border-solid border-[1px] border-A80',
   grey: 'bg-C50',
   light: 'bg-B90',
-  dark: 'bg-A00'
+  dark: 'bg-A00',
+  lavender: 'bg-H00'
 }
 
 /**
@@ -23,11 +24,11 @@ export const FloatingElement: React.FC<FloatingElementPropTypes> = ({
   text 
 }) => {
   const { getFloatingProps, floatingStyles, refs } = useBubbleGum();
-  const textColor = skin === 'dark' ? 'C100' : 'A00';
+  const textColor = skin === 'dark' ? 'C100' : skin === 'lavender' ? 'H110' : 'A00';
   return (
     <div
       className={cn(
-        'floating rounded-lg max-w-40 py-1 px-2',
+        'floating rounded-lg max-w-40 py-2 px-4',
         skin && SKIN_CLASSES[skin]
       )}
       ref={refs.setFloating}

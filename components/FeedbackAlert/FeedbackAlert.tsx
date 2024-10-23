@@ -46,8 +46,7 @@ export const FeedbackAlert: React.FC<FeedbackAlertPropTypes> = ({
         <div className='flex flex-col gap-1'>
           {title && (
             <Typography 
-              size="lg" 
-              adaptive
+              size="base" 
               weight='bold'
               color={contentColor}
             >
@@ -57,7 +56,6 @@ export const FeedbackAlert: React.FC<FeedbackAlertPropTypes> = ({
 
           <Typography 
             size="sm" 
-            adaptive
             color={contentColor}
           >
             {text}

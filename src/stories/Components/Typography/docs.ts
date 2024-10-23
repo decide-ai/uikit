@@ -40,6 +40,12 @@ export const argTypes = {
       defaultValue: { summary: 'normal' }
     }
   },
+  responsiveVW: {
+    control: 'boolean',
+    table: {
+      defaultValue: { summary: false }
+    }
+  },
   style: {
     control: 'select',
     table: {
@@ -52,10 +58,28 @@ export const argTypes = {
       defaultValue: { summary: 'A00' }
     }
   },
-  uppercase: {
-    control: 'boolean',
+  textTransform: {
+    control: 'select',
+    options: [
+      'normalCase',
+      'uppercase',
+      'lowercase',
+      'capitalize'
+    ],
     table: {
-      defaultValue: { summary: false }
+      defaultValue: { summary: 'normalCase' }
+    }
+  },
+  textAlign: {
+    control: 'select',
+    options: [
+      'left',
+      'center',
+      'right',
+      'justify',
+    ],
+    table: {
+      defaultValue: { summary: 'left' }
     }
   }
 };
