@@ -63,6 +63,14 @@ export type ButtonPropsTypes = {
   size?: SizeTypes;
 
   /**
+   * The `type` attribute specifies the type of button.
+   * `button`	The button is a clickable button. Component use `type: button` by default;
+   * `submit`	The button is a submit button (submits form-data);
+   * `reset`	The button is a reset button (resets the form-data to its initial values);
+   */
+  type?: 'button' | 'submit' | 'reset';
+
+  /**
    * Change the appearance of a button with a skin prop.
    * standard - is for general primary actions. This skin add primary A00 color, use as default value.
    * inline - this skin add burder. Sometime use in interface with standard button.
