@@ -39,6 +39,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
   skin = 'standard',
   theme = 'darkGreen',
   rounded = 'lg',
+  type = 'button',
   spaceBetween,
   disabled,
   fullWidth,
@@ -59,6 +60,7 @@ export const Button: React.FC<ButtonPropsTypes> = ({
     <button
       onClick={onClick}
       disabled={disabled}
+      type={type}
       className={cn({
           'pointer-events-none': disabled,
           'w-full': fullWidth,
