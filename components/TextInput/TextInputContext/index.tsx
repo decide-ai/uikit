@@ -26,7 +26,7 @@ export const TextInputProvider = ({
   size = 'small',
   ...props
 }: TextInputPropsTypes & { children: React.ReactNode }) => {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState(props.defaultValue || '');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
     const newValue = e.target.value;
