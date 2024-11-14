@@ -37,4 +37,10 @@ export type IconTextPropsTypes = {
    * Optional. The stroke width of the svg icon. Defaults to 1.2 if not specified.
    */
   iconStrokeWidth?: number;
+
+  /**
+   * Icon + text position. For position component uses justify: start, center, end; 
+   * Defaults to start if not specified.
+   */
+  position?: 'start' | 'center' | 'end';
 }
