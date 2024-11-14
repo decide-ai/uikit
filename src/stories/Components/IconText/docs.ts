@@ -12,6 +12,17 @@ export const argTypes = {
       defaultValue: { summary: 'medium' }
     }
   },
+  position: {
+    control: 'select',
+    options: [
+      "start",
+      "center",
+      "end"
+    ],
+    table: {
+      defaultValue: { summary: 'start' }
+    }
+  },
   iconSize: {
     control: 'number',
     table: {

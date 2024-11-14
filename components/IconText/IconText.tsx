@@ -16,7 +16,8 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
   textSize = 'sm',
   iconStroke = 'A00',
   textColor = 'A00',
-  iconStrokeWidth = 1.2
+  iconStrokeWidth = 1.2,
+  position = 'start',
 }) => {
   /** If the requred prop is not obtained, return null */
   if (!text || !iconName) {
@@ -33,7 +34,11 @@ export const IconText: React.FC<IconTextPropsTypes> = ({
   const iconType = iconData?.type;
 
   return (
-    <div className='flex justify-center items-center'>
+    <div className={cn('flex items-center', {
+      'justify-start': position === 'start',
+      'justify-center': position === 'center',
+      'justify-end': position === 'end',
+    })}>
       <DynamicIcon 
         iconName={iconName}
         size={iconSize}
