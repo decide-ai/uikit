@@ -516,6 +516,7 @@ export const getIconsMap = (props: IconProps = {}): Map<string, IconListItem> =>
   iconsMap.set('WebLayoutIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.WebLayoutIcon });
   iconsMap.set('WrenchIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.WrenchIcon });
   iconsMap.set('XInsideCircleIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.XInsideCircleIcon });
+  iconsMap.set('UserSwitchIcon', { group: 'PhosphoreIcons', type: 'fill', component: Icons.UserSwitchIcon });
 
   return iconsMap;
 };

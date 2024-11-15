@@ -43,3 +43,4 @@ export { WarningOctagonIcon } from './WarningOctagonIcon';
 export { WebLayoutIcon } from './WebLayoutIcon';
 export { WrenchIcon } from './WrenchIcon';
 export { XInsideCircleIcon } from './XInsideCircleIcon';
+export { UserSwitchIcon } from './UserSwitchIcon';
