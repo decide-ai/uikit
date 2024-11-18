@@ -12,6 +12,15 @@ export const argTypes = {
         summary: 'green',
       }
     }
+  },
+  iconBackground: {
+    control: 'text',
+  },
+  iconColor: {
+    control: 'text',
+  },
+  textColor: {
+    control: 'text',
   }
 }
 

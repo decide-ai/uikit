@@ -115,3 +115,12 @@ export const getColorByName = (colorName: string) => {
   if (!colorObject) return null;
   return colorObject;
 }
+
+/**
+ * The method allows to get any color by name.
+ */
+export const getColorByHex = (colorName: string) => {
+  let colorObject = colorsMap.find(item => item.hex === colorName);
+  if (!colorObject) return null;
+  return colorObject;
+}
