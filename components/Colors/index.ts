@@ -1,1 +1,1 @@
-export { colorsMap, getColorByName } from './colorsMap';
+export { colorsMap, getColorByName, getColorByHex } from './colorsMap';

@@ -25,4 +25,19 @@ export type FeedbackAlertPropTypes = {
    * Optional children to render additional elements inside the alert
    */
   children?: React.ReactNode;
+
+  /**
+   * Use for icon background, default background color is no
+   */
+  iconBackground?: string;
+
+  /**
+   * Use for icon color, default color is Skin color
+   */
+  iconColor?: string;
+
+  /**
+   * Use for text (title, subtitle, text) color, default color is Skin color
+   */
+  textColor?: string;
 }
