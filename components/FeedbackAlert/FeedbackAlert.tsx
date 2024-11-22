@@ -32,8 +32,7 @@ export const FeedbackAlert: React.FC<FeedbackAlertPropTypes> = ({
   const bgColor = getColorByName(skinStyles[skin])?.bg;
   // Sets the content color based on the skin type; darkGreen has a different text color
   const contentColor = textColor 
-    ? textColor 
-    : skin === 'darkGreen' || skin === 'black' ? 'C100' : 'A00';
+    ? textColor : skin === 'darkGreen' || skin === 'black' ? 'C100' : 'A00';
 
   const iconData = getIconsMap().get(iconName);
   const iconType = iconData?.type;
