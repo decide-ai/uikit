@@ -1,7 +1,7 @@
 # Modclub UI Kit
 ## Latest Version
 <!-- VERSION_BADGE_START -->
-![npm package version](https://img.shields.io/badge/version-0.3.44-blue)
+![npm package version](https://img.shields.io/badge/version-0.3.45-blue)
 <!-- VERSION_BADGE_END -->
 
 ## Storybook
