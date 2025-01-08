@@ -18,7 +18,7 @@ jobs:
         with:
           node-version: '18'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@modclub-app'
+          scope: '@decide-ai'
     
       - name: Check for AUTOVERSION in commit message
         id: check_message

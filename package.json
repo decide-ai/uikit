@@ -1,9 +1,9 @@
 {
-  "name": "@modclub-app/uikit",
+  "name": "@decide-ai/uikit",
   "version": "0.3.44",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com:modclub-app/uikit.git"
+    "url": "git+https://github.com:decide-ai/uikit.git"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
