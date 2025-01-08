@@ -5,7 +5,7 @@
 <!-- VERSION_BADGE_END -->
 
 ## Storybook
-Explore our components and their usage in detail by visiting our [Storybook](https://modclub-app.github.io/uikit/). The Storybook is automatically updated with every push to the main branch, ensuring you have access to the latest components and documentation.
+Explore our components and their usage in detail by visiting our [Storybook](https://decide-ai.github.io/uikit/). The Storybook is automatically updated with every push to the main branch, ensuring you have access to the latest components and documentation.
 
 ## Development Guide
 To start developing with the project, follow these steps:
@@ -34,7 +34,7 @@ Configure npm with Your PAT:
 Open or create the `~/.npmrc` file in your home directory.
 Add the following lines, replacing `<<YOUR_PAT>>` with your actual PAT:
 ```
-@modclub-app:registry=https://npm.pkg.github.com
+@decide-ai:registry=https://npm.pkg.github.com
 //npm.pkg.github.com/:_authToken=<<YOUR_PAT>>
 ```
 
@@ -42,7 +42,7 @@ Add the following lines, replacing `<<YOUR_PAT>>` with your actual PAT:
 With your PAT configured, you can now add the UIkit library to your project:
 
 ```sh
-yarn add @modclub-app/uikit
+yarn add @decide-ai/uikit
 ```
 
 ## Floating UI
